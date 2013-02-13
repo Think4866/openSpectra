@@ -82,8 +82,12 @@ input.my-search-query{
 }
 
 
-
-
+button.my-close-btn{
+	padding:0 10px;
+}
+.modal.fade.in{
+	top:5%;
+}
 .my-modal-body{
 	max-height: 800px;
 }
