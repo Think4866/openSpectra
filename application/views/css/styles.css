@@ -1,0 +1,106 @@
+
+
+
+
+
+/*=============================================================TOP NAVIGATION*/
+.my-navbar-inner{
+	border-radius: 0;
+
+}
+
+
+/*=============================================================MAIN CONTAINER*/
+.my-container-fluid{
+	padding:0;
+	margin:0;
+}
+.tool-bar-main .nav-pills > li > a{
+	border:1px solid #ccc;
+	border-radius: 5px;
+	text-align: center;
+}
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+}
+.nav-tabs, .nav-pills {
+    text-align:center;
+}
+
+/*=============================================================SIDEBARS*/
+/*===================================================left*/
+.span1 .sidebar-left {
+	border-radius: 0 4px 4px 0;
+}
+ul.left-navigation li{
+	margin: 20px 3px;
+}
+.my-upload-btn{
+	padding:5px 15px;	
+}
+/*====================================================right*/
+.span3 .sidebar-right{
+	border-radius: 4px 0 0 4px;
+}
+.sidebar-right p.browse-title,i {
+	text-align: center;
+	font-weight: bold;
+	padding-left: 5px;
+}
+.my-browse-tabs{
+	font-size: 70%;
+
+}
+.filter-btn{
+
+}
+/*=============================================================SEARCH*/
+
+.my-search{
+	margin: 10px 10px;
+	padding-left: 10px;
+}
+
+input.my-search-query{
+	padding-right:0;
+}
+
+/*=============================================================VIEWPORT*/
+.viewport-display {
+	height: 450px;
+    padding: 40px;
+    margin: 0px 0 10px 0;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 30px;
+    color: inherit;
+    background-color: #eeeeee;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*=============================================================MEDIA QUERIES*/
+
+@media (min-width: 1200px) {
+
+/*	.my-upload-btn{
+		margin-left:6%;
+		width:70%;
+	}*/
+
+}
+
+
+
