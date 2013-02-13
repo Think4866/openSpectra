@@ -48,6 +48,7 @@
       }
     </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet" />
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -71,7 +72,7 @@
           <li class="active"><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
-          <li><a href="#myModal" role="button" class="my-upload-btn" data-toggle="modal">Log In</a></li>
+          <li><a href="#myModal1" role="button" class="my-upload-btn" data-toggle="modal">Log In</a></li>
 
         </ul>
         <h3 class="muted">Spectra View</h3>
@@ -82,7 +83,7 @@
       <div class="jumbotron">
         <h1>Spectra View</h1> <h2>lets you view, compare and organize <br /> data sets!</h2>
         <p class="lead"></p>
-        <a class="btn btn-large btn-success" href="#">Sign up today</a>
+        <a href="#myModal2" role="button" class="btn btn-large btn-success" data-toggle="modal">Create Account</a>
       </div>
 
       <hr>
@@ -96,7 +97,7 @@
 
 
         <!-- Log in Modal -->
-      <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div id="myModal1" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <div class="modal-body">
@@ -114,11 +115,77 @@
         </div>
         <div class="modal-footer">
           <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-          <button class="btn btn-primary">Sign Up</button>
         </div>
       </div>
         
+      <!-- Sign Up Modal -->
+      <div id="myModal2" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <div class="modal-body my-modal-body">
+
+         <form id="signup" class="form-horizontal" method="post" action="success.php">
+            <legend>Sign Up</legend>
+            <div class="control-group">
+                  <label class="control-label">First Name</label>
+              <div class="controls">
+                  <div class="input-prepend">
+                <span class="add-on"><i class="icon-user"></i></span>
+                  <input type="text" class="input-xlarge" id="fname" name="fname" placeholder="First Name">
+                </div>
+              </div>
+            </div>
+            <div class="control-group ">
+                  <label class="control-label">Last Name</label>
+              <div class="controls">
+                  <div class="input-prepend">
+                <span class="add-on"><i class="icon-user"></i></span>
+                  <input type="text" class="input-xlarge" id="lname" name="lname" placeholder="Last Name">
+                </div>
+              </div>
+            </div>
+            <div class="control-group">
+                  <label class="control-label">Email</label>
+              <div class="controls">
+                  <div class="input-prepend">
+                <span class="add-on"><i class="icon-envelope"></i></span>
+                  <input type="text" class="input-xlarge" id="email" name="email" placeholder="Email">
+                </div>
+              </div>
+            </div>
+            
+            <div class="control-group">
+                  <label class="control-label">Password</label>
+              <div class="controls">
+                  <div class="input-prepend">
+                <span class="add-on"><i class="icon-lock"></i></span>
+                  <input type="Password" id="passwd" class="input-xlarge" name="passwd" placeholder="Password">
+                </div>
+              </div>
+            </div>
+            <div class="control-group">
+                  <label class="control-label">Confirm Password</label>
+              <div class="controls">
+                  <div class="input-prepend">
+                <span class="add-on"><i class="icon-lock"></i></span>
+                  <input type="Password" id="conpasswd" class="input-xlarge" name="conpasswd" placeholder="Re-enter Password">
+                </div>
+              </div>
+            </div>
+
+            <div class="control-group">
+            <label class="control-label"></label>
+                <div class="controls">
+                 <button type="submit" class="btn btn-success" >Create My Account</button>
+
+                </div>
+
+            </div>
+
+         </form>
+
+      </div>
+    </div>
 
 
 

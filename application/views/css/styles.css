@@ -84,6 +84,9 @@ input.my-search-query{
 
 
 
+.my-modal-body{
+	max-height: 800px;
+}
 
 
 
