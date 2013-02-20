@@ -26,6 +26,7 @@ require_once('../models/headerLoggedIn.php');
       }
     </style>
      <link href="css/bootstrap-responsive.css" rel="stylesheet" />
+     <link href="css/bootstrap-fileupload.min.css" rel="stylesheet" />
      <link href="css/styles.css" rel="stylesheet" />
     
 
@@ -67,7 +68,6 @@ require_once('../models/headerLoggedIn.php');
               </ul>
          
             </div><!-- user dropdown ends -->
-
             <div class="top-nav nav-collapse">
               <ul class="nav">
                 <li><a href="#">Sci Dat Viewer</a></li>
@@ -89,10 +89,10 @@ require_once('../models/headerLoggedIn.php');
             
             <ul class="nav nav-list left-navigation">   
               <!-- Button to trigger upload modal -->
-              <li><a href="#myModal" role="button" class="my-upload-btn" data-toggle="modal">Upload</a></li>
+              <li><a href="#myModalupload" role="button" class="my-upload-btn" data-toggle="modal">Upload</a></li>
 
               <!-- Button to trigger notepad modal -->
-              <li><a href="#myModal" role="button" class="my-upload-btn" data-toggle="modal">Notepad</a></li>
+              <li><a href="#myModalnotepad" role="button" class="my-upload-btn" data-toggle="modal">Notepad</a></li>
             </ul>
 
             <div class="accordion" id="accordion2">
@@ -198,10 +198,10 @@ require_once('../models/headerLoggedIn.php');
           </div>
           <div id="toolBar-main" class="tool-bar-main">
             <ul class="nav nav-pills tool-bar">
-                <li class="active"><a href="index.html"><i class="icon-cog"></i> <span>Action</span></a></li>
-                <li ><a href="" ><i class="icon-cog"></i> <span>Action</span></a></li>
-                <li ><a href="" ><i class="icon-cog"></i> <span>Action</span></a></li>
-                <li ><a href=""><i class="icon-cog"></i> <span>Action</span></a></li>
+                <li ><a href=""><!-- <i class="icon-cog"></i> --> <span>Save</span></a></li>
+                <li ><a href="" ><!-- <i class="icon-cog"></i> --> <span>Compare</span></a></li>
+                <li ><a href="" ><!-- <i class="icon-cog"></i> --> <span>Refresh</span></a></li>
+                <!-- <li ><a href=""><i class="icon-cog"></i> <span>Action</span></a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog"></i> Action <b class="caret"></b></a>
                     <ul class="dropdown-menu">
@@ -209,22 +209,41 @@ require_once('../models/headerLoggedIn.php');
                         <li><a href=""><span>action</span></a></li>
                         <li><a href=""><span>action</span></a></li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
           </div>
          
         </div><!--/span-->
 
         <!-- begin right sidebar -->
+
         
+        <div class="control-group span2">
+          <label class="control-label" for="inputIcon"></label>
+          <div class="controls">
+            <div class="input-prepend">
+              <span class="add-on"><i class="icon-search"></i></span>
+              <input class="span8" id="inputIcon" type="text">
+            </div>
+          </div>
+        </div>
         <div class="span2 sidebar-right">
+          <!-- <input placeholder="Search" class="searchMain" name="query" type="text" /> -->
+          <div class="btn-group filter-btn">
+                <button class="btn btn-medium filterMain">Filter Results</button>
+                <button class="btn btn-medium dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+
+                <ul class="dropdown-menu">
+                  <li><a href="#"><i class="icon-star"></i> Action</a></li>
+                  <li><a href="#"><i class="icon-tag"></i> Another action</a></li>
+                  <li><a href="#"><i class="icon-download-alt"></i> Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#"><i class="icon-tint"></i> Separated link</a></li>
+                </ul>    
+              </div> <!-- end filter dropup  -->
           <div class="well sidebar-nav">
-            <form id="main-search" class="my-search">
-                <input placeholder="Search" class="search-query my-search-query" name="query" type="text" />
-            </form>
             <p class="browse-title">
               <i class="icon-eye-open"> </i>Browse Sets</p>
-
               <ul class="nav nav-tabs my-browse-tabs">
                 <li><a href="#set-one" data-toggle="tab">Set Group</a></li>
                 <li><a href="#set-two" data-toggle="tab">Set Group</a></li>
@@ -288,25 +307,96 @@ require_once('../models/headerLoggedIn.php');
                 </div>
 
           </div><!--/.well -->
-          <div class="btn-group dropup filter-btn">
-            <button class="btn btn-small">Filter Results</button>
-            <button class="btn btn-small dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-
-            <ul class="dropdown-menu">
-              <li><a href="#"><i class="icon-star"></i> Action</a></li>
-              <li><a href="#"><i class="icon-tag"></i> Another action</a></li>
-              <li><a href="#"><i class="icon-download-alt"></i> Something else here</a></li>
-              <li class="divider"></li>
-              <li><a href="#"><i class="icon-tint"></i> Separated link</a></li>
-            </ul>    
-          </div> <!-- end filter dropup  -->
+          
         </div><!--/span-->
       </div><!--/row-->
 
             <hr />
 
-        <!-- Modal -->
-      <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <!-- Modal Upload -->
+      <div id="myModalupload" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <button type="button" class="close my-close-btn" data-dismiss="modal" aria-hidden="true">×</button>
+        <div class="modal-body my-modal-body">
+        <form id="signup" class="form-horizontal" method="post" action="">
+            <h3 class="form-signin-heading">Upload Data</h3>
+            
+            <div class="control-group">
+                  <label class="control-label">Username</label>
+              <div class="controls">
+                  <div class="input-prepend">
+                <span class="add-on"><i class="icon-user"></i></span>
+                  <input type="text" class="input-xlarge" id="fname" name="fname" placeholder="Username">
+                </div>
+              </div>
+            </div>
+          
+            <div class="control-group ">
+                  <label class="control-label">Institution</label>
+              <div class="controls">
+                  <div class="input-prepend">
+                <span class="add-on"><i class="icon-home"></i></span>
+                  <input type="text" class="input-xlarge" id="institution" name="institution" placeholder="Institution">
+                </div>
+              </div>
+            </div>
+            <div class="control-group ">
+                  <label class="control-label">Compound / Material</label>
+              <div class="controls">
+                  <div class="input-prepend">
+                <span class="add-on"><i class="icon-pencil"></i></span>
+                  <input type="text" class="input-xlarge" id="material" name="material" placeholder="Material">
+                </div>
+              </div>
+            </div>
+            <div class="control-group ">
+                  <label class="control-label">Molecular Formula</label>
+              <div class="controls">
+                  <div class="input-prepend">
+                <span class="add-on"><i class="icon-pencil"></i></span>
+                  <input type="text" class="input-xlarge" id="formula" name="formula" placeholder="Formula">
+                </div>
+              </div>
+            </div>
+             <div class="control-group ">
+                  <label class="control-label">Check all that apply</label>
+                <div class="controls">
+                  <label class="checkbox">
+                    <input type="checkbox" value="">
+                    Normal Isotope
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" value="">
+                    Non-normal Isotope
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" value="">
+                    Option 3
+                  </label>
+               
+                </div>
+              </div>
+            <div class="control-group ">
+                  <label class="control-label">Date Collected</label>
+              <div class="controls">
+                  <div class="input-prepend">
+                <span class="add-on"><i class="icon-calendar"></i></span>
+                  <input type="text" class="input-medium" id="calendar" name="calendar" placeholder="mm/dd/yyyy">
+                </div>
+              </div>
+            </div>
+
+            <div class="fileupload fileupload-new" data-provides="fileupload">
+              <span class="btn btn-file"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file" /></span>
+              <span class="fileupload-preview"></span>
+              <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
+            </div>
+            </div>
+
+         </form>
+
+      </div>
+      <!-- Modal Notepad -->
+      <div id="myModalnotepad" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
           <h3 id="myModalLabel">Modal header</h3>
@@ -327,16 +417,9 @@ require_once('../models/headerLoggedIn.php');
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery1-9.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>    
-      <script>
-
-        $(document).ready(function(){
-
-            $('#Tips').tooltip('show');
-
-
-        }
-      </script>
+    <script src="js/bootstrap.min.js"></script>  
+    <script src="js/bootstrap-fileupload.js"></script>  
+    
 
   </body>
 </html>
