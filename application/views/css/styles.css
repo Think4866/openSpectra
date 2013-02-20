@@ -24,7 +24,7 @@
     float:none;
     display:inline-block;
 }
-.nav-tabs, .nav-pills {
+.nav-pills {
     text-align:center;
 }
 
@@ -52,19 +52,16 @@ ul.left-navigation li{
 	font-size: 70%;
 
 }
-.filter-btn{
-
+.filter-btn .filterMain{
+	
 }
 /*=============================================================SEARCH*/
 
-.my-search{
-	margin: 10px 10px;
+input.searchMain{
 	padding-left: 10px;
+	width:70%;
 }
 
-input.my-search-query{
-	padding-right:0;
-}
 
 /*=============================================================VIEWPORT*/
 .viewport-display {
