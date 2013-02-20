@@ -58,7 +58,7 @@ require_once('../models/headerLoggedIn.php');
             <div class="btn-group pull-right">
 
               <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                <i class="icon-user"></i><span class="hidden-phone"> <?php echo $CC_USER_NAME; ?></span>
+                <i class="icon-user"></i><span class="hidden-phone"> Welcome, <?php echo $CC_USER_NAME; ?></span>
                 <span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
@@ -325,7 +325,7 @@ require_once('../models/headerLoggedIn.php');
               <div class="controls">
                   <div class="input-prepend">
                 <span class="add-on"><i class="icon-user"></i></span>
-                  <input type="text" class="input-xlarge" id="fname" name="fname" placeholder="Username">
+                  <input type="text" class="input-xlarge" id="fname" name="fname" placeholder="<?php echo $USER_USERNAME; ?>">
                 </div>
               </div>
             </div>
@@ -335,7 +335,7 @@ require_once('../models/headerLoggedIn.php');
               <div class="controls">
                   <div class="input-prepend">
                 <span class="add-on"><i class="icon-home"></i></span>
-                  <input type="text" class="input-xlarge" id="institution" name="institution" placeholder="Institution">
+                  <input type="text" class="input-xlarge" id="institution" name="institution" placeholder="<?php echo $USER_INSTITUTION; ?>">
                 </div>
               </div>
             </div>
