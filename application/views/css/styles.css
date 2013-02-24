@@ -62,11 +62,20 @@ input.searchMain{
 	width:70%;
 }
 
-
+/*=============================================================MODALS*/
+button.my-close-btn{
+	padding:0 10px;
+}
+.modal.fade.in{
+	top:5%;
+}
+.my-modal-body{
+	max-height: 800px;
+}
 /*=============================================================VIEWPORT*/
 .viewport-display {
-	height: 450px;
-    padding: 40px;
+	min-height: 480px;
+    padding: 20px;
     margin: 0px 0 10px 0;
     font-size: 18px;
     font-weight: 200;
@@ -79,22 +88,41 @@ input.searchMain{
 }
 
 
-button.my-close-btn{
-	padding:0 10px;
+.viewport-display > .set-view{
+	border-bottom:1px solid #ccc;
+	min-height: 240px;
 }
-.modal.fade.in{
-	top:5%;
+.viewport-display .graph{
+	min-height: 240px;
+	/*border:1px solid black;*/
 }
-.my-modal-body{
-	max-height: 800px;
+.viewport-display .info{
+	min-height: 240px;
+	border-left:1px solid #ccc;
+	
 }
+.viewport-display .set-2-empty{
+	min-height: 240px;
+/*	border:1px solid black;*/
+	margin-left: 0;
+}
+.viewport-display .info-display{
+	height:auto;
+/*	border:1px solid black;*/
+}
+.viewport-display .set_tools{
+/*	border:1px solid black;*/
 
-
-
-
-
-
-
+}
+.set_tools ul {
+	list-style: none;
+}
+.info-display .info-content{
+	margin-bottom: 10%;
+}
+.info-content li{
+	font-size: 90%;
+}
 /*=============================================================MEDIA QUERIES*/
 
 @media (min-width: 1200px) {
