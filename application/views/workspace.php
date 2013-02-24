@@ -333,31 +333,31 @@ require_once('../models/headerLoggedIn.php');
 
                   <div class="tab-pane" id="set-two">
                     <ul id="uploads-list" class="nav nav-list set-list">
-                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id1">Link</a></li>                      
-                        <div id="set-options-id1" class="collapse"> 
+                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id4">Link</a></li>                      
+                        <div id="set-options-id4" class="collapse"> 
                               <div class="btn-group">
                                 <a class="" href="#"><i class="icon-eye-open"></i></a>
                                 <a class="" href="#"><i class="icon-folder-close"></i></a>
                                 <a class="" href="#"><i class="icon-download-alt"></i></a>
-                                <a class="" href="#"><i class="icon-star-empty"></i></a>
+                                
                               </div>
                         </div>  <!-- end set and dropdown options -->
-                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id2">Link</a></li>                      
-                        <div id="set-options-id2" class="collapse"> 
+                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id5">Link</a></li>                      
+                        <div id="set-options-id5" class="collapse"> 
                               <div class="btn-group">
                                 <a class="" href="#"><i class="icon-eye-open"></i></a>
                                 <a class="" href="#"><i class="icon-folder-close"></i></a>
                                 <a class="" href="#"><i class="icon-download-alt"></i></a>
-                                <a class="" href="#"><i class="icon-star-empty"></i></a>
+                               
                               </div>
                         </div>  <!-- end set and dropdown options -->
-                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id3">Link</a></li>                      
-                        <div id="set-options-id3" class="collapse"> 
+                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id6">Link</a></li>                      
+                        <div id="set-options-id6" class="collapse"> 
                               <div class="btn-group">
                                 <a class="" href="#"><i class="icon-eye-open"></i></a>
                                 <a class="" href="#"><i class="icon-folder-close"></i></a>
                                 <a class="" href="#"><i class="icon-download-alt"></i></a>
-                                <a class="" href="#"><i class="icon-star-empty"></i></a>
+                               
                               </div>
                         </div>  <!-- end set and dropdown options -->
 
