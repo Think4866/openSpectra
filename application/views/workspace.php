@@ -195,10 +195,9 @@ require_once('../models/headerLoggedIn.php');
           <div id="viewport" class="viewport-display">
            
           <div id="set_load_window" class="set-view span12">
-            <div id="load-graph" class="graph span6">
+            <div id="graph-window" class="graph span6">
 
               <!--   load graph here -->
-			  <div id="#graph-window"/>
 
             </div>
             <div id="set-info" class="info span6">
