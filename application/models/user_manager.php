@@ -439,25 +439,6 @@ function my_error_handler
 			}
 		}
 
-echo '	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> ';
-echo '	<html> ';
-echo '	<head> ';
-echo '	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> ';
-echo '	<title>New Media Equipment Checckout</title> ';
-echo '	<link rel="stylesheet" type="text/css" href="../styleNMinventory.css"> ';
-echo '</head> ';
-
-echo '	<body> ';
-	echo '<br /><br /> <p>We\'re sorry, but an error has occurred.  Please use your browser\'s back button and try your request again.</p><p>If you encounter this message repeatedly, please notify the department assistant.</p> ';
-	echo '<span class="permissions">';
-	echo $err_type;
-	echo ':</span> ( ';
-	echo $in_errfile;
-	echo ', line ';
-	echo $in_errline;
-	echo ')<br /> ';
-	echo $in_errstr;
-	echo '<br /> </body></html>';
 	
 	//EXIT ON ERRORS, CONTINUE OTHERWISE
 	if ($in_errno == E_USER_ERROR) {
