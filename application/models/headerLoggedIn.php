@@ -11,6 +11,7 @@ $getName = mysql_query($queryGetName, $openSpectra) or die(mysql_error());
 $row_GetName = mysql_fetch_assoc($getName);
 $USER_NAME = "&nbsp" . $row_GetName['FIRSTNAME'] . "&nbsp;" . $row_GetName['LASTNAME'];
 $CC_USER_NAME = mb_convert_case($USER_NAME, MB_CASE_TITLE, "UTF-8");
+$ORIGFILE_URL = 
 
 
 if ($userloginid === -1) {

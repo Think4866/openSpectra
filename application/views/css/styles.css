@@ -86,8 +86,14 @@ button.my-close-btn{
     -moz-border-radius: 6px;
     border-radius: 6px;
 }
-
-
+#graph-window {
+	min-height: 240px;
+	margin: 0;
+	padding: 0;
+	background-color: inherit;
+	color: inherit;
+	width: 100%;
+}
 .viewport-display > .set-view{
 	border-bottom:1px solid #ccc;
 	min-height: 240px;

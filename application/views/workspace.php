@@ -198,6 +198,7 @@ require_once('../models/headerLoggedIn.php');
             <div id="load-graph" class="graph span6">
 
               <!--   load graph here -->
+			  <div id="#graph-window"/>
 
             </div>
             <div id="set-info" class="info span6">
@@ -486,7 +487,14 @@ require_once('../models/headerLoggedIn.php');
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery1-9.min.js"></script>
     <script src="js/bootstrap.min.js"></script>  
-    <script src="js/bootstrap-fileupload.js"></script>  
+    <script src="js/bootstrap-fileupload.js"></script>
+	<script type="text/javascript" src="http://multigraph.github.com/download/multigraph-min.js"></script>
+	<script type="text/javascript">
+		$ = window.multigraph.jQuery;
+		/* ... from this point on you can use $ to refer to jQuery as usual ... */
+		$('#graph-window').multigraph({ 'mugl' : <?php echo $ORIGFILE_URL; ?> });
+		console.log('This copy of Multigraph uses JQuery version ' + $().jquery);
+	</script>
     
 
   </body>
