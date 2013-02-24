@@ -491,7 +491,7 @@ require_once('../models/headerLoggedIn.php');
 	<script type="text/javascript">
 		$ = window.multigraph.jQuery;
 		/* ... from this point on you can use $ to refer to jQuery as usual ... */
-		$('#graph-window').multigraph({ 'mugl' : <?php echo $ORIGFILE_URL; ?> });
+		$('#graph-window').multigraph({ 'mugl' : '<?php echo $ORIGFILE_URL; ?>' });
 		console.log('This copy of Multigraph uses JQuery version ' + $().jquery);
 	</script>
     
