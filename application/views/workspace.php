@@ -70,7 +70,7 @@ require_once('../models/headerLoggedIn.php');
             </div><!-- user dropdown ends -->
             <div class="top-nav nav-collapse">
               <ul class="nav">
-                <li><a href="#">Sci Dat Viewer</a></li>
+                <li><a href="#">SpectraView</a></li>
                 <li class="active"><a href="#" >Workspace</a></li>
                 <li><a href="#">Settings</a></li>
                 <li><a href="#">Help</a></li>
@@ -379,7 +379,7 @@ require_once('../models/headerLoggedIn.php');
         <button type="button" class="close my-close-btn" data-dismiss="modal" aria-hidden="true">×</button>
         <div class="modal-body my-modal-body">
           <form id="signup" class="form-horizontal" method="post" action="">
-            <h3 class="form-signin-heading">Upload Data</h3>
+            <h5 class="form-signin-heading">Upload Data</h5>
             
             <div class="control-group">
                   <label class="control-label">Username</label>
@@ -387,16 +387,6 @@ require_once('../models/headerLoggedIn.php');
                   <div class="input-prepend">
                 <span class="add-on"><i class="icon-user"></i></span>
                   <input type="text" class="input-xlarge" id="fname" name="fname" placeholder="<?php echo $USER_USERNAME; ?>" />
-                </div>
-              </div>
-            </div>
-          
-            <div class="control-group ">
-                  <label class="control-label">Institution</label>
-              <div class="controls">
-                  <div class="input-prepend">
-                <span class="add-on"><i class="icon-home"></i></span>
-                  <input type="text" class="input-xlarge" id="institution" name="institution" placeholder="<?php echo $USER_INSTITUTION; ?>"/>
                 </div>
               </div>
             </div>
@@ -424,19 +414,28 @@ require_once('../models/headerLoggedIn.php');
              <div class="control-group ">
                   <label class="control-label">Check all that apply</label>
                 <div class="controls">
-                  <label class="checkbox">
-                    <input type="checkbox" value=""/>
+                  <label class="radio">
+                    <input type="radio" value=""/>
                     Normal Isotope
                   </label>
-                  <label class="checkbox">
-                    <input type="checkbox" value=""/>
+                  <label class="radio">
+                    <input type="radio" value=""/>
                     Non-normal Isotope
                   </label>
+                  <label class="radio">
+                    <input type="radio" value=""/>
+                    N/A
+                  </label>
+                </div>
+              </div>
+
+              <div class="control-group ">
+                  <label class="control-label">Keep this data private</label>
+                <div class="controls">
                   <label class="checkbox">
                     <input type="checkbox" value=""/>
-                    Option 3
+                    <span class="small-text">(sets are public by default and can be made private or public at any time)</span>
                   </label>
-               
                 </div>
               </div>
 
@@ -450,8 +449,27 @@ require_once('../models/headerLoggedIn.php');
               </div>
             </div>
 
+            <div class="control-group ">
+                  <label class="control-label">Add a description</label>
+              <div class="controls">
+                  <div class="description-form">
+                    <form class="form-inline">
+                      <textarea rows="3">
+                      </textarea>
+                    </form>
+                    
+                  </div>
+              </div>
+            </div>
+
             <div class="fileupload fileupload-new" data-provides="fileupload">
-              <span class="btn btn-file"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file"/></span>
+              <span class="btn btn-large btn-file"><span class="fileupload-new">Upload Data Set</span><span class="fileupload-exists">Change</span><input type="file"/></span>
+              <span class="fileupload-preview"></span>
+              <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
+            </div>
+
+            <div class="fileupload fileupload-new" data-provides="fileupload">
+              <span class="btn btn-small btn-file"><span class="fileupload-new">Upload Callibration Data</span><span class="fileupload-exists">Change</span><input type="file"/></span>
               <span class="fileupload-preview"></span>
               <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
             </div>

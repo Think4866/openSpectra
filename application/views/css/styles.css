@@ -67,10 +67,17 @@ button.my-close-btn{
 	padding:0 10px;
 }
 .modal.fade.in{
-	top:5%;
+	top:3%;
 }
 .my-modal-body{
-	max-height: 800px;
+	max-height: 1000px;
+	overflow-y:auto;
+}
+h5.form-signin-heading{
+	margin-top: 0;
+}
+#myModalupload span.small-text{
+	font-size: 75%;
 }
 /*=============================================================VIEWPORT*/
 .viewport-display {
