@@ -489,12 +489,82 @@ require_once('../models/headerLoggedIn.php');
     <script src="js/jquery1-9.min.js"></script>
     <script src="js/bootstrap.min.js"></script>  
     <script src="js/bootstrap-fileupload.js"></script>
+    <script src="js/jRespond.min.js"></script>
 	<script type="text/javascript" src="http://multigraph.github.com/download/multigraph-min.js"></script>
+
 	<script type="text/javascript">
-		$ = window.multigraph.jQuery;
-		/* ... from this point on you can use $ to refer to jQuery as usual ... */
-		$('#graph-window').multigraph({ 'mugl' : '<?php echo $ORIGFILE_URL; ?>' });
+
+  var muglFileURL = <?php echo "'" . $ORIGFILE_URL . "'"; ?>;
+
+  $ = window.multigraph.jQuery;
+  $('#graph-window').multigraph({ 'mugl' : muglFileURL, 'width' : '100%', 'height' : '100%' });
+  console.log('This copy of Multigraph uses JQuery version ' + $().jquery);
+// call jRespond and add breakpoints
+    var jRes = jRespond([
+        {
+            label: 'handheld',
+            enter: 0,
+            exit: 767
+        },{
+            label: 'tablet',
+            enter: 768,
+            exit: 979
+        },{
+            label: 'laptop',
+            enter: 980,
+            exit: 1199
+        },{
+            label: 'desktop',
+            enter: 1200,
+            exit: 10000
+        }
+    ]);
+
+    // register enter and exit functions for multiple breakpoints
+    jRes.addFunc({
+        breakpoint: 'handheld',
+        enter: function() {
+          console.log('entered handheld');
+          $('canvas').width('100%').height('100%');
+        },
+        exit: function() {
+        }
+    });
+
+    jRes.addFunc({
+        breakpoint: 'tablet',
+        enter: function() {
+          console.log('entered tablet');
+          $('canvas').width('100%').height('100%');
+        },
+        exit: function() {
+        }
+    });
+
+    jRes.addFunc({
+        breakpoint: 'laptop',
+        enter: function() {
+          console.log('entered laptop');
+          //$('canvas').remove();
+          $('canvas').width('100%').height('100%');
+        },
+        exit: function() {
+        }
+    });
+
+    jRes.addFunc({
+        breakpoint: 'desktop',
+        enter: function() {
+          console.log('entered desktop');
+          $('canvas').width('100%').height('100%');
+        },
+        exit: function() {
+        }
+    });
+
+
 		console.log('This copy of Multigraph uses JQuery version ' + $().jquery);
+		
 	</script>
     
 
