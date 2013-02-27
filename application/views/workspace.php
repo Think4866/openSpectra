@@ -203,7 +203,7 @@ require_once('../models/headerLoggedIn.php');
             <div id="set-info" class="info span6">
 
               <div id="display-info" class="info-display span12">
-                <section class="info-content span9 offset3">
+                <section class="info-content span10 offset2">
                     <ul class="set-info span6">
                       <li>name</li>
                       <li>material</li>
@@ -219,18 +219,20 @@ require_once('../models/headerLoggedIn.php');
                 </section>
               </div>
 
-              <div id="set-tools" class="set_tools span3 offset8">
-                  <ul class="row-one-tools span6">
+              <div id="set-tools" class="set_tools span12">
+                  <ul class="row-one-tools pull-right">
                     <li><a href="#"><i class="icon-pencil"></i></a></li>
                     <li><a href="#"><i class="icon-star-empty"></i></a></li>
                     <li><a href="#"><i class="icon-folder-close"></i></a></li>
+                    <li><a href="#"><i class="icon-remove"></i></a></li>
+                    <li><a href="#"><i class="icon-download-alt"></i></a></li>
                    
                   </ul>
-                  <ul class="row-two-tools span6">
-                    <li><a href="#"><i class="icon-download-alt"></i></a></li>
+            <!--       <ul class="row-two-tools span6">
+                    
                     <li><a href="#"><i class="icon-info-sign"></i></a></li>
-                    <li><a href="#"><i class="icon-remove"></i></a></li>
-                  </ul>
+                  
+                  </ul> -->
 
               </div>  <!-- end tools -->
 
@@ -273,26 +275,26 @@ require_once('../models/headerLoggedIn.php');
           <div class="controls">
             <div class="input-prepend">
               <span class="add-on"><i class="icon-search"></i></span>
-              <input class="span8 search-bar" id="inputIcon" type="text"/>
+              <input class="span9 search-bar" id="inputIcon" type="text"/>
             </div>
           </div>
         </div>
         <div class="span2 sidebar-right">
-          <!-- <input placeholder="Search" class="searchMain" name="query" type="text" /> -->
-          <div class="btn-group filter-btn">
-                <button class="btn btn-medium filterMain">Filter Results</button>
-                <button class="btn btn-medium dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
 
-                <ul class="dropdown-menu">
-                  <li><a href="#"><i class="icon-star"></i> Action</a></li>
-                  <li><a href="#"><i class="icon-tag"></i> Another action</a></li>
-                  <li><a href="#"><i class="icon-download-alt"></i> Something else here</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#"><i class="icon-tint"></i> Separated link</a></li>
-                </ul>    
-              </div> <!-- end filter dropup  -->
           <div class="well sidebar-nav">
             <p class="browse-title"><i class="icon-eye-open"> </i>Browse Sets</p>
+             <div class="btn-group filter-btn">
+                <button class="btn btn-small filterMain">Filter Results</button>
+                <button class="btn btn-small dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+
+                <ul class="dropdown-menu">
+                  <li><a href="#"><i class="icon-user"></i> Name</a></li>
+                  <li><a href="#"><i class="icon-pencil"></i> Material</a></li>
+                  <li><a href="#"><i class="icon-home"></i> Institution</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#"><i class="icon-pencil"></i> Other</a></li>
+                </ul>    
+              </div> <!-- end filter dropup  -->
               <ul class="nav nav-tabs my-browse-tabs">
                 <li><a href="#set-one" data-toggle="tab">Public Sets</a></li>
                 <li><a href="#set-two" data-toggle="tab">Uploads</a></li>
@@ -300,66 +302,66 @@ require_once('../models/headerLoggedIn.php');
                 <div id="myTabContent" class="tab-content">
                   <div class="tab-pane" id="set-one">
                     <ul id="uploads-list" class="nav nav-list set-list">
-                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id1">Link</a></li>                      
-                        <div id="set-options-id1" class="collapse"> 
-                              <div class="btn-group">
+                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id1">Data Set One</a></li>                      
+                        <ul id="set-options-id1" class="collapse"> 
+                              <li class="btn-group">
                                 <a class="" href="#" title="view"><i class="icon-eye-open"></i></a>
                                 <a class="" href="#" title="save"><i class="icon-folder-close"></i></a>
                                 <a class="" href="#" title="download"><i class="icon-download-alt"></i></a>
                                 <a class="" href="#" title="favorite"><i class="icon-star-empty"></i></a>
-                              </div>
-                        </div>  <!-- end set and dropdown options -->
-                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id2">Link</a></li>                      
-                        <div id="set-options-id2" class="collapse"> 
-                              <div class="btn-group">
+                              </li>
+                        </ul>  <!-- end set and dropdown options -->
+                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id2">Data Set Two</a></li>                      
+                        <ul id="set-options-id2" class="collapse"> 
+                              <li class="btn-group">
                                 <a class="" href="#"><i class="icon-eye-open"></i></a>
                                 <a class="" href="#"><i class="icon-folder-close"></i></a>
                                 <a class="" href="#"><i class="icon-download-alt"></i></a>
                                 <a class="" href="#"><i class="icon-star-empty"></i></a>
-                              </div>
-                        </div>  <!-- end set and dropdown options -->
-                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id3">Link</a></li>                      
-                        <div id="set-options-id3" class="collapse"> 
-                              <div class="btn-group">
+                              </li>
+                        </ul>  <!-- end set and dropdown options -->
+                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id3">Data Set Three</a></li>                      
+                        <ul id="set-options-id3" class="collapse"> 
+                              <li class="btn-group">
                                 <a class="" href="#"><i class="icon-eye-open"></i></a>
                                 <a class="" href="#"><i class="icon-folder-close"></i></a>
                                 <a class="" href="#"><i class="icon-download-alt"></i></a>
                                 <a class="" href="#"><i class="icon-star-empty"></i></a>
-                              </div>
-                        </div>  <!-- end set and dropdown options -->
+                              </li>
+                        </ul>  <!-- end set and dropdown options -->
                     </ul>  <!-- end set list one -->
                     
                   </div><!--end tab set one -->
 
                   <div class="tab-pane" id="set-two">
                     <ul id="uploads-list" class="nav nav-list set-list">
-                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id4">Link</a></li>                      
-                        <div id="set-options-id4" class="collapse"> 
-                              <div class="btn-group">
+                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id4">Data Set One</a></li>                      
+                        <ul id="set-options-id4" class="collapse"> 
+                              <li class="btn-group">
                                 <a class="" href="#"><i class="icon-eye-open"></i></a>
                                 <a class="" href="#"><i class="icon-folder-close"></i></a>
                                 <a class="" href="#"><i class="icon-download-alt"></i></a>
-                                
-                              </div>
-                        </div>  <!-- end set and dropdown options -->
-                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id5">Link</a></li>                      
-                        <div id="set-options-id5" class="collapse"> 
-                              <div class="btn-group">
+                                <a class="" href="#"><i class="icon-star-empty"></i></a>
+                              </li>
+                        </ul>  <!-- end set and dropdown options -->
+                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id5">Data Set Two</a></li>                      
+                        <ul id="set-options-id5" class="collapse"> 
+                             <li class="btn-group">
                                 <a class="" href="#"><i class="icon-eye-open"></i></a>
                                 <a class="" href="#"><i class="icon-folder-close"></i></a>
                                 <a class="" href="#"><i class="icon-download-alt"></i></a>
-                               
-                              </div>
-                        </div>  <!-- end set and dropdown options -->
-                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id6">Link</a></li>                      
-                        <div id="set-options-id6" class="collapse"> 
-                              <div class="btn-group">
+                                <a class="" href="#"><i class="icon-star-empty"></i></a>
+                              </li>
+                        </ul>  <!-- end set and dropdown options -->
+                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id6">Data Set Three</a></li>                      
+                        <ul id="set-options-id6" class="collapse"> 
+                              <li class="btn-group">
                                 <a class="" href="#"><i class="icon-eye-open"></i></a>
                                 <a class="" href="#"><i class="icon-folder-close"></i></a>
                                 <a class="" href="#"><i class="icon-download-alt"></i></a>
-                               
-                              </div>
-                        </div>  <!-- end set and dropdown options -->
+                                <a class="" href="#"><i class="icon-star-empty"></i></a>
+                              </li>
+                        </ul>  <!-- end set and dropdown options -->
 
                     </ul>  <!-- end set list two -->
                   </div><!--end tab set two -->

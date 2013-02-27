@@ -52,8 +52,8 @@ ul.left-navigation li{
 	font-size: 70%;
 
 }
-.filter-btn .filterMain{
-	
+.sidebar-right .filter-btn button {
+	margin-bottom: 1em;
 }
 /*=============================================================SEARCH*/
 
@@ -86,14 +86,7 @@ button.my-close-btn{
     -moz-border-radius: 6px;
     border-radius: 6px;
 }
-/*#graph-window {
-	min-height: 240px;
-	margin: 0;
-	padding: 0;
-	background-color: inherit;
-	color: inherit;
-	width: 100%;
-}*/
+
 .viewport-display > .set-view{
 	border-bottom:1px solid #ccc;
 	min-height: 240px;
@@ -116,18 +109,27 @@ button.my-close-btn{
 	height:auto;
 /*	border:1px solid black;*/
 }
-.viewport-display .set_tools{
+.viewport-display .set_tools ul li{
+	display: inline-block;
+	padding-top: 2em;
 /*	border:1px solid black;*/
-
 }
-.set_tools ul {
+.viewport-display .set_tools ul{
+	padding-right: 2em;
+}
+.info ul li{
 	list-style: none;
 }
 .info-display .info-content{
-	margin-bottom: 10%;
+	padding-top:1em;
+	margin-bottom: 5em;
+	font-size: 90%;
 }
 .info-content li{
 	font-size: 90%;
+}
+.viewport-display .load-another {
+	margin-top: 3em;
 }
 /*=============================================================MEDIA QUERIES*/
 
