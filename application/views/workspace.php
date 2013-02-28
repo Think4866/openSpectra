@@ -41,6 +41,8 @@ require_once('../models/headerLoggedIn.php');
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png"/>
                     <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png"/>
                                    <link rel="shortcut icon" href="ico/favicon.png"/>
+
+
   </head>
 
   <body>
@@ -97,7 +99,7 @@ require_once('../models/headerLoggedIn.php');
 
             <div class="accordion" id="accordion2">
               <div class="accordion-group sortable">
-                <div class="accordion-heading" id="">
+                <div class="accordion-heading">
                   <a rel="tooltip" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
                     Saved Data Sets
                   </a>
@@ -259,9 +261,9 @@ require_once('../models/headerLoggedIn.php');
 
           <div id="toolBar-main" class="tool-bar-main">
             <ul class="nav nav-pills tool-bar">
-                <li ><a href=""><i class="icon-folder-open"></i> <span>Save</span></a></li>
-                <li ><a href="" ><i class="icon-play"></i> <span>Compare</span></a></li>
-                <li ><a href="" ><i class="icon-refresh"></i> <span>Refresh</span></a></li>
+                <li ><a href="#"><i class="icon-folder-open"></i> <span>Save</span></a></li>
+                <li ><a href="#" ><i class="icon-play"></i> <span>Compare</span></a></li>
+                <li ><a href="#" ><i class="icon-refresh"></i> <span>Refresh</span></a></li>
             </ul>
           </div>
          
@@ -295,13 +297,16 @@ require_once('../models/headerLoggedIn.php');
                   <li><a href="#"><i class="icon-pencil"></i> Other</a></li>
                 </ul>    
               </div> <!-- end filter dropup  -->
-              <ul class="nav nav-tabs my-browse-tabs">
-                <li><a href="#set-one" data-toggle="tab">Public Sets</a></li>
-                <li><a href="#set-two" data-toggle="tab">Uploads</a></li>
+
+              <ul class="nav nav-tabs my-browse-tabs" id="allSetsTabs">
+                <li><a href="#set-one" id="public-sets-title" data-toggle="tab">Public Sets</a></li>
+                <li><a href="#set-two" id="your-uploads-title" data-toggle="tab">Uploads</a></li>
               </ul>
                 <div id="myTabContent" class="tab-content">
                   <div class="tab-pane" id="set-one">
-                    <ul id="uploads-list" class="nav nav-list set-list">
+                    <ul id="public-sets-list" class="nav nav-list set-list">
+
+                      <!--
                       <li><a href="#" data-toggle="collapse" data-target="#set-options-id1">Data Set One</a></li>                      
                         <ul id="set-options-id1" class="collapse"> 
                               <li class="btn-group">
@@ -310,7 +315,7 @@ require_once('../models/headerLoggedIn.php');
                                 <a class="" href="#" title="download"><i class="icon-download-alt"></i></a>
                                 <a class="" href="#" title="favorite"><i class="icon-star-empty"></i></a>
                               </li>
-                        </ul>  <!-- end set and dropdown options -->
+                        </ul> 
                       <li><a href="#" data-toggle="collapse" data-target="#set-options-id2">Data Set Two</a></li>                      
                         <ul id="set-options-id2" class="collapse"> 
                               <li class="btn-group">
@@ -319,7 +324,7 @@ require_once('../models/headerLoggedIn.php');
                                 <a class="" href="#"><i class="icon-download-alt"></i></a>
                                 <a class="" href="#"><i class="icon-star-empty"></i></a>
                               </li>
-                        </ul>  <!-- end set and dropdown options -->
+                        </ul> 
                       <li><a href="#" data-toggle="collapse" data-target="#set-options-id3">Data Set Three</a></li>                      
                         <ul id="set-options-id3" class="collapse"> 
                               <li class="btn-group">
@@ -328,14 +333,18 @@ require_once('../models/headerLoggedIn.php');
                                 <a class="" href="#"><i class="icon-download-alt"></i></a>
                                 <a class="" href="#"><i class="icon-star-empty"></i></a>
                               </li>
-                        </ul>  <!-- end set and dropdown options -->
+                        </ul>  
+                      -->
+
                     </ul>  <!-- end set list one -->
                     
                   </div><!--end tab set one -->
 
                   <div class="tab-pane" id="set-two">
-                    <ul id="uploads-list" class="nav nav-list set-list">
-                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id4">Data Set One</a></li>                      
+                    <ul id="your-uploads-list" class="nav nav-list set-list">
+
+                      <!--
+                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id4"><span class="dataSetTitle"></span></a></li>                      
                         <ul id="set-options-id4" class="collapse"> 
                               <li class="btn-group">
                                 <a class="" href="#"><i class="icon-eye-open"></i></a>
@@ -343,7 +352,8 @@ require_once('../models/headerLoggedIn.php');
                                 <a class="" href="#"><i class="icon-download-alt"></i></a>
                                 <a class="" href="#"><i class="icon-star-empty"></i></a>
                               </li>
-                        </ul>  <!-- end set and dropdown options -->
+                        </ul>  
+
                       <li><a href="#" data-toggle="collapse" data-target="#set-options-id5">Data Set Two</a></li>                      
                         <ul id="set-options-id5" class="collapse"> 
                              <li class="btn-group">
@@ -352,7 +362,8 @@ require_once('../models/headerLoggedIn.php');
                                 <a class="" href="#"><i class="icon-download-alt"></i></a>
                                 <a class="" href="#"><i class="icon-star-empty"></i></a>
                               </li>
-                        </ul>  <!-- end set and dropdown options -->
+                        </ul>  
+
                       <li><a href="#" data-toggle="collapse" data-target="#set-options-id6">Data Set Three</a></li>                      
                         <ul id="set-options-id6" class="collapse"> 
                               <li class="btn-group">
@@ -361,7 +372,8 @@ require_once('../models/headerLoggedIn.php');
                                 <a class="" href="#"><i class="icon-download-alt"></i></a>
                                 <a class="" href="#"><i class="icon-star-empty"></i></a>
                               </li>
-                        </ul>  <!-- end set and dropdown options -->
+                        </ul>  
+                      -->
 
                     </ul>  <!-- end set list two -->
                   </div><!--end tab set two -->
@@ -504,7 +516,7 @@ require_once('../models/headerLoggedIn.php');
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery1-9.min.js"></script>
+    <script src="js/jquery-1.9.1.js"></script>
     <script src="js/bootstrap.min.js"></script>  
     <script src="js/bootstrap-fileupload.js"></script>
     <script src="js/jRespond.min.js"></script>
@@ -584,6 +596,46 @@ require_once('../models/headerLoggedIn.php');
 		console.log('This copy of Multigraph uses JQuery version ' + $().jquery);
 		
 	</script>
+
+
+  <script type="text/javascript">
+
+    $('a[data-toggle="tab"]').click(function(e) {
+      console.log($(e.target).attr('href'));
+
+      if ($(e.target).attr('href') == '#set-two') {
+        console.log("recognizing set two");
+
+        $.get("../models/load_datasets.php", { whoseSets: "yourSets" }, function(msg) {
+          rowArray = $.parseJSON(msg);
+          console.log(rowArray);
+          $('#your-uploads-list').empty();
+          for (var p=0; p<rowArray.length; p++) {
+            var thisRow = rowArray[p];
+            var set_id = thisRow['SET_ID'];
+            $('#your-uploads-list').append('<li><a href="#" data-toggle="collapse" data-target="#set-options-id' + (set_id) + '"><span id="dataset' + (set_id) + '" class="dataSetTitle">DATASET: ' + (set_id) + '</span></a></li><ul id="set-options-id' + (set_id) + '" class="collapse"><li class="btn-group"><a class="" href="#"><i class="icon-eye-open"></i></a><a class="" href="#"><i class="icon-folder-close"></i></a><a class="" href="#"><i class="icon-download-alt"></i></a><a class="" href="#"><i class="icon-star-empty"></i></a></li></ul>').show(500);
+           }
+        });
+
+
+      } else if ($(e.target).attr('href') == '#set-one') {
+        console.log("recognizing set one");
+       $.get("../models/load_datasets.php", { whoseSets: "allPublicSets" }, function(msg) {
+          rowArray = $.parseJSON(msg);
+          console.log(rowArray);
+          $('#public-sets-list').empty();
+          for (var p=0; p<rowArray.length; p++) {
+            var thisRow = rowArray[p];
+            var set_id = thisRow['SET_ID'];
+            $('#public-sets-list').append('<li><a href="#" data-toggle="collapse" data-target="#set-options-id' + (set_id) + '"><span id="dataset' + (set_id) + '" class="dataSetTitle">DATASET: ' + (set_id) + '</span></a></li><ul id="set-options-id' + (set_id) + '" class="collapse"><li class="btn-group"><a class="" href="#"><i class="icon-eye-open"></i></a><a class="" href="#"><i class="icon-folder-close"></i></a><a class="" href="#"><i class="icon-download-alt"></i></a><a class="" href="#"><i class="icon-star-empty"></i></a></li></ul>').show(500);
+          }
+        });
+      }
+
+    });
+
+  </script>
+
     
 
   </body>
