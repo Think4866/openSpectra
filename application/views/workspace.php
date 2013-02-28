@@ -516,7 +516,7 @@ require_once('../models/headerLoggedIn.php');
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery1-9.min.js"></script>
     <script src="js/bootstrap.min.js"></script>  
     <script src="js/bootstrap-fileupload.js"></script>
     <script src="js/jRespond.min.js"></script>
