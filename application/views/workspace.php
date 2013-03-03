@@ -14,7 +14,7 @@ require_once('../models/headerLoggedIn.php');
     <meta name="author" content=""/>
 
     <!-- Le styles -->
-
+    
     <link href="css/bootstrap.min.css" rel="stylesheet"/>  
     <link href="css/font-awesome.min.css" rel="stylesheet" />
     <style type="text/css">
@@ -30,6 +30,7 @@ require_once('../models/headerLoggedIn.php');
      <link href="css/bootstrap-fileupload.min.css" rel="stylesheet"/>
      <link href="css/bootstrap-scroll-modal.css" rel="stylesheet" />
      <link href="css/styles.css" rel="stylesheet"/>
+     <!-- <link href="css/bootstrap-wysihtml5-0.0.2.css" rel="stylesheet" />  --> <!-- added for fancy text editor // not working -->
     
     
 
@@ -497,10 +498,10 @@ require_once('../models/headerLoggedIn.php');
       <div id="myModalnotepad" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-header">
           <button class="btn my-close-btn" data-dismiss="modal" aria-hidden="true">×</button>
-          <h3 id="myModalLabel">Modal header</h3>
+          <h3 id="myModalLabel">Notepad</h3>
         </div>
         <div class="modal-body">
-          <p>One fine body…</p>
+          <textarea class="notepad-textarea" placeholder="Enter text ..."></textarea>
         </div>
         <div class="modal-footer">
           <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
@@ -514,12 +515,18 @@ require_once('../models/headerLoggedIn.php');
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <!-- script src="js/wysihtml5-0.3.0_rc2.js"></script>      not working // added for fancy text editor -->
     <script src="js/jquery1-9.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>  
+    <script src="js/bootstrap.min.js"></script> 
+    
     <script src="js/bootstrap-fileupload.js"></script>
-    <script src="js/bootstrap-scroll-modal.js"></script>
+    <script src="js/bootstrap-scroll-modal.js"></script>  <!-- added for scrolling modals -->
     <script src="js/jRespond.min.js"></script>
 	  <script type="text/javascript" src="http://multigraph.github.com/download/multigraph-min.js"></script>
+    <!-- script src="js/bootstrap-wysihtml5-0.0.2.js"></script>  not working //  added for fancy text editor -->
+
+
+
 
 	<script type="text/javascript">
 
@@ -634,6 +641,18 @@ require_once('../models/headerLoggedIn.php');
     });
 
   </script>
+
+  <script type="text/javascript">
+
+    $(window).on('load', function load(){
+    $('.notepad-textarea').wysihtml5();
+    
+        });
+
+    
+  </script>
+
+
 
     
 
