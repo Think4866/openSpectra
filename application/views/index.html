@@ -9,7 +9,8 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
     <style type="text/css">
       body {
         padding-top: 20px;
@@ -49,6 +50,7 @@
     </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/bootstrap-scroll-modal.css" rel="stylesheet" />
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -72,7 +74,7 @@
           <li class="active"><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
-          <li><a href="#myModal1" role="button" class="my-upload-btn" data-toggle="modal">Log In</a></li>
+          <li><a href="#myModal1" role="button" class="my-upload-btn" data-toggle="modal" data-dynamic="true">Log In</a></li>
 
         </ul>
         <h3 class="muted">Spectra View</h3>
@@ -83,7 +85,7 @@
       <div class="jumbotron">
         <h1>Spectra View</h1> <h2>lets you view, compare and organize <br /> data sets!</h2>
         <p class="lead"></p>
-        <a href="#myModal2" role="button" class="btn btn-large btn-success" data-toggle="modal">Create Account</a>
+        <a href="#myModal2" role="button" class="btn btn-large btn-success" data-toggle="modal" data-dynamic="true">Create Account</a>
       </div>
 
       <hr>
@@ -99,7 +101,7 @@
         <!-- Log in Modal -->
       <div id="myModal1" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 
-        <button type="button" class="close my-close-btn" data-dismiss="modal" aria-hidden="true">×</button>
+        <button class="btn my-close-btn" data-dismiss="modal" aria-hidden="true">×</button>
         <div class="modal-body">
 
           <form class="form-signin" action="../models/process_login.php" method="POST">
@@ -138,7 +140,7 @@
       <!-- Sign Up Modal -->
       <div id="myModal2" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 
-        <button type="button" class="close my-close-btn" data-dismiss="modal" aria-hidden="true">×</button>
+         <button class="btn my-close-btn" data-dismiss="modal" aria-hidden="true">×</button>
         <div class="modal-body my-modal-body">
 
          <form id="signup" class="form-horizontal" method="post" action="">
@@ -254,6 +256,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery1-9.min.js"></script>
     <script src="js/bootstrap.min.js"></script>   
+    <script src="js/bootstrap-scroll-modal.js"></script>
 
   </body>
 </html>

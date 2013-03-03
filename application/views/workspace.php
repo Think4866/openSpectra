@@ -15,7 +15,8 @@ require_once('../models/headerLoggedIn.php');
 
     <!-- Le styles -->
 
-    <link href="css/bootstrap.css" rel="stylesheet"/>  
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>  
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
     <style type="text/css">
       body {
         /*padding-top: 40px;*/
@@ -27,7 +28,9 @@ require_once('../models/headerLoggedIn.php');
     </style>
      <link href="css/bootstrap-responsive.css" rel="stylesheet"/>
      <link href="css/bootstrap-fileupload.min.css" rel="stylesheet"/>
+     <link href="css/bootstrap-scroll-modal.css" rel="stylesheet" />
      <link href="css/styles.css" rel="stylesheet"/>
+    
     
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -91,10 +94,10 @@ require_once('../models/headerLoggedIn.php');
             
             <ul class="nav nav-list left-navigation">   
               <!-- Button to trigger upload modal -->
-              <li><a href="#myModalupload" role="button" class="my-upload-btn" data-toggle="modal">Upload</a></li>
+              <li><a href="#myModalupload" role="button" class="my-upload-btn" data-toggle="modal" data-dynamic="true">Upload</a></li>
 
               <!-- Button to trigger notepad modal -->
-              <li><a href="#myModalnotepad" role="button" class="my-upload-btn" data-toggle="modal">Notepad</a></li>
+              <li><a href="#myModalnotepad" role="button" class="my-upload-btn" data-toggle="modal" data-dynamic="true">Notepad</a></li>
             </ul>
 
             <div class="accordion" id="accordion2">
@@ -230,11 +233,6 @@ require_once('../models/headerLoggedIn.php');
                     <li><a href="#"><i class="icon-download-alt"></i></a></li>
                    
                   </ul>
-            <!--       <ul class="row-two-tools span6">
-                    
-                    <li><a href="#"><i class="icon-info-sign"></i></a></li>
-                  
-                  </ul> -->
 
               </div>  <!-- end tools -->
 
@@ -261,7 +259,7 @@ require_once('../models/headerLoggedIn.php');
 
           <div id="toolBar-main" class="tool-bar-main">
             <ul class="nav nav-pills tool-bar">
-                <li ><a href="#"><i class="icon-folder-open"></i> <span>Save</span></a></li>
+                <li ><a href="#"><i class="icon-folder-close"></i> <span>Save</span></a></li>
                 <li ><a href="#" ><i class="icon-play"></i> <span>Compare</span></a></li>
                 <li ><a href="#" ><i class="icon-refresh"></i> <span>Refresh</span></a></li>
             </ul>
@@ -388,7 +386,7 @@ require_once('../models/headerLoggedIn.php');
 
       <!-- Modal Upload -->
       <div id="myModalupload" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <button type="button" class="close my-close-btn" data-dismiss="modal" aria-hidden="true">×</button>
+        <button lass="btn my-close-btn" data-dismiss="modal" aria-hidden="true">&times;</button>
         <div class="modal-body my-modal-body">
           <form id="signup" class="form-horizontal" method="post" action="">
             <h5 class="form-signin-heading">Upload Data</h5>
@@ -498,7 +496,7 @@ require_once('../models/headerLoggedIn.php');
       <!-- Modal Notepad -->
       <div id="myModalnotepad" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <button class="btn my-close-btn" data-dismiss="modal" aria-hidden="true">×</button>
           <h3 id="myModalLabel">Modal header</h3>
         </div>
         <div class="modal-body">
@@ -519,8 +517,9 @@ require_once('../models/headerLoggedIn.php');
     <script src="js/jquery1-9.min.js"></script>
     <script src="js/bootstrap.min.js"></script>  
     <script src="js/bootstrap-fileupload.js"></script>
+    <script src="js/bootstrap-scroll-modal.js"></script>
     <script src="js/jRespond.min.js"></script>
-	<script type="text/javascript" src="http://multigraph.github.com/download/multigraph-min.js"></script>
+	  <script type="text/javascript" src="http://multigraph.github.com/download/multigraph-min.js"></script>
 
 	<script type="text/javascript">
 

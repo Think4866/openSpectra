@@ -71,7 +71,7 @@ button.my-close-btn{
 }
 .my-modal-body{
 	max-height: 1000px;
-	overflow-y:auto;
+	/*overflow-y:scroll;*/
 }
 h5.form-signin-heading{
 	margin-top: 0;
@@ -140,14 +140,48 @@ h5.form-signin-heading{
 }
 /*=============================================================MEDIA QUERIES*/
 
-@media (min-width: 1200px) {
+@media (max-width: 979px) {
+	.viewport-display{
+		min-height: 450px;
+	}
 
-/*	.my-upload-btn{
-		margin-left:6%;
-		width:70%;
+	/*.dropdown-menu{
+		max-width: 115px !important;
+	}
+	.btn-group > ul.dropdown-menu{
+		
+		font-size: 12px;
 	}*/
+
 
 }
 
+
+@media (max-width: 768px) {
+
+	.viewport-display{
+		min-height: 600px;
+	}
+
+	.btn-group > .btn-small {
+		font-size: 10.4px;
+	}
+	/*.dropdown-menu{
+		max-width: 105px ;
+	}*/
+	.btn-group > ul.dropdown-menu{
+		
+		font-size: 12px;
+	}
+
+
+}
+
+@media (max-width: 480px) {
+
+
+
+
+}
 
 
