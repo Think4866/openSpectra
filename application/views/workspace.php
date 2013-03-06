@@ -305,77 +305,19 @@ require_once('../models/headerLoggedIn.php');
                   <div class="tab-pane" id="set-one">
                     <ul id="public-sets-list" class="nav nav-list set-list">
 
-                      <!--
-                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id1">Data Set One</a></li>                      
-                        <ul id="set-options-id1" class="collapse"> 
-                              <li class="btn-group">
-                                <a class="" href="#" title="view"><i class="icon-eye-open"></i></a>
-                                <a class="" href="#" title="save"><i class="icon-folder-close"></i></a>
-                                <a class="" href="#" title="download"><i class="icon-download-alt"></i></a>
-                                <a class="" href="#" title="favorite"><i class="icon-star-empty"></i></a>
-                              </li>
-                        </ul> 
-                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id2">Data Set Two</a></li>                      
-                        <ul id="set-options-id2" class="collapse"> 
-                              <li class="btn-group">
-                                <a class="" href="#"><i class="icon-eye-open"></i></a>
-                                <a class="" href="#"><i class="icon-folder-close"></i></a>
-                                <a class="" href="#"><i class="icon-download-alt"></i></a>
-                                <a class="" href="#"><i class="icon-star-empty"></i></a>
-                              </li>
-                        </ul> 
-                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id3">Data Set Three</a></li>                      
-                        <ul id="set-options-id3" class="collapse"> 
-                              <li class="btn-group">
-                                <a class="" href="#"><i class="icon-eye-open"></i></a>
-                                <a class="" href="#"><i class="icon-folder-close"></i></a>
-                                <a class="" href="#"><i class="icon-download-alt"></i></a>
-                                <a class="" href="#"><i class="icon-star-empty"></i></a>
-                              </li>
-                        </ul>  
-                      -->
+                      <!-- All Public Sets datasets will be displayed here -->
 
-                    </ul>  <!-- end set list one -->
-                    
-                  </div><!--end tab set one -->
+                    </ul> 
+                  </div>
 
                   <div class="tab-pane" id="set-two">
                     <ul id="your-uploads-list" class="nav nav-list set-list">
 
-                      <!--
-                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id4"><span class="dataSetTitle"></span></a></li>                      
-                        <ul id="set-options-id4" class="collapse"> 
-                              <li class="btn-group">
-                                <a class="" href="#"><i class="icon-eye-open"></i></a>
-                                <a class="" href="#"><i class="icon-folder-close"></i></a>
-                                <a class="" href="#"><i class="icon-download-alt"></i></a>
-                                <a class="" href="#"><i class="icon-star-empty"></i></a>
-                              </li>
-                        </ul>  
+                      <!-- Your Uploads datasets will be displayed here -->
 
-                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id5">Data Set Two</a></li>                      
-                        <ul id="set-options-id5" class="collapse"> 
-                             <li class="btn-group">
-                                <a class="" href="#"><i class="icon-eye-open"></i></a>
-                                <a class="" href="#"><i class="icon-folder-close"></i></a>
-                                <a class="" href="#"><i class="icon-download-alt"></i></a>
-                                <a class="" href="#"><i class="icon-star-empty"></i></a>
-                              </li>
-                        </ul>  
+                    </ul>
+                  </div>
 
-                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id6">Data Set Three</a></li>                      
-                        <ul id="set-options-id6" class="collapse"> 
-                              <li class="btn-group">
-                                <a class="" href="#"><i class="icon-eye-open"></i></a>
-                                <a class="" href="#"><i class="icon-folder-close"></i></a>
-                                <a class="" href="#"><i class="icon-download-alt"></i></a>
-                                <a class="" href="#"><i class="icon-star-empty"></i></a>
-                              </li>
-                        </ul>  
-                      -->
-
-                    </ul>  <!-- end set list two -->
-                  </div><!--end tab set two -->
                 </div><!--end tab content -->
 
           </div><!--/.well -->
@@ -480,7 +422,7 @@ require_once('../models/headerLoggedIn.php');
             </div>
 
             <div class="fileupload fileupload-new" data-provides="fileupload">
-              <span class="btn btn-small btn-file"><span class="fileupload-new">Upload Callibration Data</span><span class="fileupload-exists">Change</span><input type="file"/></span>
+              <span class="btn btn-small btn-file"><span class="fileupload-new">Upload Calibration Data</span><span class="fileupload-exists">Change</span><input type="file"/></span>
               <span class="fileupload-preview"></span>
               <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
             </div>
