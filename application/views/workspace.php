@@ -98,7 +98,7 @@ require_once('../models/headerLoggedIn.php');
               <li><a href="#myModalupload" role="button" class="my-upload-btn" data-toggle="modal" data-dynamic="true">Upload</a></li>
 
               <!-- Button to trigger notepad modal -->
-              <li><a href="#myModalnotepad" role="button" class="my-upload-btn" data-toggle="modal" data-dynamic="true">Notepad</a></li>
+              <li><a href="#myModalnotepad" role="button" class="my-notepad-btn" data-toggle="modal" data-dynamic="true">Notepad</a></li>
             </ul>
 
             <div class="accordion" id="accordion2">
@@ -284,7 +284,8 @@ require_once('../models/headerLoggedIn.php');
 
           <div class="well sidebar-nav">
             <p class="browse-title"><i class="icon-eye-open"> </i>Browse Sets</p>
-             <div class="btn-group filter-btn">
+            <a href="#myModalfilter" role="button" data-toggle="modal" data-dynamic="true" class="btn btn-small">Filter Data Sets</a>
+           <!--   <div class="btn-group filter-btn">
                 <button class="btn btn-small filterMain">Filter Results</button>
                 <button class="btn btn-small dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
 
@@ -295,7 +296,7 @@ require_once('../models/headerLoggedIn.php');
                   <li class="divider"></li>
                   <li><a href="#"><i class="icon-pencil"></i> Other</a></li>
                 </ul>    
-              </div> <!-- end filter dropup  -->
+              </div>  -->
 
               <ul class="nav nav-tabs my-browse-tabs" id="allSetsTabs">
                 <li><a href="#set-one" id="public-sets-title" data-toggle="tab">Public Sets</a></li>
@@ -455,7 +456,7 @@ require_once('../models/headerLoggedIn.php');
       <div id="myModalprofile" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-header">
           <button class="btn my-close-btn" data-dismiss="modal" aria-hidden="true">×</button>
-         
+          <h3 id="myModalLabel">Your User Profile</h3>
         </div>
         <div class="modal-body">
           <div class="well">
@@ -581,13 +582,131 @@ require_once('../models/headerLoggedIn.php');
                   </div>
               </form>
               </div>
-          </div>        
+          </div>  
+              <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>   
+              </div>      
         </div> <!-- end modal body -->
-        <div class="modal-footer">
-          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>   
+       </div><!-- end modal profile -->
+      </div> 
+
+      <!-- Modal Sort Filter -->
+      <div id="myModalfilter" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            
+            <h4>Filter By:</h4>  
         </div>
-      </div>
+        <div class="modal-body">
+          <div class="row-fluid">
+            <ul class="nav nav-pills pagination-centered">
+                <li class="active">
+                  <a href="#name" data-toggle="pill">Name</a>
+                </li>
+                <li><a href="#institution" data-toggle="pill">Institution</a></li>
+                <li><a href="#material" data-toggle="pill">Material</a></li>
+                <li><a href="#isotope" data-toggle="pill">Isotope</a></li>
+                
+
+              </ul>
+          </div>
+          <div class="row-fluid">
+            <div class="tab-content">
+              <div class="tab-pane active" id="name">
+                  <form>
+                    <div class="control-group">
+                        <label class="control-label">Name</label>
+                    <div class="controls">
+                        <div class="input-prepend">
+                      <span class="add-on"><i class="icon-user"></i></span>
+                        <input type="text" class="input-xlarge" id="name-filter" name="name-filter" placeholder="Enter Name to Filter">
+                      </div>
+                    </div>
+                  </div>
+                      <div class="controls controls-row">
+                        <select>
+                          <option>Filter Options</option>
+                          <option>Show Only</option>
+                          <option>Show All Except</option>
+                        </select>
+                      </div>
+                  <button type="submit" class="btn btn-medium">Apply Filter</button>
+                  </form>
+              </div>
+
+              <div class="tab-pane" id="institution">
+                  <form>
+                    <div class="control-group">
+                        <label class="control-label">Institution</label>
+                    <div class="controls">
+                        <div class="input-prepend">
+                      <span class="add-on"><i class="icon-home"></i></span>
+                        <input type="text" class="input-xlarge" id="name-filter" name="name-filter" placeholder="Enter Institution to Filter">
+                      </div>
+                    </div>
+                  </div>
+                      <div class="controls controls-row">
+                        <select>
+                          <option>Filter Options</option>
+                          <option>Show Only</option>
+                          <option>Show All Except</option>
+                        </select>
+                      </div>
+                  <button type="submit" class="btn btn-medium">Apply Filter</button>
+                  </form>
+              </div>
+
+              <div class="tab-pane" id="material">
+                  <form>
+                    <div class="control-group">
+                        <label class="control-label">Material</label>
+                    <div class="controls">
+                        <div class="input-prepend">
+                      <span class="add-on"><i class="icon-pencil"></i></span>
+                        <input type="text" class="input-xlarge" id="name-filter" name="name-filter" placeholder="Enter Material to Filter">
+                      </div>
+                    </div>
+                  </div>
+                      <div class="controls controls-row">
+                        <select>
+                          <option>Filter Options</option>
+                          <option>Show Only</option>
+                          <option>Show All Except</option>
+                        </select>
+                      </div>
+                  <button type="submit" class="btn btn-medium">Apply Filter</button>
+                  </form>
+              </div>
+
+              <div class="tab-pane" id="isotope">
+                  <form>
+                    <div class="control-group">
+                        <label class="control-label">Isotope</label>
+                    <div class="controls">
+                        <div class="input-prepend">
+                      <span class="add-on"><i class="icon-pencil"></i></span>
+                        <input type="text" class="input-xlarge" id="name-filter" name="name-filter" placeholder="Enter Isotope to Filter">
+                      </div>
+                    </div>
+                  </div>
+                      <div class="controls controls-row">
+                        <select>
+                          <option>Filter Options</option>
+                          <option>Show Only</option>
+                          <option>Show All Except</option>
+                        </select>
+                      </div>
+                  <button type="submit" class="btn btn-medium">Apply Filter</button>
+                  </form>
+              </div>
+
+              
+              </div>          
+            </div>
+        </div>
         
+      </div> <!-- end sort filter modal -->
+
 
     </div><!--/.fluid-container-->
 
