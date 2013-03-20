@@ -68,7 +68,7 @@ require_once('../models/headerLoggedIn.php');
                 <span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
-                <li><a href="#">Profile</a></li>
+                <li><a href="#myModalprofile" role="" class="my-profile-modal" data-toggle="modal" data-dynamic="true">Profile</a></li>
                 <li class="divider"></li>
                 <li><a href="../models/logout.php">Logout</a></li>
               </ul>
@@ -276,7 +276,7 @@ require_once('../models/headerLoggedIn.php');
           <div class="controls">
             <div class="input-prepend">
               <span class="add-on"><i class="icon-search"></i></span>
-              <input class="span9 search-bar" id="inputIcon" type="text"/>
+              <input class="span9 search-bar" id="inputIcon" type="text" placeholder="Search for Data Sets"/>
             </div>
           </div>
         </div>
@@ -299,7 +299,7 @@ require_once('../models/headerLoggedIn.php');
 
               <ul class="nav nav-tabs my-browse-tabs" id="allSetsTabs">
                 <li><a href="#set-one" id="public-sets-title" data-toggle="tab">Public Sets</a></li>
-                <li><a href="#set-two" id="your-uploads-title" data-toggle="tab">Uploads</a></li>
+                <li><a href="#set-two" id="your-uploads-title" data-toggle="tab">Your Uploads</a></li>
               </ul>
                 <div id="myTabContent" class="tab-content">
                   <div class="tab-pane" id="set-one">
@@ -450,6 +450,143 @@ require_once('../models/headerLoggedIn.php');
           <button class="btn btn-primary">Save changes</button>
         </div>
       </div>
+
+      <!-- Modal Profile -->
+      <div id="myModalprofile" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button class="btn my-close-btn" data-dismiss="modal" aria-hidden="true">×</button>
+         
+        </div>
+        <div class="modal-body">
+          <div class="well">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#home" data-toggle="tab">Profile</a></li>
+              <li><a href="#profile" data-toggle="tab">Password</a></li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+              <div class="tab-pane active in" id="home">
+                <form id="tab">
+                    <div class="control-group">
+                <label class="control-label">Prefix</label>
+              <div class="controls">
+                <select class="span1">
+                  <option>   </option>
+                  <option>Dr.</option>
+                  <option>Mrs.</option>
+                  <option>Mr.</option>
+                  <option>Ms.</option>
+                  <option>Miss</option>
+                </select>
+              </div>
+            </div>
+            <div class="control-group">
+                  <label class="control-label">First Name</label>
+              <div class="controls">
+                  <div class="input-prepend">
+                <span class="add-on"><i class="icon-user"></i></span>
+                  <input type="text" class="input-xlarge" id="fname" name="fname" placeholder="First Name">
+                </div>
+              </div>
+            </div>
+            <div class="control-group ">
+                  <label class="control-label">Last Name</label>
+              <div class="controls">
+                  <div class="input-prepend">
+                <span class="add-on"><i class="icon-user"></i></span>
+                  <input type="text" class="input-xlarge" id="lname" name="lname" placeholder="Last Name">
+                </div>
+              </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">Suffix</label>
+              <div class="controls">
+                <div class="input-prepend">
+                <span class="add-on"><i class="icon-user"></i></span>
+                  <input type="text" class="input-mini" id="suffix" name="suffix" placeholder="Suffix">
+                </div>
+              </div>
+            </div>
+            <div class="control-group ">
+                  <label class="control-label">Institution</label>
+              <div class="controls">
+                  <div class="input-prepend">
+                <span class="add-on"><i class="icon-home"></i></span>
+                  <input type="text" class="input-xlarge" id="institution" name="institution" placeholder="Institution">
+                </div>
+              </div>
+            </div>
+            <div class="control-group">
+                  <label class="control-label">Email</label>
+              <div class="controls">
+                  <div class="input-prepend">
+                <span class="add-on"><i class="icon-envelope"></i></span>
+                  <input type="text" class="input-xlarge" id="email" name="email" placeholder="Email">
+                </div>
+              </div>
+            </div>
+            <div class="control-group ">
+                  <label class="control-label">User Name</label>
+              <div class="controls">
+                  <div class="input-prepend">
+                <span class="add-on"><i class="icon-user"></i></span>
+                  <input type="text" class="input-xlarge" id="uname" name="uname" placeholder="Create a Username">
+                </div>
+              </div>
+            </div>
+                    <label>Time Zone</label>
+                    <select name="DropDownTimezone" id="DropDownTimezone" class="input-xlarge">
+                      <option value="-12.0">(GMT -12:00) Eniwetok, Kwajalein</option>
+                      <option value="-11.0">(GMT -11:00) Midway Island, Samoa</option>
+                      <option value="-10.0">(GMT -10:00) Hawaii</option>
+                      <option value="-9.0">(GMT -9:00) Alaska</option>
+                      <option selected="selected" value="-8.0">(GMT -8:00) Pacific Time (US & Canada)</option> <!-- selected -->
+                      <option value="-7.0">(GMT -7:00) Mountain Time (US & Canada)</option>
+                      <option value="-6.0">(GMT -6:00) Central Time (US & Canada), Mexico City</option>
+                      <option value="-5.0">(GMT -5:00) Eastern Time (US & Canada), Bogota, Lima</option>
+                      <option value="-4.0">(GMT -4:00) Atlantic Time (Canada), Caracas, La Paz</option>
+                      <option value="-3.5">(GMT -3:30) Newfoundland</option>
+                      <option value="-3.0">(GMT -3:00) Brazil, Buenos Aires, Georgetown</option>
+                      <option value="-2.0">(GMT -2:00) Mid-Atlantic</option>
+                      <option value="-1.0">(GMT -1:00 hour) Azores, Cape Verde Islands</option>
+                      <option value="0.0">(GMT) Western Europe Time, London, Lisbon, Casablanca</option>
+                      <option value="1.0">(GMT +1:00 hour) Brussels, Copenhagen, Madrid, Paris</option>
+                      <option value="2.0">(GMT +2:00) Kaliningrad, South Africa</option>
+                      <option value="3.0">(GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg</option>
+                      <option value="3.5">(GMT +3:30) Tehran</option>
+                      <option value="4.0">(GMT +4:00) Abu Dhabi, Muscat, Baku, Tbilisi</option>
+                      <option value="4.5">(GMT +4:30) Kabul</option>
+                      <option value="5.0">(GMT +5:00) Ekaterinburg, Islamabad, Karachi, Tashkent</option>
+                      <option value="5.5">(GMT +5:30) Bombay, Calcutta, Madras, New Delhi</option>
+                      <option value="5.75">(GMT +5:45) Kathmandu</option>
+                      <option value="6.0">(GMT +6:00) Almaty, Dhaka, Colombo</option>
+                      <option value="7.0">(GMT +7:00) Bangkok, Hanoi, Jakarta</option>
+                      <option value="8.0">(GMT +8:00) Beijing, Perth, Singapore, Hong Kong</option>
+                      <option value="9.0">(GMT +9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk</option>
+                      <option value="9.5">(GMT +9:30) Adelaide, Darwin</option>
+                      <option value="10.0">(GMT +10:00) Eastern Australia, Guam, Vladivostok</option>
+                      <option value="11.0">(GMT +11:00) Magadan, Solomon Islands, New Caledonia</option>
+                      <option value="12.0">(GMT +12:00) Auckland, Wellington, Fiji, Kamchatka</option>
+                  </select>
+                    <div>
+                      <button class="btn btn-primary">Update</button>
+                  </div>
+                </form>
+              </div>
+              <div class="tab-pane fade" id="profile">
+              <form id="tab2">
+                  <label>New Password</label>
+                  <input type="password" class="input-xlarge">
+                  <div>
+                      <button class="btn btn-primary">Update</button>
+                  </div>
+              </form>
+              </div>
+          </div>        
+        </div> <!-- end modal body -->
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>   
+        </div>
+      </div>
         
 
     </div><!--/.fluid-container-->
@@ -584,7 +721,7 @@ require_once('../models/headerLoggedIn.php');
 
   </script>
 
-  <script type="text/javascript">
+  <script type="text/javascript">  //this is currently non-functional
 
     $(window).on('load', function load(){
     $('.notepad-textarea').wysihtml5();
