@@ -14,7 +14,8 @@ require_once('../models/headerLoggedIn.php');
     <meta name="author" content=""/>
 
     <!-- Le styles -->
-    
+    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700' rel='stylesheet' type='text/css'>
     <link href="css/bootstrap.min.css" rel="stylesheet"/>  
     <link href="css/font-awesome.min.css" rel="stylesheet" />
     <style type="text/css">
@@ -52,7 +53,7 @@ require_once('../models/headerLoggedIn.php');
   <body>
 
     <!-- topbar starts -->
-    <div class="navbar">
+    <div class="my-navbar navbar">
       <div class="navbar-inner my-navbar-inner">
         <div class="container-fluid">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".top-nav.nav-collapse,.sidebar-nav.nav-collapse">
@@ -63,7 +64,7 @@ require_once('../models/headerLoggedIn.php');
             <!-- user dropdown starts -->
             <div class="btn-group pull-right">
 
-              <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+              <a class="btn  dropdown-toggle" data-toggle="dropdown" href="#">
                 <i class="icon-user"></i><span class="hidden-phone"> Welcome, <?php echo $CC_USER_NAME; ?></span>
                 <span class="caret"></span>
               </a>
@@ -92,20 +93,21 @@ require_once('../models/headerLoggedIn.php');
         
         <div class="span2">
           <div class="well sidebar-nav sidebar-left">
+            <p class="dashboard-title"><i class="icon-dashboard"> </i>Dashboard</p>
             
             <ul class="nav nav-list left-navigation">   
               <!-- Button to trigger upload modal -->
-              <li><a href="#myModalupload" role="button" class="my-upload-btn" data-toggle="modal" data-dynamic="true">Upload</a></li>
+              <li><a href="#myModalupload" role="button" class="my-upload-btn" data-toggle="modal" data-dynamic="true"><i class="icon-upload"> </i>Upload</a></li>
 
               <!-- Button to trigger notepad modal -->
-              <li><a href="#myModalnotepad" role="button" class="my-notepad-btn" data-toggle="modal" data-dynamic="true">Notepad</a></li>
+              <li><a href="#myModalnotepad" role="button" class="my-notepad-btn" data-toggle="modal" data-dynamic="true"><i class="icon-pencil"></i>Notepad</a></li>
             </ul>
 
             <div class="accordion" id="accordion2">
               <div class="accordion-group sortable">
                 <div class="accordion-heading">
                   <a rel="tooltip" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                    Saved Data Sets
+                    <i class="icon-briefcase"> </i>Saved Data Sets
                   </a>
                 </div>
                 <div id="collapseOne" class="accordion-body collapse">
@@ -128,7 +130,7 @@ require_once('../models/headerLoggedIn.php');
               <div class="accordion-group">
                 <div class="accordion-heading">
                   <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-                    Saved Comparisons
+                    <i class="icon-briefcase"> </i>Saved Comparisons
                   </a>
                 </div>
                 <div id="collapseTwo" class="accordion-body collapse">
@@ -150,7 +152,7 @@ require_once('../models/headerLoggedIn.php');
               <div class="accordion-group">
                 <div class="accordion-heading">
                   <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-                    Favorites
+                    <i class="icon-star"> </i>Favorites
                   </a>
                 </div>
                 <div id="collapseThree" class="accordion-body collapse">
@@ -173,7 +175,7 @@ require_once('../models/headerLoggedIn.php');
               <div class="accordion-group">
                 <div class="accordion-heading">
                   <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
-                    History
+                    <i class="icon-calendar"> </i>History
                   </a>
                 </div>
                 <div id="collapseFour" class="accordion-body collapse">
@@ -244,11 +246,11 @@ require_once('../models/headerLoggedIn.php');
             <div class="set-2-empty span12">
               <section class="load-another span12">
                 <div class="btn-toolbar pagination-centered">
-                  <div class="btn-group">
+                  <div class="">
                     <label>Add Another Set</label>
-                    <a href="#" class="btn"><i class="icon-folder-open"></i> <strong>Choose</strong></a>
-                    <a href="#" class="btn"><i class="icon-eye-open"></i> <strong>Browse</strong></a>
-                    <a href="#" class="btn"><i class="icon-arrow-up"></i> <strong>Upload</strong></a>
+                    <a href="#" class="btn btn-custom"><i class="icon-folder-open"></i> <strong>Choose</strong></a>
+                   <!--  <a href="#" class="btn"><i class="icon-eye-open"></i> <strong>Browse</strong></a> -->
+                    <a href="#" class="btn btn-custom"><i class="icon-arrow-up"></i> <strong>Upload</strong></a>
                   </div>
                 </div>
               </section>
@@ -259,7 +261,7 @@ require_once('../models/headerLoggedIn.php');
           </div>   <!-- end viewport display -->
 
           <div id="toolBar-main" class="tool-bar-main">
-            <ul class="nav nav-pills tool-bar">
+            <ul class="nav btn-custom nav-pills tool-bar">
                 <li ><a href="#"><i class="icon-folder-close"></i> <span>Save</span></a></li>
                 <li ><a href="#" ><i class="icon-play"></i> <span>Compare</span></a></li>
                 <li ><a href="#" ><i class="icon-refresh"></i> <span>Refresh</span></a></li>
@@ -274,17 +276,17 @@ require_once('../models/headerLoggedIn.php');
         <div class="control-group span2">
           <label class="control-label" for="inputIcon"></label>
           <div class="controls">
-            <div class="input-prepend">
+            <div class="input-prepend search-bar">
               <span class="add-on"><i class="icon-search"></i></span>
-              <input class="span9 search-bar" id="inputIcon" type="text" placeholder="Search for Data Sets"/>
+              <input class="span9 search-bar" id="inputIcon" type="text" placeholder="Search"/>
             </div>
           </div>
         </div>
         <div class="span2 sidebar-right">
 
           <div class="well sidebar-nav">
-            <p class="browse-title"><i class="icon-eye-open"> </i>Browse Sets</p>
-            <a href="#myModalfilter" role="button" data-toggle="modal" data-dynamic="true" class="btn btn-small">Filter Data Sets</a>
+            <p class="browse-title"><i class="icon-eye-open"> </i>Browse Data Sets</p>
+            <!-- <a href="#myModalfilter" role="button" data-toggle="modal" data-dynamic="true" class="btn-custom btn btn-medium pagination-centered">Filter</a> -->
            <!--   <div class="btn-group filter-btn">
                 <button class="btn btn-small filterMain">Filter Results</button>
                 <button class="btn btn-small dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
@@ -298,9 +300,10 @@ require_once('../models/headerLoggedIn.php');
                 </ul>    
               </div>  -->
 
-              <ul class="nav nav-tabs my-browse-tabs" id="allSetsTabs">
-                <li><a href="#set-one" id="public-sets-title" data-toggle="tab">Public Sets</a></li>
-                <li><a href="#set-two" id="your-uploads-title" data-toggle="tab">Your Uploads</a></li>
+              <ul class="nav nav-tabs my-browse-tabs nav-stacked" id="allSetsTabs">
+                <li><a href="#myModalfilter" role="button" data-toggle="modal" data-dynamic="true" class=""><i class="icon-sort"> </i>Filter</a></li>
+                <li><a href="#set-one" id="public-sets-title" data-toggle="tab"><i class="icon-file"> </i>Public Sets</a></li>
+                <li><a href="#set-two" id="your-uploads-title" data-toggle="tab"><i class="icon-circle-arrow-up"> </i>Your Uploads</a></li>
               </ul>
                 <div id="myTabContent" class="tab-content">
                   <div class="tab-pane" id="set-one">
@@ -603,12 +606,8 @@ require_once('../models/headerLoggedIn.php');
                 <li class="active">
                   <a href="#name" data-toggle="pill">Name</a>
                 </li>
-                <li><a href="#institution" data-toggle="pill">Institution</a></li>
-                <li><a href="#material" data-toggle="pill">Material</a></li>
                 <li><a href="#isotope" data-toggle="pill">Isotope</a></li>
-                
-
-              </ul>
+            </ul>
           </div>
           <div class="row-fluid">
             <div class="tab-content">
@@ -620,50 +619,6 @@ require_once('../models/headerLoggedIn.php');
                         <div class="input-prepend">
                       <span class="add-on"><i class="icon-user"></i></span>
                         <input type="text" class="input-xlarge" id="name-filter" name="name-filter" placeholder="Enter Name to Filter">
-                      </div>
-                    </div>
-                  </div>
-                      <div class="controls controls-row">
-                        <select>
-                          <option>Filter Options</option>
-                          <option>Show Only</option>
-                          <option>Show All Except</option>
-                        </select>
-                      </div>
-                  <button type="submit" class="btn btn-medium">Apply Filter</button>
-                  </form>
-              </div>
-
-              <div class="tab-pane" id="institution">
-                  <form>
-                    <div class="control-group">
-                        <label class="control-label">Institution</label>
-                    <div class="controls">
-                        <div class="input-prepend">
-                      <span class="add-on"><i class="icon-home"></i></span>
-                        <input type="text" class="input-xlarge" id="name-filter" name="name-filter" placeholder="Enter Institution to Filter">
-                      </div>
-                    </div>
-                  </div>
-                      <div class="controls controls-row">
-                        <select>
-                          <option>Filter Options</option>
-                          <option>Show Only</option>
-                          <option>Show All Except</option>
-                        </select>
-                      </div>
-                  <button type="submit" class="btn btn-medium">Apply Filter</button>
-                  </form>
-              </div>
-
-              <div class="tab-pane" id="material">
-                  <form>
-                    <div class="control-group">
-                        <label class="control-label">Material</label>
-                    <div class="controls">
-                        <div class="input-prepend">
-                      <span class="add-on"><i class="icon-pencil"></i></span>
-                        <input type="text" class="input-xlarge" id="name-filter" name="name-filter" placeholder="Enter Material to Filter">
                       </div>
                     </div>
                   </div>
@@ -704,7 +659,7 @@ require_once('../models/headerLoggedIn.php');
               </div>          
             </div>
         </div>
-        
+
       </div> <!-- end sort filter modal -->
 
 
