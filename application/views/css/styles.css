@@ -5,9 +5,9 @@ a{
 	color:#F2B017;
 }
 body{
-	/*background: #fff;*/
-	background-color: #585858;
-	font-family: 'Oxygen';
+	background: #fff;
+	/*background-color: #585858;
+*/	font-family: 'Oxygen';
 }
 .well {
 	/*background: #fff;*/
@@ -54,8 +54,8 @@ body{
   background-image: -webkit-linear-gradient(top, #383838, #0a0a0a);
   background-image: -o-linear-gradient(top, #383838, #0a0a0a);
   background-image: linear-gradient(#383838, #0a0a0a);
- /* border-color: #0a0a0a #0a0a0a hsl(0, 0%, -0.5%);*/
-	border-bottom:none;
+  border-color: #0a0a0a #0a0a0a hsl(0, 0%, -0.5%);
+
 	border-top: none;
 	border-right:none;
 	border-left: none;
@@ -84,6 +84,7 @@ body{
 .navbar .nav>li>a{
 	text-shadow:none;
 	letter-spacing: 1px;
+	color:#2b8685;
 }
 .top-nav {
 	max-width: 285px;
@@ -280,10 +281,11 @@ body{
 /*====================================================right*/
 .sidebar-right .well
 {
-/*	padding-top: 77px;
-	margin-top: -71px;*/
-	border-radius: 5px 0 0px 5px;
-	margin-top: 9px;
+	border-radius: 0 0 0 5px;
+	padding-top: 90px;
+	margin-top: -70px;
+/*	border-radius: 5px 0 0px 5px;
+	margin-top: 9px;*/
 }
 .sidebar-right p.browse-title, i {
 	text-align: center;
@@ -303,7 +305,7 @@ body{
 	font-weight: normal;
 	margin-bottom: 0px;
 	margin-top: -10px;
-	border-radius:5px 0 0 0 ;
+	/*border-radius:5px 0 0 0 ;*/
 }
 .sidebar-right p.browse-title i{
 	font-size: 16px;
@@ -340,7 +342,8 @@ body{
 }
 /*=============================================================SEARCH*/
 .search-bar input[type="text"]{
-	background-color: #333333;
+	/*background-color: #333333;*/
+	background: #4d4d4d;
 	color:#eee;
 	border: none;
 }
@@ -355,10 +358,11 @@ input.searchMain{
 .search-bar{
 	position: relative;
 	z-index: 100;
-	/*margin-left: 10px;*/
+	margin-left: 10px;
 }
 .input-append .add-on, .input-prepend .add-on{
-	background-color: #333333;
+	/*background-color: #333333;*/
+	background-color:#4d4d4d;
 	color:#4d4d4d;
 	border-top:none;
 	border-bottom:none;
@@ -397,7 +401,7 @@ h5.form-signin-heading{
     line-height: 30px;
     color: inherit;
     /*background-color: #fff;*/
-    background-color: #f9f9f9;
+    background-color: #e9e9e9;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px;
