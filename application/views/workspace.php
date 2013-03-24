@@ -77,7 +77,7 @@ require_once('../models/headerLoggedIn.php');
             </div><!-- user dropdown ends -->
             <div class="top-nav nav-collapse">
               <ul class="nav">
-                <li><a href="#">SpectraView</a></li>
+               <!--  <li><a href="#">SpectraView</a></li> -->
                 <li class="active"><a href="#" >Workspace</a></li>
                 <li><a href="#">Settings</a></li>
                 <li><a href="#">Help</a></li>
@@ -93,7 +93,12 @@ require_once('../models/headerLoggedIn.php');
         
         <div class="span2">
           <div class="well sidebar-nav sidebar-left">
-            <p class="dashboard-title"><i class="icon-dashboard"> </i>Dashboard</p>
+
+             <ul class="nav logo-header">
+                <li><a href="#">SpectraView</a></li>
+              </ul>
+            <p class="dashboard-title"><!-- <i class="icon-dashboard"> </i> -->Dashboard</p>
+
             
             <ul class="nav nav-list left-navigation">   
               <!-- Button to trigger upload modal -->
@@ -273,7 +278,8 @@ require_once('../models/headerLoggedIn.php');
         <!-- begin right sidebar -->
 
         
-        <div class="control-group span2">
+        <div class="control-group span2 search-bar">
+          
           <label class="control-label" for="inputIcon"></label>
           <div class="controls">
             <div class="input-prepend search-bar">
@@ -285,20 +291,7 @@ require_once('../models/headerLoggedIn.php');
         <div class="span2 sidebar-right">
 
           <div class="well sidebar-nav">
-            <p class="browse-title"><i class="icon-eye-open"> </i>Browse Data Sets</p>
-            <!-- <a href="#myModalfilter" role="button" data-toggle="modal" data-dynamic="true" class="btn-custom btn btn-medium pagination-centered">Filter</a> -->
-           <!--   <div class="btn-group filter-btn">
-                <button class="btn btn-small filterMain">Filter Results</button>
-                <button class="btn btn-small dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-
-                <ul class="dropdown-menu">
-                  <li><a href="#"><i class="icon-user"></i> Name</a></li>
-                  <li><a href="#"><i class="icon-pencil"></i> Material</a></li>
-                  <li><a href="#"><i class="icon-home"></i> Institution</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#"><i class="icon-pencil"></i> Other</a></li>
-                </ul>    
-              </div>  -->
+            <p class="browse-title"><!-- <i class="icon-eye-open"> </i> -->Browse Data Sets</p>
 
               <ul class="nav nav-tabs my-browse-tabs nav-stacked" id="allSetsTabs">
                 <li><a href="#myModalfilter" role="button" data-toggle="modal" data-dynamic="true" class=""><i class="icon-sort"> </i>Filter</a></li>
@@ -329,7 +322,7 @@ require_once('../models/headerLoggedIn.php');
         </div><!--/span-->
       </div><!--/row-->
 
-            <hr />
+            <!-- <hr /> -->
 
       <!-- Modal Upload -->
       <div id="myModalupload" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
