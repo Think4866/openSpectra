@@ -50,7 +50,7 @@ require_once('../models/headerLoggedIn.php');
 
   </head>
 
-  <body>
+  <body class="workspace-body">
 
     <!-- topbar starts -->
     <div class="my-navbar navbar">

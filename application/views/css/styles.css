@@ -8,10 +8,15 @@ a:hover{
 	color:#f9f9f9;
 }
 body{
-	/*background: #fff;*/
+	background: #fff;
 	/*background-color: #585858;*/
-	background: #5d5d5d;
+	
+	/*background-size: 200px 200px;*/
 	font-family: 'Oxygen';
+}
+body.workspace-body{
+	background: url('../img/bkgd-2.png') repeat top left transparent;
+
 }
 .well {
 	/*background: #fff;*/
