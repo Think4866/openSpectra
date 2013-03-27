@@ -213,7 +213,7 @@ require_once('../models/headerLoggedIn.php');
               <!--   load graph here -->
 
             </div>
-            <div id="set-info" class="info span6">
+            <div id="set-info" class="info span6">           <!-- set info display -->
 
               <div id="display-info" class="info-display span12">
                 <section class="info-content span11 offset1">
@@ -243,7 +243,7 @@ require_once('../models/headerLoggedIn.php');
                   <ul class="row-one-tools pull-right">
                     <li><a href="#"><i class="icon-pencil"></i></a></li>
                     <li><a href="#"><i class="icon-star-empty"></i></a></li>
-                    <li><a href="#"><i class="icon-folder-close"></i></a></li>
+                    <li><a href="#"><i class="icon-save"></i></a></li>
                     <li><a href="#"><i class="icon-remove"></i></a></li>
                     <li><a href="#"><i class="icon-download-alt"></i></a></li>
                    
@@ -274,7 +274,7 @@ require_once('../models/headerLoggedIn.php');
 
           <div id="toolBar-main" class="tool-bar-main">
             <ul class="nav btn-custom nav-pills tool-bar">
-                <li ><a href="#"><i class="icon-folder-close"></i> <span>Save</span></a></li>
+                <li ><a href="#"><i class="icon-save"></i> <span>Save</span></a></li>
                 <li ><a href="#" ><i class="icon-play"></i> <span>Compare</span></a></li>
                 <li ><a href="#" ><i class="icon-refresh"></i> <span>Refresh</span></a></li>
             </ul>
@@ -668,7 +668,6 @@ require_once('../models/headerLoggedIn.php');
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <!-- script src="js/wysihtml5-0.3.0_rc2.js"></script>      not working // added for fancy text editor -->
     <script src="js/jquery1-9.min.js"></script>
     <script src="js/bootstrap.min.js"></script> 
     
@@ -676,7 +675,8 @@ require_once('../models/headerLoggedIn.php');
     <script src="js/bootstrap-scroll-modal.js"></script>  <!-- added for scrolling modals -->
     <script src="js/jRespond.min.js"></script>
 	  <script type="text/javascript" src="http://multigraph.github.com/download/multigraph-min.js"></script>
-    <!-- script src="js/bootstrap-wysihtml5-0.0.2.js"></script>  not working //  added for fancy text editor -->
+    <script type="text/javascript" src="js/scripts.js"></script>
+    
 
 
 
@@ -759,51 +759,43 @@ require_once('../models/headerLoggedIn.php');
 
   <script type="text/javascript">
 
-    $('a[data-toggle="tab"]').click(function(e) {
-      console.log($(e.target).attr('href'));
+    // $('a[data-toggle="tab"]').click(function(e) {
+    //   console.log($(e.target).attr('href'));
 
-      if ($(e.target).attr('href') == '#set-two') {
-        console.log("recognizing set two");
+    //   if ($(e.target).attr('href') == '#set-two') {
+    //     console.log("recognizing set two");
 
-        $.get("../models/load_datasets.php", { whoseSets: "yourSets" }, function(msg) {
-          rowArray = $.parseJSON(msg);
-          console.log(rowArray);
-          $('#your-uploads-list').empty();
-          for (var p=0; p<rowArray.length; p++) {
-            var thisRow = rowArray[p];
-            var set_id = thisRow['SET_ID'];
-            $('#your-uploads-list').append('<li><a href="#" data-toggle="collapse" data-target="#set-options-id' + (set_id) + '"><span id="dataset' + (set_id) + '" class="dataSetTitle">DATASET: ' + (set_id) + '</span></a></li><ul id="set-options-id' + (set_id) + '" class="collapse"><li class="btn-group"><a class="" href="#"><i class="icon-eye-open"></i></a><a class="" href="#"><i class="icon-folder-close"></i></a><a class="" href="#"><i class="icon-download-alt"></i></a><a class="" href="#"><i class="icon-star-empty"></i></a></li></ul>').show(500);
-           }
-        });
+    //     $.get("../models/load_datasets.php", { whoseSets: "yourSets" }, function(msg) {
+    //       rowArray = $.parseJSON(msg);
+    //       console.log(rowArray);
+    //       $('#your-uploads-list').empty();
+    //       for (var p=0; p<rowArray.length; p++) {
+    //         var thisRow = rowArray[p];
+    //         var set_id = thisRow['SET_ID'];
+    //         $('#your-uploads-list').append('<li><a href="#" data-toggle="collapse" data-target="#set-options-id' + (set_id) + '"><span id="dataset' + (set_id) + '" class="dataSetTitle">DATASET: ' + (set_id) + '</span></a></li><ul id="set-options-id' + (set_id) + '" class="collapse"><li class="btn-group"><a class="" href="#"><i class="icon-eye-open"></i></a><a class="" href="#"><i class="icon-star-empty"></i></a></li></ul>').show(500);
+    //        }
+    //     });
 
 
-      } else if ($(e.target).attr('href') == '#set-one') {
-        console.log("recognizing set one");
-       $.get("../models/load_datasets.php", { whoseSets: "allPublicSets" }, function(msg) {
-          rowArray = $.parseJSON(msg);
-          console.log(rowArray);
-          $('#public-sets-list').empty();
-          for (var p=0; p<rowArray.length; p++) {
-            var thisRow = rowArray[p];
-            var set_id = thisRow['SET_ID'];
-            $('#public-sets-list').append('<li><a href="#" data-toggle="collapse" data-target="#set-options-id' + (set_id) + '"><span id="dataset' + (set_id) + '" class="dataSetTitle">DATASET: ' + (set_id) + '</span></a></li><ul id="set-options-id' + (set_id) + '" class="collapse"><li class="btn-group"><a class="" href="#"><i class="icon-eye-open"></i></a><a class="" href="#"><i class="icon-folder-close"></i></a><a class="" href="#"><i class="icon-download-alt"></i></a><a class="" href="#"><i class="icon-star-empty"></i></a></li></ul>').show(500);
-          }
-        });
-      }
+    //   } else if ($(e.target).attr('href') == '#set-one') {
+    //     console.log("recognizing set one");
+    //    $.get("../models/load_datasets.php", { whoseSets: "allPublicSets" }, function(msg) {
+    //       rowArray = $.parseJSON(msg);
+    //       console.log(rowArray);
+    //       $('#public-sets-list').empty();
+    //       for (var p=0; p<rowArray.length; p++) {
+    //         var thisRow = rowArray[p];
+    //         var set_id = thisRow['SET_ID'];
+    //         $('#public-sets-list').append('<li><a href="#" data-toggle="collapse" data-target="#set-options-id' + (set_id) + '"><span id="dataset' + (set_id) + '" class="dataSetTitle">DATASET: ' + (set_id) + '</span></a></li><ul id="set-options-id' + (set_id) + '" class="collapse"><li class="btn-group"><a class="" href="#"><i class="icon-eye-open"></i></a><a class="" href="#"><i class="icon-folder-close"></i></a><a class="" href="#"><i class="icon-download-alt"></i></a><a class="" href="#"><i class="icon-star-empty"></i></a></li></ul>').show(500);
+    //       }
+    //     });
+    //   }
 
-    });
+    // });
 
   </script>
 
-  <script type="text/javascript">  //this is currently non-functional
 
-    $(window).on('load', function load(){
-    $('.notepad-textarea').wysihtml5();
-    
-        });
-
-    
-  </script>
 
 
 
