@@ -91,13 +91,13 @@ require_once('../models/headerLoggedIn.php');
     <div class="container-fluid my-container-fluid">
       <div class="row-fluid">
         
-        <div class="span2">
+        <div class="span2">                  <!-- left sidebar begins -->
           <div class="well sidebar-nav sidebar-left">
 
              <ul class="nav logo-header">
                 <li><a href="#">SpectraView</a></li>
               </ul>
-            <p class="dashboard-title"><!-- <i class="icon-dashboard"> </i> -->Dashboard</p>
+            <p class="dashboard-title">Dashboard</p>
 
             
             <ul class="nav nav-list left-navigation">   
@@ -203,7 +203,7 @@ require_once('../models/headerLoggedIn.php');
           </div><!--/.well -->
         </div><!--/span 2-->
 
-        <div class="span8">
+        <div class="span8">    <!-- viewport begins -->
           
           <div id="viewport" class="viewport-display">
            
@@ -216,19 +216,26 @@ require_once('../models/headerLoggedIn.php');
             <div id="set-info" class="info span6">
 
               <div id="display-info" class="info-display span12">
-                <section class="info-content span10 offset2">
+                <section class="info-content span11 offset1">
                     <ul class="set-info span6">
-                      <li>name</li>
-                      <li>material</li>
-                      <li>date uploaded</li>
-                      <li>institution</li>
+                      <li>Name: <span class="info-data">User Name</span></li>
+                      <li>Material: <span class="info-data">Data Set Material</span></li>
+                      <li>Date Uploaded: <span class="info-data">03/20/2013</span></li>
+                      <li>Institution: <span class="info-data">UNCA</span></li>
                     </ul>
-                    <ul class="set-info-other span6">
-                      <li>callibration</li>
-                      <li>isotope</li>
-                      <li>molecular formula</li>
-                      <li>other info</li>
+                    <ul class="set-info span6">
+                      <li>Callibration</li>
+                      <li>Isotope</li>
+                      <li>Molecular Formula</li>
+                      <li id="uploaded-notes-show"><a href=""><i class="icon-eye-open"></i>Show Notes</a></li>
                     </ul>
+                    
+                      <div class="span11 offset1 uploaded-notes">
+                        <p>These are the notes uploaded by the user. We should have a button to show and hide these notes.
+                          These are the notes uploaded by the user. We should have a button to show and hide these notes.
+                          These are the notes uploaded by the user. We should have a button to show and hide these notes.</p>
+                      </div>
+                    
                 </section>
               </div>
 
@@ -250,11 +257,11 @@ require_once('../models/headerLoggedIn.php');
 
             <div class="set-2-empty span12">
               <section class="load-another span12">
-                <div class="btn-toolbar pagination-centered">
+                <div id="add-another-btns" class="btn-toolbar pagination-centered">
                   <div class="">
                     <label>Add Another Set</label>
                     <a href="#" class="btn btn-custom"><i class="icon-folder-open"></i> <strong>Choose</strong></a>
-                   <!--  <a href="#" class="btn"><i class="icon-eye-open"></i> <strong>Browse</strong></a> -->
+                   
                     <a href="#" class="btn btn-custom"><i class="icon-arrow-up"></i> <strong>Upload</strong></a>
                   </div>
                 </div>

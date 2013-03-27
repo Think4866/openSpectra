@@ -6,11 +6,11 @@ a{
 }
 a:hover{
 	color:#f9f9f9;
+	text-decoration: none;
 }
 body{
 	background: #fff;
-	/*background-color: #585858;*/
-	
+	/*background-color: #585858;*/	
 	/*background-size: 200px 200px;*/
 	font-family: 'Oxygen';
 }
@@ -98,23 +98,25 @@ body.workspace-body{
 }
 
 .dropdown-menu{
-	background-color: #585858;
+	/*background-color: #303030;*/
+	background: #45BAB4;
 	
 }
 .dropdown-menu li a{
-	color:#F2B017;
+	/*color:#F2B017;*/
+	color:#000;
 	padding: 12px 20px;
 	font-size: 16px;
 	letter-spacing: 1px;
 }
 .dropdown-menu li>a:hover{
-	background-color: #585858;
+	background-color:#45BAB4;
 	background-image:none;
 	color:#f9f9f9;
 }
 .dropdown-menu .divider{
 	border:none;
-	background-color: #303030;
+	background-color: #000;
 }
 .navbar .nav>li>a{
 	text-shadow:none;
@@ -262,7 +264,8 @@ body.workspace-body{
 	text-align: center;
 	font-size: 1.5em;
 	/*color:#F2B017;*/
-	color:#2b8685;
+	/*color:#2b8685;*/
+	color:#45BAB4;
 	letter-spacing: 1px;
 }
 .sidebar-left ul.logo-header li a:hover{
@@ -464,6 +467,13 @@ h5.form-signin-heading{
 	border-left:1px solid #ccc;
 	
 }
+.info-content ul.set-info li{
+	font-size: 12px;
+}
+.info-content ul.set-info li span{
+	font-size: 14px;
+	font-weight: bold;
+}
 .viewport-display .set-2-empty{
 	min-height: 240px;
 /*	border:1px solid black;*/
@@ -492,7 +502,8 @@ h5.form-signin-heading{
 }
 .tool-bar-main .nav-pills > li > a{    /*--------bottom tool bar*/
 	/*color:#F2B017;*/
-	color:#2b8685;
+	/*color:#2b8685;*/
+	color:#45BAB4;
 	font-weight: bold;
 	font-size: 1.3em;
 	border-radius: 5px;
@@ -507,7 +518,7 @@ h5.form-signin-heading{
 }
 .info-display .info-content{
 	padding-top:1em;
-	margin-bottom: 5em;
+	margin-bottom: 0em;
 	font-size: 90%;
 }
 .info-content li{
@@ -515,6 +526,19 @@ h5.form-signin-heading{
 }
 .viewport-display .load-another {
 	margin-top: 3em;
+}
+.info-content .uploaded-notes{
+	line-height: 1.2;
+	font-size: 12px;
+	margin-left: 0;
+}
+.set-info li#uploaded-notes-show a{
+	color:#2b8685;
+	font-weight: bold;
+	padding-left: 0;
+}
+.set-info li#uploaded-notes-show a:hover{
+	color:#000;
 }
 /*=============================================================MEDIA QUERIES*/
 
