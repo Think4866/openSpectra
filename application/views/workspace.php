@@ -279,12 +279,12 @@ require_once('../models/headerLoggedIn.php');
 
         
         <div class="control-group span2 search-bar">
-          
+
           <label class="control-label" for="inputIcon"></label>
           <div class="controls">
             <div class="input-prepend search-bar">
               <span class="add-on"><i class="icon-search"></i></span>
-              <input class="span9 search-bar" id="inputIcon" type="text" placeholder="Search"/>
+              <input class="span9 search-bar" id="inputIcon" type="text" placeholder="Search Data Sets"/>
             </div>
           </div>
         </div>

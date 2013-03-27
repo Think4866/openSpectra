@@ -4,14 +4,19 @@ a{
 	/*color:#2b8685;*/
 	color:#F2B017;
 }
+a:hover{
+	color:#f9f9f9;
+}
 body{
 	/*background: #fff;*/
-	background-color: #585858;
+	/*background-color: #585858;*/
+	background: #5d5d5d;
 	font-family: 'Oxygen';
 }
 .well {
 	/*background: #fff;*/
 	background-color: #333333;
+	/*background-color: #404040;*/
 	border:none;
 
 }
@@ -39,23 +44,28 @@ body{
   border-radius: 5px;
 }
 /*=============================================================TOP NAVIGATION*/
+.navbar{
+	/*background-color: #000;*/
+}
 .my-navbar-inner{
 	border-radius: 0;
 	min-height: 40px;
 	padding-left: 20px;
 	padding-right: 20px;
+/*	background-color: #000;
+	background-image: none;*/
 	background-color: hsl(0, 0%, 4%) !important;
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#383838", endColorstr="#0a0a0a");
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#383838), to(#0a0a0a));
-  background-image: -moz-linear-gradient(top, #383838, #0a0a0a);
-  background-image: -ms-linear-gradient(top, #383838, #0a0a0a);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #383838), color-stop(100%, #0a0a0a));
-  background-image: -webkit-linear-gradient(top, #383838, #0a0a0a);
-  background-image: -o-linear-gradient(top, #383838, #0a0a0a);
-  background-image: linear-gradient(#383838, #0a0a0a);
-  border-color: #0a0a0a #0a0a0a hsl(0, 0%, -0.5%);
-
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#383838", endColorstr="#0a0a0a");
+	background-image: -khtml-gradient(linear, left top, left bottom, from(#383838), to(#0a0a0a));
+	background-image: -moz-linear-gradient(top, #383838, #0a0a0a);
+	background-image: -ms-linear-gradient(top, #383838, #0a0a0a);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #383838), color-stop(100%, #0a0a0a));
+	background-image: -webkit-linear-gradient(top, #383838, #0a0a0a);
+	background-image: -o-linear-gradient(top, #383838, #0a0a0a);
+	background-image: linear-gradient(#383838, #0a0a0a);
+	border-color: #0a0a0a #0a0a0a hsl(0, 0%, -0.5%);
+	border-bottom: none;
 	border-top: none;
 	border-right:none;
 	border-left: none;
@@ -81,10 +91,31 @@ body{
 	filter: progid:dximagetransform.microsoft.gradient(startColorStr='#e6e6e6', EndColorStr='#ffffff');
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#404040',EndColorStr='#333333')";
 }
+
+.dropdown-menu{
+	background-color: #585858;
+	
+}
+.dropdown-menu li a{
+	color:#F2B017;
+	padding: 12px 20px;
+	font-size: 16px;
+	letter-spacing: 1px;
+}
+.dropdown-menu li>a:hover{
+	background-color: #585858;
+	background-image:none;
+	color:#f9f9f9;
+}
+.dropdown-menu .divider{
+	border:none;
+	background-color: #303030;
+}
 .navbar .nav>li>a{
 	text-shadow:none;
 	letter-spacing: 1px;
-	color:#2b8685;
+	/*color:#2b8685;*/
+
 }
 .top-nav {
 	max-width: 285px;
@@ -281,9 +312,10 @@ body{
 /*====================================================right*/
 .sidebar-right .well
 {
-	border-radius: 0 0 0 5px;
+	border-radius: 0px 0 0 5px;
 	padding-top: 90px;
 	margin-top: -70px;
+	background-color: transparent;
 /*	border-radius: 5px 0 0px 5px;
 	margin-top: 9px;*/
 }
@@ -291,6 +323,7 @@ body{
 	text-align: center;
 	font-weight: bold;
 	padding-left: 5px;
+	border-radius: 5px 0 0 0px;
 	/*font-size: 12px;*/
 }
 .sidebar-right p.browse-title{
@@ -299,7 +332,7 @@ body{
 	text-shadow:none;
 	text-align: center;
 	background-color: #0d0d0d;
-	padding:10px 0 10px 0;
+	padding:10px 3px 10px 3px;
 	text-transform: uppercase;
 	font-size: 12px;
 	font-weight: normal;
@@ -322,9 +355,10 @@ body{
 	padding-bottom: 11px;
 	
 }
-.sidebar-right .tab-content ul{
+.sidebar-right ul.nav-stacked li:last-child{
 	/*background-color: #252525;*/
 	/*border-top: 1px solid #252525;*/
+	border-radius: 0px 0 0 5px;
 }
 .sidebar-right ul.nav-stacked li:first-child{
 /*	border-bottom: 1px solid #252525;
@@ -342,10 +376,14 @@ body{
 }
 /*=============================================================SEARCH*/
 .search-bar input[type="text"]{
-	/*background-color: #333333;*/
-	background: #4d4d4d;
+	background-color: #333333;
+	/*background: #4d4d4d;*/
 	color:#eee;
 	border: none;
+	width: 80%;
+}
+.search-bar .input-prepend input{
+	font-size: 12px;
 }
 .search-bar input[type="text"]:active, .search-bar input[type="text"]:focus{
 	background-color: #ccc;
@@ -358,11 +396,11 @@ input.searchMain{
 .search-bar{
 	position: relative;
 	z-index: 100;
-	margin-left: 10px;
+	/*margin-left: 10px;*/
 }
 .input-append .add-on, .input-prepend .add-on{
-	/*background-color: #333333;*/
-	background-color:#4d4d4d;
+	background-color: #333333;
+	/*background-color:#4d4d4d;*/
 	color:#4d4d4d;
 	border-top:none;
 	border-bottom:none;
@@ -372,7 +410,8 @@ input.searchMain{
 	border-right:2px solid #0d0d0d;
 }
 .input-prepend .add-on i{
-	color:#eee;
+	color:#aaa;
+	/*color:#2b8685;*/
 }
 /*=============================================================MODALS*/
 button.my-close-btn{
@@ -446,8 +485,10 @@ h5.form-signin-heading{
 .viewport-display .set_tools ul{
 	padding-right: 2em;
 }
-.tool-bar-main .nav-pills > li > a{
-	color:#F2B017;
+.tool-bar-main .nav-pills > li > a{    /*--------bottom tool bar*/
+	/*color:#F2B017;*/
+	color:#2b8685;
+	font-weight: bold;
 	font-size: 1.3em;
 	border-radius: 5px;
 	text-align: center;
