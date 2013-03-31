@@ -105,10 +105,27 @@ require_once('../models/headerLoggedIn.php');
               <li><a href="#myModalupload" role="button" class="my-upload-btn" data-toggle="modal" data-dynamic="true"><i class="icon-upload"> </i>Upload</a></li>
 
               <!-- Button to trigger notepad modal -->
-              <li><a href="#myModalnotepad" role="button" class="my-notepad-btn" data-toggle="modal" data-dynamic="true"><i class="icon-pencil"></i>Notepad</a></li>
+              <!-- <li><a href="#myModalnotepad" role="button" class="my-notepad-btn" data-toggle="modal" data-dynamic="true"><i class="icon-pencil"></i>Notepad</a></li> -->
             </ul>
-
             <div class="accordion" id="accordion2">
+              <div class="accordion-group sortable">
+                <div class="accordion-heading">
+                  <a rel="tooltip" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseZero">
+                    <i class="icon-list-alt"> </i>Notebook
+                  </a>
+                </div>
+                <div id="collapseZero" class="accordion-body collapse">
+                  <div class="accordion-inner">
+                    <ul class="nav nav-list left-navigation">           
+                      <li><a href="#">Date </a></li>
+                      <li><a href="#">Date </a></li>
+                      <li><a href="#">Date </a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div><!--end accordion group0 -->
+
+            
               <div class="accordion-group sortable">
                 <div class="accordion-heading">
                   <a rel="tooltip" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
@@ -117,15 +134,16 @@ require_once('../models/headerLoggedIn.php');
                 </div>
                 <div id="collapseOne" class="accordion-body collapse">
                   <div class="accordion-inner">
-                    <ul class="nav nav-list left-navigation">           
-                      <li><a href="#">Link</a></li>
-                      <li><a href="#">Link</a></li>
-                      <li><a href="#">Link</a></li>
-                      <li class="nav-header">Area Two</li>
-                      <li><a href="#">Link</a></li>
-                      <li><a href="#">Link</a></li>
-                      <li><a href="#">Link</a></li>
-
+                    <ul class="nav nav-list left-navigation set-list">           
+                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id1">Set Name</a></li>                      
+                         <div id="set-options-id1" class="collapse"> 
+                          <div class="btn-group">
+                              <a class="" href="#" title="favorite"><i class="icon-star-empty"></i></a>
+                              <a class="" href="#" title="view"><i class="icon-eye-open"></i></a>                                   
+                              <a class="" href="#" title="download"><i class="icon-download-alt"></i></a>
+                              <a class="" href="#" title="download"><i class="icon-trash"></i></a>
+                          </div>
+                        </div>  <!-- end set and dropdown options -->
 
                     </ul>
                   </div>
@@ -140,14 +158,17 @@ require_once('../models/headerLoggedIn.php');
                 </div>
                 <div id="collapseTwo" class="accordion-body collapse">
                   <div class="accordion-inner">
-                    <ul class="nav nav-list left-navigation">           
-                      <li><a href="#">Link</a></li>
-                      <li><a href="#">Link</a></li>
-                      <li><a href="#">Link</a></li>
-                      <li class="nav-header">Area Two</li>
-                      <li><a href="#">Link</a></li>
-                      <li><a href="#">Link</a></li>
-                      <li><a href="#">Link</a></li>
+                    <ul class="nav nav-list left-navigation set-list">           
+                       <li><a href="#" data-toggle="collapse" data-target="#set-options-id2">Set Name</a></li>                      
+                         <div id="set-options-id2" class="collapse"> 
+                          <div class="btn-group">
+                              <a class="" href="#" title="favorite"><i class="icon-star-empty"></i></a>
+                              <a class="" href="#" title="view"><i class="icon-eye-open"></i></a>                                   
+                              <a class="" href="#" title="download"><i class="icon-download-alt"></i></a>
+                              <a class="" href="#" title="download"><i class="icon-trash"></i></a>
+                          </div>
+                        </div>  <!-- end set and dropdown options -->
+
 
                     </ul>
                   </div>
@@ -162,15 +183,16 @@ require_once('../models/headerLoggedIn.php');
                 </div>
                 <div id="collapseThree" class="accordion-body collapse">
                   <div class="accordion-inner">
-                    <ul class="nav nav-list left-navigation">           
-                      <li><a href="#">Link</a></li>
-                      <li><a href="#">Link</a></li>
-                      <li><a href="#">Link</a></li>
-                      <li class="nav-header">Area Two</li>
-                      <li><a href="#">Link</a></li>
-                      <li><a href="#">Link</a></li>
-                      <li><a href="#">Link</a></li>
-
+                    <ul class="nav nav-list left-navigation set-list">           
+                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id3">Set Name</a></li>                      
+                         <div id="set-options-id3" class="collapse"> 
+                          <div class="btn-group">
+                              <a class="" href="#" title="favorite"><i class="icon-star"></i></a>
+                              <a class="" href="#" title="view"><i class="icon-eye-open"></i></a>                                   
+                              <a class="" href="#" title="download"><i class="icon-download-alt"></i></a>
+                              <a class="" href="#" title="download"><i class="icon-trash"></i></a>
+                          </div>
+                        </div>  <!-- end set and dropdown options -->
 
                     </ul>
                   </div>
@@ -189,10 +211,7 @@ require_once('../models/headerLoggedIn.php');
                       <li><a href="#">Link</a></li>
                       <li><a href="#">Link</a></li>
                       <li><a href="#">Link</a></li>
-                      <li class="nav-header">Area Two</li>
-                      <li><a href="#">Link</a></li>
-                      <li><a href="#">Link</a></li>
-                      <li><a href="#">Link</a></li>
+
 
                     </ul>
                   </div>
@@ -222,18 +241,35 @@ require_once('../models/headerLoggedIn.php');
                       <li>Material: <span class="info-data">Data Set Material</span></li>
                       <li>Date Uploaded: <span class="info-data">03/20/2013</span></li>
                       <li>Institution: <span class="info-data">UNCA</span></li>
+                      <li id="show-description"><a href=""><i class="icon-minus"></i>Hide Description</a></li>
+                      <li id="show-notes"><a href=""><i class="icon-minus"></i>Hide Notes</a></li>
                     </ul>
                     <ul class="set-info span6">
                       <li>Callibration</li>
                       <li>Isotope</li>
                       <li>Molecular Formula</li>
-                      <li id="uploaded-notes-show"><a href=""><i class="icon-eye-open"></i>Show Notes</a></li>
+                      
                     </ul>
                     
-                      <div class="span11 offset1 uploaded-notes">
+                      <div class="span11 offset1 description">
+                        <p>Set Description</p>
+                        <p>username - date</p>
+
                         <p>These are the notes uploaded by the user. We should have a button to show and hide these notes.
                           These are the notes uploaded by the user. We should have a button to show and hide these notes.
                           These are the notes uploaded by the user. We should have a button to show and hide these notes.</p>
+                      </div>
+
+                      <div class="span11 offset1 notes">
+                        <p>Notes</p>
+                        <p>username - date</p>
+                        <p>These are the notes uploaded by the user. We should have a button to show and hide these notes.
+                          These are the notes uploaded by the user. We should have a button to show and hide these notes.
+                          These are the notes uploaded by the user. We should have a button to show and hide these notes.</p>
+                        
+                        
+                        <!-- notes insert here -->
+
                       </div>
                     
                 </section>
@@ -271,13 +307,14 @@ require_once('../models/headerLoggedIn.php');
            <!--  end set view content -->
 
           </div>   <!-- end viewport display -->
-
-          <div id="toolBar-main" class="tool-bar-main">
-            <ul class="nav btn-custom nav-pills tool-bar">
-                <li ><a href="#"><i class="icon-save"></i> <span>Save</span></a></li>
-                <li ><a href="#" ><i class="icon-play"></i> <span>Compare</span></a></li>
-                <li ><a href="#" ><i class="icon-refresh"></i> <span>Refresh</span></a></li>
-            </ul>
+          <div class="row-fluid">
+            <div id="toolBar-main" class="tool-bar-main span12">
+              <ul class="nav btn-custom nav-pills tool-bar">
+                  <li ><a href="#"><i class="icon-save"></i> <span>Save</span></a></li>
+                  <li ><a href="#" ><i class="icon-play"></i> <span>Compare</span></a></li>
+                  <li ><a href="#" ><i class="icon-refresh"></i> <span>Refresh</span></a></li>
+              </ul>
+            </div>
           </div>
          
         </div><!--/span 8 viewport-->

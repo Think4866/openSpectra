@@ -184,6 +184,9 @@ body.workspace-body{
 }
 
 /*=============================================================SIDEBARS*/
+ul.set-list .btn-group{
+	padding-top: 10px;
+}
 
 .sidebar-left ul.left-navigation li, .sidebar-left .accordion-group{
 
@@ -440,8 +443,8 @@ h5.form-signin-heading{
 }
 /*=============================================================VIEWPORT*/
 .viewport-display {
-	min-height: 480px;
-    padding: 20px;
+/*	min-height: 480px;
+    padding: 20px;*/
     margin: 0px 0 10px 0;
     font-size: 18px;
     font-weight: 200;
@@ -457,12 +460,20 @@ h5.form-signin-heading{
 .viewport-display > .set-view{
 	border-bottom:1px solid #ccc;
 	min-height: 240px;
+	background-color: #f9f9f9;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
 }
 .viewport-display .graph{
 	min-height: 240px;
 	/*border:1px solid black;*/
 }
 .viewport-display .info{
+	background-color: #f9f9f9;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
 	min-height: 240px;
 	border-left:1px solid #ccc;
 	
@@ -478,6 +489,10 @@ h5.form-signin-heading{
 	min-height: 240px;
 /*	border:1px solid black;*/
 	margin-left: 0;
+	background-color: #f9f9f9;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
 }
 .viewport-display .info-display{
 	height:auto;
@@ -508,10 +523,19 @@ h5.form-signin-heading{
 	font-size: 1.3em;
 	border-radius: 5px;
 	text-align: center;
+
 }
 .tool-bar-main .nav-pills > li > a:hover{
 	background: transparent;
 	color:#fff;
+}
+ul.tool-bar{
+	margin-top: 20px;
+}
+#tool-bar-main{
+	margin-left: 0;
+	
+
 }
 .info ul li{
 	list-style: none;
@@ -525,19 +549,25 @@ h5.form-signin-heading{
 	font-size: 90%;
 }
 .viewport-display .load-another {
-	margin-top: 3em;
+	padding-top: 3em;
+	background-color: #f9f9f9;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
 }
-.info-content .uploaded-notes{
+.info-content .description, .info-content .notes{
+	margin-top:15px;
 	line-height: 1.2;
 	font-size: 12px;
 	margin-left: 0;
+	border-bottom: 1px solid #000;
 }
-.set-info li#uploaded-notes-show a{
+.set-info li#show-description a, .set-info li#show-notes a{
 	color:#2b8685;
 	font-weight: bold;
 	padding-left: 0;
 }
-.set-info li#uploaded-notes-show a:hover{
+.set-info li#show-description a:hover{
 	color:#000;
 }
 /*=============================================================MEDIA QUERIES*/
