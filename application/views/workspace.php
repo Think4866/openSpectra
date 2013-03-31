@@ -241,7 +241,7 @@ require_once('../models/headerLoggedIn.php');
 
               <div id="set-tools" class="set_tools span12">
                   <ul class="row-one-tools pull-right">
-                    <li><a href="#"><i class="icon-pencil"></i></a></li>
+                    <li><a href="#myModalnotepad" role="button" class="" data-toggle="modal" data-dynamic="true"><i class="icon-pencil"></i></a></li>
                     <li><a href="#"><i class="icon-star-empty"></i></a></li>
                     <li><a href="#"><i class="icon-save"></i></a></li>
                     <li><a href="#"><i class="icon-remove"></i></a></li>
@@ -602,11 +602,13 @@ require_once('../models/headerLoggedIn.php');
         </div>
         <div class="modal-body">
           <div class="row-fluid">
-            <ul class="nav nav-pills pagination-centered">
-                <li class="active">
+            <ul class="nav nav-pills">
+              <li><a href="#material" data-toggle="pill">Material</a></li>
+                <li>
                   <a href="#name" data-toggle="pill">Name</a>
                 </li>
                 <li><a href="#isotope" data-toggle="pill">Isotope</a></li>
+                
             </ul>
           </div>
           <div class="row-fluid">
@@ -617,9 +619,9 @@ require_once('../models/headerLoggedIn.php');
                         <label class="control-label">Name</label>
                     <div class="controls">
                         <div class="input-prepend">
-                      <span class="add-on"><i class="icon-user"></i></span>
-                        <input type="text" class="input-xlarge" id="name-filter" name="name-filter" placeholder="Enter Name to Filter">
-                      </div>
+                          <span class="add-on"><i class="icon-user"></i></span>
+                          <input type="text" class="input-xlarge" id="name-filter" name="name-filter" placeholder="Enter Name to Filter">
+                        </div>
                     </div>
                   </div>
                       <div class="controls controls-row">
@@ -655,6 +657,27 @@ require_once('../models/headerLoggedIn.php');
                   </form>
               </div>
 
+               <div class="tab-pane" id="material">
+                  <form>
+                    <div class="control-group">
+                        <label class="control-label">Material</label>
+                    <div class="controls">
+                        <div class="input-prepend">
+                      <span class="add-on"><i class="icon-pencil"></i></span>
+                        <input type="text" class="input-xlarge" id="name-filter" name="name-filter" placeholder="Enter Isotope to Filter">
+                      </div>
+                    </div>
+                  </div>
+                      <div class="controls controls-row">
+                        <select>
+                          <option>Filter Options</option>
+                          <option>Show Only</option>
+                          <option>Show All Except</option>
+                        </select>
+                      </div>
+                  <button type="submit" class="btn btn-medium">Apply Filter</button>
+                  </form>
+              </div>
               
               </div>          
             </div>
