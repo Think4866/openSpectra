@@ -335,7 +335,7 @@ require_once('../models/headerLoggedIn.php');
       <div id="myModalupload" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <button lass="btn my-close-btn" data-dismiss="modal" aria-hidden="true">&times;</button>
         <div class="modal-body my-modal-body">
-          <form id="signup" class="form-horizontal" method="post" action="">
+          <form id="signup" class="form-horizontal" method="post" action="upload_datasets.php">
             <h5 class="form-signin-heading">Upload Data</h5>
             
             <div class="control-group">
