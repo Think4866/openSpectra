@@ -425,6 +425,17 @@ input.searchMain{
 button.my-close-btn{
 	padding:0 10px;
 }
+.buttoninline{
+	float: left;
+	margin-right: 15px;
+}
+.buttonclear{
+	clear: both;
+}
+.buttoncenter {
+	margin-left: auto;
+	margin-right: auto;
+}
 .modal.fade.in{
 	top:3%;
 }
@@ -437,6 +448,9 @@ h5.form-signin-heading{
 }
 #myModalupload span.small-text{
 	font-size: 75%;
+}
+.errorCheck {
+	color: #ff3333;
 }
 /*=============================================================VIEWPORT*/
 .viewport-display {
