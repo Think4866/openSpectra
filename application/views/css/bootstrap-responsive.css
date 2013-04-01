@@ -847,6 +847,7 @@
   .input-large,
   .input-xlarge,
   .input-xxlarge,
+  textarea,
   input[class*="span"],
   select[class*="span"],
   textarea[class*="span"],

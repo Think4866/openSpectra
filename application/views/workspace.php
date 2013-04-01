@@ -31,6 +31,8 @@ require_once('../models/headerLoggedIn.php');
      <link href="css/bootstrap-fileupload.min.css" rel="stylesheet"/>
      <link href="css/bootstrap-scroll-modal.css" rel="stylesheet" />
      <link href="css/styles.css" rel="stylesheet"/>
+     <link href="css/datepicker.css" rel="stylesheet" />
+
      <!-- <link href="css/bootstrap-wysihtml5-0.0.2.css" rel="stylesheet" />  --> <!-- added for fancy text editor // not working -->
     
     
@@ -333,23 +335,24 @@ require_once('../models/headerLoggedIn.php');
 
       <!-- Modal Upload -->
       <div id="myModalupload" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <button lass="btn my-close-btn" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <button class="btn my-close-btn" data-dismiss="modal" aria-hidden="true">&times;</button>
         <div class="modal-body my-modal-body">
-          <form id="signup" class="form-horizontal" method="post" action="upload_datasets.php">
+          <form id="uploadDataset" class="form-horizontal" method="post" action="../models/upload_datasets.php" enctype="multipart/form-data">
             <h5 class="form-signin-heading">Upload Data</h5>
-            
+            <span class="smalltext">Items with an asterisk (*) are required.</span>
             <div class="control-group">
-                  <label class="control-label">Username</label>
+                  <label class="control-label">* Username</label>
               <div class="controls">
                   <div class="input-prepend">
                 <span class="add-on"><i class="icon-user"></i></span>
-                  <input type="text" class="input-xlarge" id="fname" name="fname" placeholder="<?php echo $USER_USERNAME; ?>" />
+                  <input type="text" class="input-xlarge" id="fname" name="fname" value="<?php echo $USER_USERNAME; ?>" />
                 </div>
               </div>
             </div>
 
             <div class="control-group ">
-                  <label class="control-label">Compound / Material</label>
+              <div id="control-group-material"></div>
+                  <label class="control-label">* Compound / Material</label>
               <div class="controls">
                   <div class="input-prepend">
                 <span class="add-on"><i class="icon-pencil"></i></span>
@@ -369,39 +372,39 @@ require_once('../models/headerLoggedIn.php');
             </div>
 
              <div class="control-group ">
-                  <label class="control-label">Check all that apply</label>
+                  <label class="control-label">Isotope Status</label>
                 <div class="controls">
                   <label class="radio">
-                    <input type="radio" value=""/>
+                    <input type="radio" name="isotope" value="1" checked/>
                     Normal Isotope
                   </label>
                   <label class="radio">
-                    <input type="radio" value=""/>
+                    <input type="radio" name="isotope" value="0"/>
                     Non-normal Isotope
                   </label>
                   <label class="radio">
-                    <input type="radio" value=""/>
+                    <input type="radio" name="isotope" value="na"/>
                     N/A
                   </label>
                 </div>
               </div>
 
               <div class="control-group ">
-                  <label class="control-label">Keep this data private</label>
+                  <label class="control-label">Keep this data private?</label>
                 <div class="controls">
                   <label class="checkbox">
-                    <input type="checkbox" value=""/>
+                    <input type="checkbox" id="public" name="public" value="0"/>
                     <span class="small-text">(sets are public by default and can be made private or public at any time)</span>
                   </label>
                 </div>
               </div>
 
             <div class="control-group ">
-                  <label class="control-label">Date Collected</label>
+                  <label class="control-label">* Date Collected</label>
               <div class="controls">
                   <div class="input-prepend">
-                <span class="add-on"><i class="icon-calendar"></i></span>
-                  <input type="text" class="input-medium" id="calendar" name="calendar" placeholder="mm/dd/yyyy"/>
+                    <span class="add-on"><i class="icon-calendar"></i></span>
+                    <input type="text"  id="dp1" class="input-medium" name="date_collected" value="<?php echo date("m/d/Y"); ?>" />
                   </div>
               </div>
             </div>
@@ -410,32 +413,52 @@ require_once('../models/headerLoggedIn.php');
                   <label class="control-label">Add a description</label>
               <div class="controls">
                   <div class="description-form">
-                    <form class="form-inline">
-                      <textarea rows="3">
-                      </textarea>
-                    </form>
+                      <textarea rows="3" name="description"></textarea>
                     
                   </div>
               </div>
             </div>
 
-            <div class="fileupload fileupload-new" data-provides="fileupload">
-              <span class="btn btn-large btn-file"><span class="fileupload-new">Upload Data Set</span><span class="fileupload-exists">Change</span><input type="file"/></span>
-              <span class="fileupload-preview"></span>
+            <div class="fileuploaderrors"></div>
+
+            <div class="fileupload fileupload-new buttoninline" data-provides="fileupload">
+              <span class="btn btn-large btn-file buttoninline"><span class="fileupload-new">Upload Data Set</span><span class="fileupload-exists">Change</span><input type="file" name="origfile_url"/></span>
+              <span class="fileupload-preview" id="datasetfilename"></span>
               <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
             </div>
 
-            <div class="fileupload fileupload-new" data-provides="fileupload">
-              <span class="btn btn-small btn-file"><span class="fileupload-new">Upload Calibration Data</span><span class="fileupload-exists">Change</span><input type="file"/></span>
-              <span class="fileupload-preview"></span>
+            <div class="fileupload fileupload-new buttoninline" data-provides="fileupload">
+              <span class="btn btn-large btn-file buttoninline"><span class="fileupload-new">Upload Calibration Data</span><span class="fileupload-exists">Change</span><input type="file" name="origcalib_url"/></span>
+              <span class="fileupload-preview" id="calibfilename"></span>
               <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
             </div>
 
-            <div class="upload_submit">
-                <button id="upload-submit" type="submit" class="btn btn-file">Submit</button>
+            <div class="control-group buttonclear">
+               <span class="small-text">The following filetypes are currently supported: .ADT, .DAT, .MCS, .WS5, .XML</span><br /><br />
+              <span class="small-text">It is highly recommended to upload a Calibration Set along with your data.  If you do not upload a Calibration Set, your data will be marked as "Not Calibrated".</span>
+            </div>
+
+
+            <div class="upload_submit buttonclear">
+                <hr /> 
+                <button id="upload-submit" type="submit" class="btn btn-file buttonclear">Submit</button>
             </div>
 
           </form>
+        </div>
+      </div>
+
+      <!-- Modal Upload Confirm -->
+      <div id="myModaluploadConfirm" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button class="btn my-close-btn" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Upload successful!</h3>
+        </div>
+        <div class="modal-body">
+          <span class="smalltext">Your new dataset will be displayed under "Your Uploads".</span>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">OK</button>
         </div>
       </div>
 
@@ -699,12 +722,13 @@ require_once('../models/headerLoggedIn.php');
     <script src="js/jRespond.min.js"></script>
 	  <script type="text/javascript" src="http://multigraph.github.com/download/multigraph-min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
-    
-
-
+    <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="js/jquery.form.js"></script>
+    <script type="text/javascript" src="js/form-submits.js"></script>
 
 
 	<script type="text/javascript">
+
 
   var muglFileURL = <?php echo "'" . $ORIGFILE_URL . "'"; ?>;
 
