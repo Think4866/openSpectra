@@ -18,7 +18,8 @@ if ($_FILES["origfile_url"]["error"] > 0) {
 	$query = mysql_query("SHOW TABLE STATUS LIKE 'DATASETS'"); 
 	$row = mysql_fetch_assoc($query); 
 	$next_inc_value = $row['Auto_increment'];
-	  
+	 
+	//this is the new name of the raw data file -- keep consistent across the raw and xml buckets
 	$origfile_url_destination = "data-" . $next_inc_value . "-" . $_FILES['origfile_url']['name'];
   	$origfile_url_destination_file = $_FILES['origfile_url']['tmp_name'];
   	
@@ -38,6 +39,7 @@ if ($_FILES["origfile_url"]["error"] > 0) {
 	} else if ($_FILES['origcalib_url']["error"] > 0) {
 	  echo "Error: " . $_FILES["origcalib_url"]["error"] . "<br />";
 	} else {
+		//this is the new name of the calibration file -- keep consistent across the raw and xml buckets
 	  	$origcalib_url_destination = "calib-" . $next_inc_value . "-" . $_FILES['origcalib_url']['name'];
 	  	$origcalib_url_destination_file = $_FILES['origcalib_url']['tmp_name'];
 	  	
