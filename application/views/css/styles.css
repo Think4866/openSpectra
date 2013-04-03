@@ -1,13 +1,5 @@
 
-a{
-	/*color:#F4B21B;*/
-	/*color:#2b8685;*/
-	color:#F2B017;
-}
-a:hover{
-	color:#f9f9f9;
-	text-decoration: none;
-}
+
 body{
 	background: #fff;
 	/*background-color: #585858;*/	
@@ -17,6 +9,21 @@ body{
 body.workspace-body{
 	background: url('../img/bkgd-2.png') repeat top left transparent;
 
+}
+a{
+	/*color:#F4B21B;*/
+	/*color:#2b8685;*/
+	color:#F2B017;
+}
+a:hover{
+	color:#f9f9f9;
+	text-decoration: none;
+}
+i.icon-star{
+	color:#45BAB4;
+}
+i.icon-star-empty{
+	color:#45BAB4;
 }
 .well {
 	/*background: #fff;*/
@@ -95,6 +102,9 @@ body.workspace-body{
 	background: -o-linear-gradient(bottom, #333333, #404040);
 	filter: progid:dximagetransform.microsoft.gradient(startColorStr='#e6e6e6', EndColorStr='#ffffff');
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#404040',EndColorStr='#333333')";
+}
+.dropdown-toggle span.hidden-phone{
+	padding: 0 5px;
 }
 
 .dropdown-menu{
@@ -317,6 +327,9 @@ ul.set-list .btn-group{
 	font-size: 11px;
 
 }
+.sidebar-left .accordion-inner{
+	border-top: 1px solid #000;
+}
 .sidebar-left .accordion-heading{
 	padding-left: -10px;
 }
@@ -384,6 +397,10 @@ ul.set-list .btn-group{
 }
 .sidebar-right .nav-tabs>.active>a{
 	background-color: transparent;
+	color:#eee;
+}
+.sidebar-right .nav>li>a:hover{
+	background-color: #303030;
 }
 /*=============================================================SEARCH*/
 .search-bar input[type="text"]{
@@ -427,6 +444,14 @@ input.searchMain{
 /*=============================================================MODALS*/
 button.my-close-btn{
 	padding:0 10px;
+	float:right;
+	border:none;
+	background-color: transparent;
+	background-image:none;
+	box-shadow: 0;
+}
+.modal-backdrop.fade.in{
+	background-color: rgba(0, 0, 0, 0.3);
 }
 .buttoninline{
 	float: left;
@@ -455,6 +480,19 @@ h5.form-signin-heading{
 .errorCheck {
 	color: #ff3333;
 }
+#myModalnotebook .btn-group a{
+	margin-bottom: 5px;
+	font-size: 16px;
+	display: block;
+}
+#myModalnotebook .btn-group a:hover{
+	color:#303030;
+}
+#myModalupload h5.form-signin-heading{
+	font-size: 18px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #aaa;
+}
 /*=============================================================VIEWPORT*/
 .viewport-display {
 /*	min-height: 480px;
@@ -475,21 +513,24 @@ h5.form-signin-heading{
 	border-bottom:1px solid #ccc;
 	min-height: 240px;
 	background-color: #f9f9f9;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
+    -webkit-border-radius: 6px 6px 0px 0px;
+    -moz-border-radius: 6px 6px 0px 0px;
+    border-radius: 6px 6px 0px 0px;
 }
 .viewport-display .graph{
 	min-height: 240px;
-	/*border:1px solid black;*/
+	height:340px;
+	padding:20px 10px;
+	;
 }
 .viewport-display .info{
 	background-color: #f9f9f9;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
+    -webkit-border-radius: 0px 6px 0px 0px ;
+    -moz-border-radius: 0px 6px 0px 0px ;
+    border-radius: 0px 6px 0px 0px ;
 	min-height: 240px;
 	border-left:1px solid #ccc;
+	margin-left: 0;
 	
 }
 .info-content ul.set-info li{
@@ -504,9 +545,9 @@ h5.form-signin-heading{
 /*	border:1px solid black;*/
 	margin-left: 0;
 	background-color: #f9f9f9;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
+    -webkit-border-radius: 0px 0px 6px 6px;
+    -moz-border-radius: 0px 0px 6px 6px;
+    border-radius: 0px 0px 6px 6px;
 }
 .viewport-display .info-display{
 	height:auto;
@@ -541,10 +582,10 @@ h5.form-signin-heading{
 }
 .tool-bar-main .nav-pills > li > a:hover{
 	background: transparent;
-	color:#fff;
+	/*color:#fff;*/
 }
 ul.tool-bar{
-	margin-top: 20px;
+	margin-top: 15px;
 }
 #tool-bar-main{
 	margin-left: 0;
@@ -593,13 +634,7 @@ ul.tool-bar{
 	.my-navbar-inner .btn-group a.dropdown-toggle{
 	margin-right: 0px;
 	}
-	/*.dropdown-menu{
-		max-width: 115px !important;
-	}
-	.btn-group > ul.dropdown-menu{
-		
-		font-size: 12px;
-	}*/
+
 
 
 }
@@ -614,9 +649,7 @@ ul.tool-bar{
 	.btn-group > .btn-small {
 		font-size: 10.4px;
 	}
-	/*.dropdown-menu{
-		max-width: 105px ;
-	}*/
+
 	.btn-group > ul.dropdown-menu{
 		
 		font-size: 12px;

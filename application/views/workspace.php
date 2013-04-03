@@ -67,7 +67,7 @@ require_once('../models/headerLoggedIn.php');
             <div class="btn-group pull-right">
 
               <a class="btn  dropdown-toggle" data-toggle="dropdown" href="#">
-                <i class="icon-user"></i><span class="hidden-phone"> Welcome, <?php echo $CC_USER_NAME; ?></span>
+                <i class="icon-user"></i><span class="hidden-phone"><?php echo $CC_USER_NAME; ?></span>
                 <span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
@@ -110,24 +110,31 @@ require_once('../models/headerLoggedIn.php');
               <!-- <li><a href="#myModalnotepad" role="button" class="my-notepad-btn" data-toggle="modal" data-dynamic="true"><i class="icon-pencil"></i>Notepad</a></li> -->
             </ul>
             <div class="accordion" id="accordion2">
-              <div class="accordion-group sortable">
+
+              <div class="accordion-group">
                 <div class="accordion-heading">
-                  <a rel="tooltip" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseZero">
-                    <i class="icon-list-alt"> </i>Notebook
+                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                    <i class="icon-star"> </i>Favorites
                   </a>
                 </div>
-                <div id="collapseZero" class="accordion-body collapse">
+                <div id="collapseThree" class="accordion-body collapse">
                   <div class="accordion-inner">
-                    <ul class="nav nav-list left-navigation">           
-                      <li><a href="#">Date </a></li>
-                      <li><a href="#">Date </a></li>
-                      <li><a href="#">Date </a></li>
+                    <ul class="nav nav-list left-navigation set-list">           
+                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id3">Set Name</a></li>                      
+                         <div id="set-options-id3" class="collapse"> 
+                          <div class="btn-group">
+                              <a class="" href="#" title="favorite"><i class="icon-star"></i></a>
+                              <a class="" href="#" title="view"><i class="icon-eye-open"></i></a>                                   
+                              <a class="" href="#" title="download"><i class="icon-download-alt"></i></a>
+                              <a class="" href="#" title="download"><i class="icon-trash"></i></a>
+                          </div>
+                        </div>  <!-- end set and dropdown options -->
+
                     </ul>
                   </div>
                 </div>
-              </div><!--end accordion group0 -->
+              </div><!--end accordion group3 -->
 
-            
               <div class="accordion-group sortable">
                 <div class="accordion-heading">
                   <a rel="tooltip" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
@@ -143,7 +150,7 @@ require_once('../models/headerLoggedIn.php');
                               <a class="" href="#" title="favorite"><i class="icon-star-empty"></i></a>
                               <a class="" href="#" title="view"><i class="icon-eye-open"></i></a>                                   
                               <a class="" href="#" title="download"><i class="icon-download-alt"></i></a>
-                              <a class="" href="#" title="download"><i class="icon-trash"></i></a>
+                              <a class="" href="#" title="trash"><i class="icon-trash"></i></a>
                           </div>
                         </div>  <!-- end set and dropdown options -->
 
@@ -177,29 +184,24 @@ require_once('../models/headerLoggedIn.php');
                 </div>
               </div><!--end accordion group2 -->
 
-              <div class="accordion-group">
+              
+
+              <div class="accordion-group sortable">
                 <div class="accordion-heading">
-                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-                    <i class="icon-star"> </i>Favorites
+                  <a rel="tooltip" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseZero">
+                    <i class="icon-list-alt"> </i>Notebook
                   </a>
                 </div>
-                <div id="collapseThree" class="accordion-body collapse">
+                <div id="collapseZero" class="accordion-body collapse">
                   <div class="accordion-inner">
-                    <ul class="nav nav-list left-navigation set-list">           
-                      <li><a href="#" data-toggle="collapse" data-target="#set-options-id3">Set Name</a></li>                      
-                         <div id="set-options-id3" class="collapse"> 
-                          <div class="btn-group">
-                              <a class="" href="#" title="favorite"><i class="icon-star"></i></a>
-                              <a class="" href="#" title="view"><i class="icon-eye-open"></i></a>                                   
-                              <a class="" href="#" title="download"><i class="icon-download-alt"></i></a>
-                              <a class="" href="#" title="download"><i class="icon-trash"></i></a>
-                          </div>
-                        </div>  <!-- end set and dropdown options -->
-
+                    <ul class="nav nav-list left-navigation">           
+                      <li><a href="#myModalnotebook" role="button" class="notebook-btn" data-toggle="modal" data-dynamic="true">Date </a></li>
+                      <li><a href="#myModalnotebook" role="button" class="notebook-btn" data-toggle="modal" data-dynamic="true">Date </a></li>
+                      <li><a href="#myModalnotebook" role="button" class="notebook-btn" data-toggle="modal" data-dynamic="true">Date </a></li>
                     </ul>
                   </div>
                 </div>
-              </div><!--end accordion group3 -->
+              </div><!--end accordion group0 -->
               
               <div class="accordion-group">
                 <div class="accordion-heading">
@@ -247,9 +249,9 @@ require_once('../models/headerLoggedIn.php');
                       <li id="show-notes"><a href=""><i class="icon-minus"></i>Hide Notes</a></li>
                     </ul>
                     <ul class="set-info span6">
-                      <li>Callibration</li>
-                      <li>Isotope</li>
-                      <li>Molecular Formula</li>
+                      <li>Callibration: <span class="info-data">Included</span></li>
+                      <li>Isotope: <span class="info-data"></span></li>
+                      <li>Molecular Formula: <span class="info-data"></span></li>
                       
                     </ul>
                     
@@ -281,9 +283,9 @@ require_once('../models/headerLoggedIn.php');
                   <ul class="row-one-tools pull-right">
                     <li><a href="#myModalnotepad" role="button" class="" data-toggle="modal" data-dynamic="true"><i class="icon-pencil"></i></a></li>
                     <li><a href="#"><i class="icon-star-empty"></i></a></li>
-                    <li><a href="#"><i class="icon-save"></i></a></li>
-                    <li><a href="#"><i class="icon-remove"></i></a></li>
+                    <li><a href="#"><i class="icon-save"></i></a></li>                    
                     <li><a href="#"><i class="icon-download-alt"></i></a></li>
+                    <li><a href="#"><i class="icon-remove"></i></a></li>
                    
                   </ul>
 
@@ -298,9 +300,9 @@ require_once('../models/headerLoggedIn.php');
                 <div id="add-another-btns" class="btn-toolbar pagination-centered">
                   <div class="">
                     <label>Add Another Set</label>
-                    <a href="#" class="btn btn-custom"><i class="icon-folder-open"></i> <strong>Choose</strong></a>
+                    <a data-toggle="collapse" data-parent="#accordion2" href="#collapseThree" class="accordion-toggle btn btn-custom"><i class="icon-folder-open"></i> <strong>Choose</strong></a>
                    
-                    <a href="#" class="btn btn-custom"><i class="icon-arrow-up"></i> <strong>Upload</strong></a>
+                    <a href="#myModalupload" role="button" class="btn btn-custom my-upload-btn" data-toggle="modal" data-dynamic="true"><i class="icon-arrow-up"></i> <strong>Upload</strong></a>
                   </div>
                 </div>
               </section>
@@ -371,9 +373,9 @@ require_once('../models/headerLoggedIn.php');
             <!-- <hr /> -->
 
       <!-- Modal Upload -->
-      <div id="myModalupload" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <button class="btn my-close-btn" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <div id="myModalupload" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">        
         <div class="modal-body my-modal-body">
+          <button class="btn my-close-btn" data-dismiss="modal" aria-hidden="true">&times;</button>
           <form id="uploadDataset" class="form-horizontal" method="post" action="../models/upload_datasets.php" enctype="multipart/form-data">
             <h5 class="form-signin-heading">Upload Data</h5>
             <span class="smalltext">Items with an asterisk (*) are required.</span>
@@ -507,13 +509,53 @@ require_once('../models/headerLoggedIn.php');
           <h3 id="myModalLabel">Notepad</h3>
         </div>
         <div class="modal-body">
-          <textarea class="notepad-textarea" placeholder="Enter text ..."></textarea>
+          <div class="control-group">
+                  <label class="control-label">Username</label>
+              <div class="controls">
+                  <div class="input-prepend">
+                <span class="add-on"><i class="icon-user"></i></span>
+                  <input type="text" class="input-large" id="fname" name="fname" value="<?php echo $USER_USERNAME; ?>" />
+                </div>
+              </div>
+          </div>
+          <div class="control-group ">
+                  <label class="control-label">Date</label>
+              <div class="controls">
+                  <div class="input-prepend">
+                    <span class="add-on"><i class="icon-calendar"></i></span>
+                    <input type="text"  id="dp1" class="input-medium" name="date_collected" value="<?php echo date("m/d/Y"); ?>" />
+                  </div>
+              </div>
+            </div>
+          <textarea class="notepad-textarea span5" placeholder="Enter notes here" rows="7"></textarea>
         </div>
         <div class="modal-footer">
           <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-          <button class="btn btn-primary">Save changes</button>
+          <button class="btn btn-primary">Save Notes</button>
         </div>
       </div>
+
+      <!-- Modal Notebook -->
+      <div id="myModalnotebook" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header notebook-header">
+          <button class="btn my-close-btn" data-dismiss="modal" aria-hidden="true">×</button>
+          <span><?php echo $USER_USERNAME; ?></span>&nbsp;|&nbsp;<span>Date of Note</span>&nbsp;|&nbsp;<span>Data Set ID?</span>
+        </div>
+        <div class="modal-body">
+          <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor.
+          Sed posuere consectetur est at lobortis. Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+          <div class="btn-group">         
+            <a class="" href="#" title="view"><i class="icon-eye-open"></i>View Data Set</a>
+            <a class="" href="#" title="trash"><i class="icon-trash"></i>Delete Note</a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          
+
+        </div>
+      </div>
+
+
 
       <!-- Modal Profile -->
       <div id="myModalprofile" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -841,49 +883,6 @@ require_once('../models/headerLoggedIn.php');
 	</script>
 
 
-  <script type="text/javascript">
-
-    // $('a[data-toggle="tab"]').click(function(e) {
-    //   console.log($(e.target).attr('href'));
-
-    //   if ($(e.target).attr('href') == '#set-two') {
-    //     console.log("recognizing set two");
-
-    //     $.get("../models/load_datasets.php", { whoseSets: "yourSets" }, function(msg) {
-    //       rowArray = $.parseJSON(msg);
-    //       console.log(rowArray);
-    //       $('#your-uploads-list').empty();
-    //       for (var p=0; p<rowArray.length; p++) {
-    //         var thisRow = rowArray[p];
-    //         var set_id = thisRow['SET_ID'];
-    //         $('#your-uploads-list').append('<li><a href="#" data-toggle="collapse" data-target="#set-options-id' + (set_id) + '"><span id="dataset' + (set_id) + '" class="dataSetTitle">DATASET: ' + (set_id) + '</span></a></li><ul id="set-options-id' + (set_id) + '" class="collapse"><li class="btn-group"><a class="" href="#"><i class="icon-eye-open"></i></a><a class="" href="#"><i class="icon-star-empty"></i></a></li></ul>').show(500);
-    //        }
-    //     });
-
-
-    //   } else if ($(e.target).attr('href') == '#set-one') {
-    //     console.log("recognizing set one");
-    //    $.get("../models/load_datasets.php", { whoseSets: "allPublicSets" }, function(msg) {
-    //       rowArray = $.parseJSON(msg);
-    //       console.log(rowArray);
-    //       $('#public-sets-list').empty();
-    //       for (var p=0; p<rowArray.length; p++) {
-    //         var thisRow = rowArray[p];
-    //         var set_id = thisRow['SET_ID'];
-    //         $('#public-sets-list').append('<li><a href="#" data-toggle="collapse" data-target="#set-options-id' + (set_id) + '"><span id="dataset' + (set_id) + '" class="dataSetTitle">DATASET: ' + (set_id) + '</span></a></li><ul id="set-options-id' + (set_id) + '" class="collapse"><li class="btn-group"><a class="" href="#"><i class="icon-eye-open"></i></a><a class="" href="#"><i class="icon-folder-close"></i></a><a class="" href="#"><i class="icon-download-alt"></i></a><a class="" href="#"><i class="icon-star-empty"></i></a></li></ul>').show(500);
-    //       }
-    //     });
-    //   }
-
-    // });
-
-  </script>
-
-
-
-
-
-    
 
   </body>
 </html>
