@@ -4,7 +4,7 @@ body{
 	background: #fff;
 	/*background-color: #585858;*/	
 	/*background-size: 200px 200px;*/
-	font-family: 'Oxygen';
+	font-family: 'OxygenRegular';
 }
 body.workspace-body{
 	background: url('../img/bkgd-2.png') repeat top left transparent;

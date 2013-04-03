@@ -30,6 +30,7 @@ require_once('../models/headerLoggedIn.php');
      <link href="css/bootstrap-responsive.css" rel="stylesheet"/>
      <link href="css/bootstrap-fileupload.min.css" rel="stylesheet"/>
      <link href="css/bootstrap-scroll-modal.css" rel="stylesheet" />
+    <link href="css/oxygen-stylesheet.css" rel="stylesheet" />
      <link href="css/styles.css" rel="stylesheet"/>
      <link href="css/datepicker.css" rel="stylesheet" />
 
