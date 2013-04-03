@@ -10,6 +10,9 @@ body.workspace-body{
 	background: url('../img/bkgd-2.png') repeat top left transparent;
 
 }
+p{
+	font-family: 'Open Sans';
+}
 a{
 	/*color:#F4B21B;*/
 	/*color:#2b8685;*/
@@ -131,7 +134,10 @@ i.icon-star-empty{
 .navbar .nav>li>a{
 	text-shadow:none;
 	letter-spacing: 1px;
-	/*color:#2b8685;*/
+	color:#45BAB4;
+}
+.navbar .nav>li>a:hover{
+	color:#eee;
 
 }
 .top-nav {
@@ -279,7 +285,13 @@ ul.set-list .btn-group{
 	/*color:#F2B017;*/
 	/*color:#2b8685;*/
 	color:#45BAB4;
-	letter-spacing: 1px;
+	letter-spacing: 1.5px;
+	font-family: '';
+
+}
+.sidebar-left ul.logo-header li a span{
+	font-family: '';
+	/*font-weight: bold;*/
 }
 .sidebar-left ul.logo-header li a:hover{
 	background-color: transparent;
@@ -519,7 +531,7 @@ h5.form-signin-heading{
 }
 .viewport-display .graph{
 	min-height: 240px;
-	height:340px;
+	/*height:340px;*/
 	padding:20px 10px;
 	;
 }
