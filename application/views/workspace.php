@@ -14,7 +14,7 @@ require_once('../models/headerLoggedIn.php');
     <meta name="author" content=""/>
 
     <!-- Le styles -->
-    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type='text/css'>
+    
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700' rel='stylesheet' type='text/css'>
     <link href="css/bootstrap.min.css" rel="stylesheet"/>  
     <link href="css/font-awesome.min.css" rel="stylesheet" />
