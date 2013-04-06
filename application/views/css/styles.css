@@ -17,6 +17,7 @@ body.home .home-nav li a{
 	/*color:#F4B21B;*/
 	/*color:#2b8685;*/
 	/*color:#F2B017;*/
+	color: #303030;
 	
 	
 }
@@ -30,15 +31,16 @@ body.home .home-nav li a:hover{
 	height:615px;
 	background:url(../img/spectroscopy.jpg) no-repeat left top transparent;
 }
-.home-container{
+/*.home-container{
 	width:1200px;
 	margin:0 auto;
 	margin-top: 80px;
-}
-/*.home-container .row{
-	width:1200px;
-	padding:20px;
 }*/
+.home-container .row{
+	max-width:1200px;
+	padding:20px;
+	margin:0 auto;
+}
 .navbar-inner ul.home-nav{
 	float:right;
 	font-family: 'OxygenBold';
@@ -46,19 +48,22 @@ body.home .home-nav li a:hover{
 	letter-spacing: 1.5px;
 }
 .home-container .intro{
-	margin-top: 170px;
+	margin-top: 150px;
+}
+.intro h1{
+	font-size: 4em;
 }
 .home-container .display img{
-	margin-top: 130px;
+	margin-top: 100px;
 
 }
 a.log-in-btn{
-	background-color: #ccc;
+	background-color: #eee;
 	border-radius: 6px;
 /*	padding:3px 5px;*/
 }
 .intro a.create-acct{
-	color:#fff !important;
+	/*color:#fff !important;*/
 	font-size: 2em;
 	padding:15px;
 	font-family: 'OxygenBold';
