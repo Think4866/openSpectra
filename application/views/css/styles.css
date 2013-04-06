@@ -1,11 +1,69 @@
 
+img{
+	max-width:100%;
 
+}
 body{
 	background: #fff;
 	/*background-color: #585858;*/	
 	/*background-size: 200px 200px;*/
 	font-family: 'OxygenRegular';
 }
+body.home {
+	background-color: #4D4D4D;
+
+}
+body.home .home-nav li a{
+	/*color:#F4B21B;*/
+	/*color:#2b8685;*/
+	/*color:#F2B017;*/
+	
+	
+}
+body.home .home-nav li a:hover{
+	/*color:#f9f9f9;*/
+	color:#303030;
+	text-decoration: none;
+}
+.background-header{
+	width:100%;
+	height:615px;
+	background:url(../img/spectroscopy.jpg) no-repeat left top transparent;
+}
+.home-container{
+	width:1200px;
+	margin:0 auto;
+	margin-top: 80px;
+}
+/*.home-container .row{
+	width:1200px;
+	padding:20px;
+}*/
+.navbar-inner ul.home-nav{
+	float:right;
+	font-family: 'OxygenBold';
+	font-size: 1.1em;
+	letter-spacing: 1.5px;
+}
+.home-container .intro{
+	margin-top: 170px;
+}
+.home-container .display img{
+	margin-top: 130px;
+
+}
+a.log-in-btn{
+	background-color: #ccc;
+	border-radius: 6px;
+/*	padding:3px 5px;*/
+}
+.intro a.create-acct{
+	color:#fff !important;
+	font-size: 2em;
+	padding:15px;
+	font-family: 'OxygenBold';
+}
+/*===================================================workspace*/
 body.workspace-body{
 	background: url('../img/bkgd-2.png') repeat top left transparent;
 
@@ -569,7 +627,7 @@ h5.form-signin-heading{
 }
 .viewport-display .set_tools ul li{
 	display: inline-block;
-	padding-top: 2em;
+	padding-top: 4em;
 /*	border:1px solid black;*/
 
 }
