@@ -79,9 +79,9 @@ require_once('../models/headerLoggedIn.php');
          
             </div><!-- user dropdown ends -->
             <div class="top-nav nav-collapse">
-              <ul class="nav">
+              <ul class="nav workspace-nav">
                <!--  <li><a href="#">SpectraView</a></li> -->
-                <li class="active"><a href="#" >Workspace</a></li>
+                <li class="active"><a href="#">Workspace</a></li>
                 <li><a href="#">Settings</a></li>
                 <li><a href="#">Help</a></li>
               </ul>
@@ -246,17 +246,18 @@ require_once('../models/headerLoggedIn.php');
                       <li>Material: <span class="info-data">Data Set Material</span></li>
                       <li>Date Uploaded: <span class="info-data">03/20/2013</span></li>
                       <li>Institution: <span class="info-data">UNCA</span></li>
-                      <li id="show-description"><a href=""><i class="icon-minus"></i>Hide Description</a></li>
-                      <li id="show-notes"><a href=""><i class="icon-minus"></i>Hide Notes</a></li>
-                    </ul>
-                    <ul class="set-info span6">
                       <li>Callibration: <span class="info-data">Included</span></li>
                       <li>Isotope: <span class="info-data"></span></li>
                       <li>Molecular Formula: <span class="info-data"></span></li>
                       
                     </ul>
+                    <ul class="set-info span6">
+                      <li id="show-description"><a href=""><i class="icon-plus"></i>Show Description</a></li>
+                      <li id="show-notes"><a href=""><i class="icon-plus"></i>Show Notes</a></li>
+                      
+                    </ul>
                     
-                      <div class="span11 offset1 description">
+                     <!--  <div class="span11 offset1 description">
                         <p>Set Description</p>
                         <p>username - date</p>
 
@@ -271,11 +272,8 @@ require_once('../models/headerLoggedIn.php');
                         <p>These are the notes uploaded by the user. We should have a button to show and hide these notes.
                           These are the notes uploaded by the user. We should have a button to show and hide these notes.
                           These are the notes uploaded by the user. We should have a button to show and hide these notes.</p>
-                        
-                        
-                        <!-- notes insert here -->
 
-                      </div>
+                      </div> -->
                     
                 </section>
               </div>
