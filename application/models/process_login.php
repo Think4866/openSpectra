@@ -1,11 +1,8 @@
 <?php 
 
-echo 'we got to process_login!';
 
-require_once('connections/spectra.php');
+//require_once('connections/spectra.php');
 require_once('user_manager.php');
-
-//echo ' ...and the requires... ';
 
 session_start();
 
@@ -17,16 +14,13 @@ if (!isset($_POST['USERNAME']) || $_POST['USERNAME'] == ''
 } else {
 		$USER_USERNAME = $_POST['USERNAME'];
 		$USER_PASSWORD = $_POST['PASSWORD'];
-		mysql_select_db($database_openSpectra, $openSpectra);
-
+		//mysql_select_db($database_openSpectra, $openSpectra);
 }
-
 //HAVE USERMANAGER OBJECT PROCESS LOGIN
 $usermgr = new UserManager();
 $usermgr->processLogin($USER_USERNAME, $USER_PASSWORD);
 
 header('Location: ../views/workspace.php');
-//echo 'and past the header redirect?';
 
 ?>
 
