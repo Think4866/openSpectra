@@ -13,8 +13,9 @@ $getName = mysqli_query($conn, $queryGetName) or die(mysqli_error($conn));
 $row_GetName = mysqli_fetch_assoc($getName);
 //echo 'reached headerLoggedIn after query results  = ' . $row_GetName;
 $USER_ID = $row_GetName['USER_ID'];
-$USER_NAME = $row_GetName['FIRSTNAME'] . "&nbsp;" . $row_GetName['LASTNAME'];
-$CC_USER_NAME = mb_convert_case($USER_NAME, MB_CASE_TITLE, "UTF-8");
+$USER_FIRST_NAME = mb_convert_case($row_GetName['FIRSTNAME'], MB_CASE_TITLE, "UTF-8");
+$USER_LAST_NAME = mb_convert_case($row_GetName['LASTNAME'], MB_CASE_TITLE, "UTF-8");
+$CC_USER_NAME = $USER_FIRST_NAME . "&nbsp;" . $USER_LAST_NAME;
 $USER_USERNAME = $row_GetName['USERNAME'];
 $USER_INSTITUTION = $row_GetName['INSTITUTION'];
 

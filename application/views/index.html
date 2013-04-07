@@ -15,7 +15,6 @@
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/font-awesome.min.css" rel="stylesheet" />
     <link href="css/oxygen-stylesheet.css" rel="stylesheet" />
-    <link href="css/comfortaa-stylesheet.css" rel="stylesheet" />
     <style type="text/css">
     /* GLOBAL STYLES
     -------------------------------------------------- */
@@ -147,7 +146,7 @@
           <div class="span5 intro">
             <h1>SpectraView</h1>
                 <p class="lead">A web application for viewing, comparing and organizing spectroscopy data.</p>
-                <a href="#myModal2" role="button" class="btn btn-large btn-custom create-acct" data-toggle="modal" data-dynamic="true">Create Account</a>
+                <a href="#myModalCreateAccount" role="button" class="btn btn-large btn-custom create-acct" data-toggle="modal" data-dynamic="true">Create Account</a>
           </div>
           <div class="span8 display">
            <!-- <img src="img/workspace-1.png" alt="" /> -->
@@ -165,7 +164,7 @@
 
           <form class="form-signin" action="../models/process_login.php" method="POST">
             <h3 class="form-signin-heading">Please sign in</h3>
-            <div class="control-group ">
+            <div class="control-group">
                   <label class="control-label">User Name</label>
               <div class="controls">
                   <div class="input-prepend">
@@ -197,7 +196,7 @@
       </div>
         
       <!-- Create Account Modal -->
-      <div id="myModal2" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div id="myModalCreateAccount" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 
       
         <div class="modal-body my-modal-body">
@@ -220,7 +219,7 @@
               </div>
             </div>
             <div class="control-group">
-                  <div id="control-group-fname"></div>
+                  <div id="control-group-fname" class="errormsgs"></div>
                   <label class="control-label">* First Name</label>
               <div class="controls">
                   <div class="input-prepend">
@@ -229,7 +228,7 @@
                 </div>
               </div>
             </div>
-            <div class="control-group ">
+            <div class="control-group">
                   <div id="control-group-lname" class="errormsgs"></div>
                   <label class="control-label">* Last Name</label>
               <div class="controls">
@@ -252,7 +251,7 @@
                   <label class="control-label">Institution</label>
               <div class="controls">
                   <div class="input-prepend">
-                <span class="add-on"><i class="icon-home"></i></span>
+                    <span class="add-on"><i class="icon-home"></i></span>
                   <input type="text" class="input-xlarge" id="institution" name="institution" placeholder="Institution">
                 </div>
               </div>
@@ -262,19 +261,19 @@
                   <label class="control-label">* Email</label>
               <div class="controls">
                   <div class="input-prepend">
-                <span class="add-on"><i class="icon-envelope"></i></span>
+                   <span class="add-on"><i class="icon-envelope"></i></span>
                   <input type="text" class="input-xlarge" id="email" name="email" placeholder="Email">
-                </div>
+                 </div>
               </div>
             </div>
-            <div class="control-group ">
+            <div class="control-group">
                   <div id="control-group-uname" class="errormsgs"></div>
                   <label class="control-label">* User Name</label>
               <div class="controls">
                   <div class="input-prepend">
-                <span class="add-on"><i class="icon-user"></i></span>
-                  <input type="text" class="input-xlarge" id="uname" name="uname" placeholder="Create a Username">
-                </div>
+                    <span class="add-on"><i class="icon-user"></i></span>
+                    <input type="text" class="input-xlarge" id="unamenew" name="unamenew" placeholder="Create a Username">
+                  </div>
               </div>
             </div>
             <div class="control-group">
@@ -283,7 +282,7 @@
               <div class="controls">
                   <div class="input-prepend">
                 <span class="add-on"><i class="icon-lock"></i></span>
-                  <input type="Password" id="passwd" class="input-xlarge" name="passwd" placeholder="Password">
+                  <input type="Password" id="passwdnew" class="input-xlarge" name="passwdnew" placeholder="Password">
                 </div>
               </div>
             </div>
@@ -293,7 +292,7 @@
               <div class="controls">
                   <div class="input-prepend">
                 <span class="add-on"><i class="icon-lock"></i></span>
-                  <input type="Password" id="conpasswd" class="input-xlarge" name="conpasswd" placeholder="Re-enter Password">
+                  <input type="Password" id="conpasswdnew" class="input-xlarge" name="conpasswdnew" placeholder="Re-enter Password">
                 </div>
               </div>
             </div>
@@ -312,6 +311,24 @@
       </div>
     </div>
 
+    <!-- Account successfully created -->
+    <div id="myModalAccountCreated" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-header">
+          <button class="btn my-close-btn" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Success!</h3>
+      </div>
+       <form id="loginAfterAccountCreation" class="form-horizontal" method="post" action="../models/process_login.php">
+      <div class="modal-body">
+          <input type="hidden" name="NEW_USERNAME" id="new_uname">
+          <input type="hidden" name="NEW_PASSWORD" id="new_passwd">
+          <span class="smalltext">Your account has been created.</span>
+      </div>
+      <div class="modal-footer">
+          <button type="submit" class="btn">Log In</button>
+      </div>
+      </form>
+    </div>
+
 
 
 
@@ -324,7 +341,8 @@
     <script src="js/jquery1-9.min.js"></script>
     <script src="js/bootstrap.min.js"></script>   
     <script src="js/bootstrap-scroll-modal.js"></script>
-    <script src="js/form-submits.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/create-account.js"></script>
 
   </body>
 </html>
