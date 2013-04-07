@@ -1,4 +1,1 @@
-csci499
-=======
-
-Scientific data web application
+OpenSpectra is a web application developed at UNC Asheville for viewing scientific data.
