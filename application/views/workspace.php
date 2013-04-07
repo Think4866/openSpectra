@@ -105,7 +105,7 @@ require_once('../models/headerLoggedIn.php');
             
             <ul class="nav nav-list left-navigation">   
               <!-- Button to trigger upload modal -->
-              <li><a href="#myModalupload" role="button" class="my-upload-btn" data-toggle="modal" data-dynamic="true"><i class="icon-upload"> </i>Upload</a></li>
+              <li><a href="#myModalupload" role="button" class="hidden-phone my-upload-btn" data-toggle="modal" data-dynamic="true"><i class="icon-upload"> </i>Upload</a></li>
 
               <!-- Button to trigger notepad modal -->
               <!-- <li><a href="#myModalnotepad" role="button" class="my-notepad-btn" data-toggle="modal" data-dynamic="true"><i class="icon-pencil"></i>Notepad</a></li> -->
@@ -148,10 +148,12 @@ require_once('../models/headerLoggedIn.php');
                       <li><a href="#" data-toggle="collapse" data-target="#set-options-id1">Set Name</a></li>                      
                          <div id="set-options-id1" class="collapse"> 
                           <div class="btn-group">
+                              
                               <a class="" href="#" title="favorite"><i class="icon-star-empty"></i></a>
                               <a class="" href="#" title="view"><i class="icon-eye-open"></i></a>                                   
                               <a class="" href="#" title="download"><i class="icon-download-alt"></i></a>
                               <a class="" href="#" title="trash"><i class="icon-trash"></i></a>
+                              <a class="saved" href="#" title="favorite"><i class="icon-save"></i></a>
                           </div>
                         </div>  <!-- end set and dropdown options -->
 
@@ -172,10 +174,12 @@ require_once('../models/headerLoggedIn.php');
                        <li><a href="#" data-toggle="collapse" data-target="#set-options-id2">Set Name</a></li>                      
                          <div id="set-options-id2" class="collapse"> 
                           <div class="btn-group">
+
                               <a class="" href="#" title="favorite"><i class="icon-star-empty"></i></a>
                               <a class="" href="#" title="view"><i class="icon-eye-open"></i></a>                                   
                               <a class="" href="#" title="download"><i class="icon-download-alt"></i></a>
                               <a class="" href="#" title="download"><i class="icon-trash"></i></a>
+                              <a class="saved" href="#" title="favorite"><i class="icon-save"></i></a>
                           </div>
                         </div>  <!-- end set and dropdown options -->
 
@@ -331,7 +335,7 @@ require_once('../models/headerLoggedIn.php');
           <div class="controls">
             <div class="input-prepend search-bar">
               <span class="add-on"><i class="icon-search"></i></span>
-              <input class="span9 search-bar" id="inputIcon" type="text" placeholder="Search Data Sets"/>
+              <input class="span9 search-bar" id="inputIcon" type="text" placeholder="Search Data"/>
             </div>
           </div>
         </div>
