@@ -1,13 +1,12 @@
 <?php
 
 
-require_once('connections/spectra.php');
+//require_once('connections/spectra.php');
 require_once('user_manager.php');
-//require_once('user_manager.php');
 require_once('page.php');
 
 
-mysql_select_db($database_openSpectra, $openSpectra);
+//mysql_select_db($database_openSpectra, $openSpectra);
 
 //check for file uploads
 
@@ -15,8 +14,8 @@ if ($_FILES["origfile_url"]["error"] > 0) {
   echo "Error: " . $_FILES["origfile_url"]["error"] . "<br />";
 } else {
   	//check the database for the next origfile and origcalib autoinc values
-	$query = mysql_query("SHOW TABLE STATUS LIKE 'DATASETS'"); 
-	$row = mysql_fetch_assoc($query); 
+	$query = mysqli_query($conn, "SHOW TABLE STATUS LIKE 'DATASETS'"); 
+	$row = mysqli_fetch_assoc($query); 
 	$next_inc_value = $row['Auto_increment'];
 	 
 	//this is the new name of the raw data file -- keep consistent across the raw and xml buckets
@@ -71,8 +70,8 @@ $ORIGCALIB_URL = isset($origcalib_url_destination) ? $origcalib_url_destination 
 
 
 $queryGetID = "SELECT * FROM USER WHERE USERNAME='" . $FNAME . "' LIMIT 0, 1";
-$selectUserID = mysql_query($queryGetID, $openSpectra) or die(mysql_error());
-$row_GetID = mysql_fetch_assoc($selectUserID);
+$selectUserID = mysqli_query($conn, $queryGetID) or die(mysqli_error($conn));
+$row_GetID = mysqli_fetch_assoc($selectUserID);
 $USER_ID = $row_GetID['USER_ID'];
 $FNAME = $USER_ID;
 
@@ -95,7 +94,7 @@ $ORIGCALIB_URL = GetSQLValueString($ORIGCALIB_URL, "text");
 
 $qstr = "INSERT INTO DATASETS (USER_ID, MATERIAL, MOLECULARFORMULA, ISOTOPE, PUBLIC, DATE_COLLECTED, DESCRIPTION, ORIGFILE_URL, ORIGCALIB_URL) VALUES ('" . $FNAME . "', '" . $MATERIAL . "', '" . $MOLECULARFORMULA . "', '" . $ISOTOPE . "', '" . $PUBLIC . "', '" . $DATE_COLLECTED . "', '" . $DESCRIPTION . "', '" . $ORIGFILE_URL . "', '" . $ORIGCALIB_URL . "')";
 
-$addNewDataset = mysql_query($qstr, $openSpectra) or die(mysql_error());
+$addNewDataset = mysqli_query($conn, $qstr) or die(mysqli_error($conn));
 //echo "new row should be added!";
 
 header('Location: ../views/workspace.php');

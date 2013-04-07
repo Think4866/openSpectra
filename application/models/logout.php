@@ -1,5 +1,6 @@
 <?php 
 require_once('user_manager.php');
+//require_once('connections/spectra.php');
 session_start();
 $usermgr = new UserManager();
 $USER_USERNAME = NULL;

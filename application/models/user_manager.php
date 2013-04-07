@@ -1,4 +1,5 @@
-<?php  require_once('connections/spectra.php');
+<?php  
+require_once('connections/spectra.php');
 
 
 date_default_timezone_set('America/New_York');
@@ -99,10 +100,10 @@ class UserManager {
 	}
 	
 	private function getConnection() {
-		$conn = new mysqli("localhost", "ewatson", "E-wma1spe", "openSpectra");
-		if (mysqli_connect_errno() !== 0) {
-			throw new DatabaseErrorException(mysqli_connect_error());
-		}
+			$conn = new mysqli($GLOBALS['hostname_openSpectra'], $GLOBALS['username_openSpectra'], $GLOBALS['password_openSpectra'], $GLOBALS['database_openSpectra']);
+ 			if (mysqli_connect_errno() !== 0) {
+				throw new DatabaseErrorException(mysqli_connect_error());
+			} 
 		return $conn;
 	}
 	
@@ -170,22 +171,20 @@ class UserManager {
 		}
 		//GET DB CONNECTION
 		$conn = $this->getConnection();
-		
 		try {
 			$userloginid = $this->confirmUserNamePassword($in_USER_USERNAME, $in_USER_PASSWORD, $conn);
 			$sessionid = session_id();
-			
 			//CLEAR EXISTING ENTRIES IN LOGIN TABLE
 			$this->clearLoginEntriesForUser($userloginid);
 			
 			//LOG THE USER INTO THE TABLE
 			$query = "INSERT INTO SESSIONS(USER_ID, SESSION_ID, LAST_ACCESS) VALUES('" . $userloginid . "', '" . $sessionid . "', NOW() )";
-			
 			$result = @$conn->query($query);
 			if ($result === FALSE) {
 				throw new DatabaseErrorException($conn->error);  //change to DatabaseErrorException after errors.php created
 			}
 		} catch (Exception $e) {
+			//echo ' / some kind of error in processLogin function';
 			if (isset($conn)) {
 				$conn->close();
 			} throw $e;
