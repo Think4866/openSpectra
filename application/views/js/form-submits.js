@@ -41,3 +41,42 @@ $(function() {
 
 	});
 })
+
+$(function() {
+	$('#createAccount').ajaxForm({
+		beforeSubmit: function() {
+			$('.errormsgs').empty();
+			//$('#control-group-material').empty();
+			//var datasetFilename = $('#datasetfilename').text();
+			//var calibFilename = $('#calibfilename').text();
+			var submitPrefix = $("#prefix").val();
+			var submitFname = $("#fname").val();
+			var submitLname = $("#lname").val();
+			var submitSuffix = $("#suffix").val();
+			var submitInstitution = $("#institution").val();
+			var submitEmail = $("#email").val();
+			var submitUname = $("#uname").val();
+			//var submitPasswd = $("#passwd").val();
+			//var submitConpasswd = $("#conpasswd").val();
+			if (submitFname == '') {
+				$('#control-group-fname').append('<span class="errorCheck">This field is required.</span>');
+			} 
+			if (submitLname == '') {
+				$('#control-group-lname').append('<span class="errorCheck">This field is required.</span>');
+			}
+			if (submitEmail == '') {
+				$('#control-group-email').prepend('<span class="errorCheck">This field is required.</span>');
+			}
+			if ((datasetFilename == '' ) || (submitMaterial == '')) {
+				return false;
+			}
+		},
+		success: function(data) {
+			jQuery.noConflict();
+			$('#myModaluploadConfirm').modal('show');
+			$('#myModalupload').modal('hide');
+		}
+		//var fname = $("#fname").val();
+
+	});
+})
