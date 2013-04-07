@@ -28,27 +28,19 @@ class UserManager {
 	// }
 	
 	public function createAccount (
-		$in_STUDENT_ID,
-		$in_STUDENT_LASTNAME, 
-		$in_STUDENT_INITIAL, 
-		$in_STUDENT_FIRSTNAME, 
-		$in_EMAIL_ADDRESS, 
-		$in_STUDENT_MAJOR, 
-		$in_STUDENT_MINOR, 
-		$in_CLASS_LEVEL, 
-		$in_TERMS_SIGNED, 
-		$in_CC_ID_COPIED, 
-		$in_CC_EXPDATEMONTH,
-		$in_CC_EXPDATEYEAR, 
-		$in_FACULTY,
-		$in_ADMIN,  
-		$in_ACTIVE, 
+		$in_PREFIX,
+		$in_FNAME,
+		$in_LNAME, 
+		$in_SUFFIX, 
+		$in_INSTITUTION, 
+		$in_EMAIL, 
+		$in_UNAME, 
 		$in_PASSWORD
 	) {
 		//QUICK INPUT VALIDATION
-		if ($in_STUDENT_LASTNAME == '' or $in_STUDENT_FIRSTNAME == '' or !$this->isValidStudentID($in_STUDENT_ID)) {
-			throw new IncompleteFormException();
-		}
+		//if ($in_STUDENT_LASTNAME == '' or $in_STUDENT_FIRSTNAME == '' or !$this->isValidStudentID($in_STUDENT_ID)) {
+		//	throw new IncompleteFormException();
+		//}
 		
 		//GET A DATABASE CONNECTION WITH WHICH TO WORK
 		$conn = $this->getConnection();
@@ -56,32 +48,23 @@ class UserManager {
 		//MAKE SURE USER DOESN'T EXIST ALREADY
 		try {
 			$exists = FALSE;
-			$exists = $this->userExists($in_STUDENT_ID);
-//, $in_db_conn			
+			$exists = $this->userExists($in_UNAME);
 			if ($exists === TRUE) {
 //				throw new UserAlreadyExistsException();
 				$conn->close();
 				return;
 			}
 			//MAKE SURE PARAMETERS ARE SAFE FOR INSERTION, AND ENCRYPT PASSWORD FOR STORAGE
-			$STUDENT_ID = $this->super_escape_string($in_STUDENT_ID, $conn);
-			$STUDENT_LASTNAME = $this->super_escape_string($in_STUDENT_LASTNAME, $conn);
-			$STUDENT_INITIAL = $this->super_escape_string($in_STUDENT_INITIAL, $conn);
-			$STUDENT_FIRSTNAME = $this->super_escape_string($in_STUDENT_FIRSTNAME, $conn);
-			$EMAIL_ADDRESS = $this->super_escape_string($in_EMAIL_ADDRESS, $conn);
-			$STUDENT_MAJOR = $this->super_escape_string($in_STUDENT_MAJOR, $conn);
-			$STUDENT_MINOR = $this->super_escape_string($in_STUDENT_MINOR, $conn);
-			$CLASS_LEVEL = $this->super_escape_string($in_CLASS_LEVEL, $conn);
-			$TERMS_SIGNED = $this->super_escape_string($in_TERMS_SIGNED, $conn);
-			$CC_ID_COPIED = $this->super_escape_string($in_CC_ID_COPIED, $conn);
-			$CC_EXPDATEMONTH = $this->super_escape_string($in_CC_EXPDATEMONTH, $conn);
-			$CC_EXPDATEYEAR = $this->super_escape_string($in_CC_EXPDATEYEAR, $conn);
-			$FACULTY = $this->super_escape_string($in_FACULTY, $conn);
-			$ADMIN = $this->super_escape_string($in_ADMIN, $conn);
-			$ACTIVE = $this->super_escape_string($in_ACTIVE, $conn);
+			$PREFIX = $this->super_escape_string($in_PREFIX, $conn);
+			$FNAME = $this->super_escape_string($in_FNAME, $conn);
+			$LNAME = $this->super_escape_string($in_LNAME, $conn);
+			$SUFFIX = $this->super_escape_string($in_SUFFIX, $conn);
+			$INSTITUTION = $this->super_escape_string($in_INSTITUTION, $conn);
+			$EMAIL = $this->super_escape_string($in_EMAIL, $conn);
+			$UNAME = $this->super_escape_string($in_UNAME, $conn);
 			$PASSWORD = $in_PASSWORD;
 			
-			$qstr = 	"INSERT INTO NMINVENTORY.STUDENT (STUDENT_ID, STUDENT_LASTNAME, STUDENT_INITIAL, STUDENT_FIRSTNAME, EMAIL_ADDRESS, STUDENT_MAJOR, STUDENT_MINOR, CLASS_LEVEL, TERMS_SIGNED, CC_ID_COPIED, CC_EXPDATEMONTH, CC_EXPDATEYEAR, FACULTY, ADMIN, ACTIVE, PASSWORD) VALUES ('$STUDENT_ID', '$STUDENT_LASTNAME', '$STUDENT_INITIAL', '$STUDENT_FIRSTNAME', '$EMAIL_ADDRESS', '$STUDENT_MAJOR', '$STUDENT_MINOR', '$CLASS_LEVEL', '$TERMS_SIGNED', '$CC_ID_COPIED', '$CC_EXPDATEMONTH', '$CC_EXPDATEYEAR', '$FACULTY', '$ADMIN', '$ACTIVE', '$PASSWORD')";
+			$qstr = 	"INSERT INTO USER (PREFIX, FIRSTNAME, LASTNAME, SUFFIX, INSTITUTION, EMAIL, USERNAME, PASSWORD) VALUES ('$PREFIX', '$FNAME', '$LNAME', '$SUFFIX', '$INSTITUTION', '$EMAIL', '$UNAME', '$PASSWORD')";
 			
 			//INSERT NEW USER
 			$results =  @$conn->query($qstr);
@@ -96,7 +79,7 @@ class UserManager {
 		
 		// CLEAN UP AND EXIT
 		$conn->close();
-		return $STUDENT_ID;
+		return $LNAME; //maybe pull the new USER_ID here... not sure what this is used for
 	}
 	
 	private function getConnection() {
@@ -121,29 +104,28 @@ class UserManager {
 	
 	//SEE IF USER ALREADY EXISTS
 	public function userExists (
-		$in_STUDENT_ID,
-		$in_db_conn = NULL
+		$in_UNAME
 	) {
-		if ($in_STUDENT_ID == '') {
-			throw new InvalidArgumentException();
-		}
-		if ($in_db_conn === NULL) {
+		//if ($in_STUDENT_ID == '') {
+		//	throw new InvalidArgumentException();
+		//}
+		//if ($in_db_conn === NULL) {
 			$conn = $this->getConnection();
-		} else {
-			$conn = $in_db_conn;
-		}
+		//} else {
+		//	$conn = $in_db_conn;
+		//}
 		try {
-			$STUDENT = $this->super_escape_string($in_STUDENT_ID, $conn);
-			$qstr = "SELECT STUDENT_ID FROM STUDENT WHERE STUDENT_ID = '$STUDENT'";
+			$CHECK_USERNAME = $this->super_escape_string($in_UNAME, $conn);
+			$qstr = "SELECT USERNAME FROM USER WHERE USERNAME = '" . $CHECK_USERNAME . "'";
 			$results = @$conn->query($qstr);
-			if ($results === FALSE) {
+			if ($results === false) {
 				throw new DatabaseErrorException($conn->error);
 			}
 			//SEE IF WE FOUND AN EXISTING RECORD
-			$user_exists = FALSE;
+			$user_exists = false;
 			while (($row = @$results->fetch_assoc()) !== NULL) {
-				if ($row['STUDENT_ID'] == $in_STUDENT_ID) {
-					$user_exists = TRUE;
+				if ($row['USERNAME'] == $in_UNAME) {
+					$user_exists = true;
 					break;
 				}
 			}
@@ -386,7 +368,7 @@ class UserManager {
 	
 	
 	///DELETING USERS
-	public function deleteAccount($in_STUDENT_ID)
+	public function deleteAccount($in_USER_ID)
 	{
 		// VERIFY PARAMETERS
 	//	if (!is_int($in_userloginid)) {
@@ -396,7 +378,7 @@ class UserManager {
 		$conn = $this->getConnection();
 		try {
 	//		$this->clearLoginEntriesForSessionID(session_id());
-			$qstr = "DELETE FROM STUDENT WHERE STUDENT_ID = '" . $in_STUDENT_ID . "'";
+			$qstr = "DELETE FROM USER WHERE USER_ID = '" . $in_USER_ID . "'";
 			$result = @$conn->query($qstr);
 			if ($result === FALSE) {
 				throw new DatabaseErrorException($conn->error);

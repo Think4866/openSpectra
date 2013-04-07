@@ -446,7 +446,7 @@ require_once('../models/headerLoggedIn.php');
               <div class="controls">
                   <div class="input-prepend">
                     <span class="add-on"><i class="icon-calendar"></i></span>
-                    <input type="text"  id="dp1" class="input-medium" name="date_collected" value="<?php echo date("m/d/Y"); ?>" />
+                    <input type="text"  id="date_collected" class="input-medium" name="date_collected" value="<?php echo date("m/d/Y"); ?>" />
                   </div>
               </div>
             </div>

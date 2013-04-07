@@ -1,8 +1,10 @@
+
+
 // Datepicker
   $(function() {
-      $('#dp1').datepicker()
+      $('#date_collected').datepicker()
         .on('changeDate', function(ev) {
-          $('#dp1').datepicker('hide');
+          $('#date_collected').datepicker('hide');
         })
   });
 
@@ -17,7 +19,7 @@ $(function() {
 			var submitFormula = $("#formula").val();
 			var submitIsotope = $("input[name='isotope']:checked").val();
 			var submitPublic = $("#public").val();
-			var submitDate = $("#dp1").val();
+			var submitDate = $("#date_collected").val();
 			var submitDescription = $("#description").val();
 			if (datasetFilename == '') {
 				$('.fileuploaderrors').append('<span class="errorCheck">You must choose a dataset to upload.</span><br />');
@@ -40,43 +42,6 @@ $(function() {
 		//var fname = $("#fname").val();
 
 	});
-})
+});
 
-$(function() {
-	$('#createAccount').ajaxForm({
-		beforeSubmit: function() {
-			$('.errormsgs').empty();
-			//$('#control-group-material').empty();
-			//var datasetFilename = $('#datasetfilename').text();
-			//var calibFilename = $('#calibfilename').text();
-			var submitPrefix = $("#prefix").val();
-			var submitFname = $("#fname").val();
-			var submitLname = $("#lname").val();
-			var submitSuffix = $("#suffix").val();
-			var submitInstitution = $("#institution").val();
-			var submitEmail = $("#email").val();
-			var submitUname = $("#uname").val();
-			//var submitPasswd = $("#passwd").val();
-			//var submitConpasswd = $("#conpasswd").val();
-			if (submitFname == '') {
-				$('#control-group-fname').append('<span class="errorCheck">This field is required.</span>');
-			} 
-			if (submitLname == '') {
-				$('#control-group-lname').append('<span class="errorCheck">This field is required.</span>');
-			}
-			if (submitEmail == '') {
-				$('#control-group-email').prepend('<span class="errorCheck">This field is required.</span>');
-			}
-			if ((datasetFilename == '' ) || (submitMaterial == '')) {
-				return false;
-			}
-		},
-		success: function(data) {
-			jQuery.noConflict();
-			$('#myModaluploadConfirm').modal('show');
-			$('#myModalupload').modal('hide');
-		}
-		//var fname = $("#fname").val();
 
-	});
-})
