@@ -303,9 +303,9 @@ require_once('../models/headerLoggedIn.php');
                 <div id="add-another-btns" class="btn-toolbar pagination-centered">
                   <div class="">
                     <label>Add Another Set</label>
-                    <a data-toggle="collapse" data-parent="#accordion2" href="#collapseThree" class="accordion-toggle btn btn-custom"><i class="icon-folder-open"></i> <strong>Choose</strong></a>
+                    <!-- <a data-toggle="collapse" data-parent="#accordion2" href="#collapseThree" class="accordion-toggle btn btn-custom"><i class="icon-file"></i> <strong>Choose</strong></a> -->
                    
-                    <a href="#myModalupload" role="button" class="btn btn-custom my-upload-btn" data-toggle="modal" data-dynamic="true"><i class="icon-arrow-up"></i> <strong>Upload</strong></a>
+                    <!-- <a href="#myModalupload" role="button" class="btn btn-custom my-upload-btn" data-toggle="modal" data-dynamic="true"><i class="icon-arrow-up"></i> <strong>Upload</strong></a> -->
                   </div>
                 </div>
               </section>
