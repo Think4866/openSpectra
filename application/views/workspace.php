@@ -567,7 +567,6 @@ require_once('../models/headerLoggedIn.php');
           <h3 id="myModalLabel">Your User Profile</h3>
         </div>
         <div class="modal-body">
-          <div class="well">
             <ul class="nav nav-tabs">
               <li class="active"><a href="#home" data-toggle="tab">Profile</a></li>
               <li><a href="#profile" data-toggle="tab">Password</a></li>
@@ -677,7 +676,7 @@ require_once('../models/headerLoggedIn.php');
                       <option value="12.0">(GMT +12:00) Auckland, Wellington, Fiji, Kamchatka</option>
                   </select>
                     <div>
-                      <button class="btn btn-primary">Update</button>
+                      <button class="btn btn-large">Update</button>
                   </div>
                 </form>
               </div>
@@ -686,15 +685,15 @@ require_once('../models/headerLoggedIn.php');
                   <label>New Password</label>
                   <input type="password" class="input-xlarge">
                   <div>
-                      <button class="btn btn-primary">Update</button>
+                      <button class="btn btn-large">Update</button>
                   </div>
               </form>
               </div>
-          </div>  
-              <div class="modal-footer">
-                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>   
-              </div>      
+              
         </div> <!-- end modal body -->
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>   
+        </div>      
        </div><!-- end modal profile -->
       </div> 
 
@@ -736,6 +735,7 @@ require_once('../models/headerLoggedIn.php');
                           <option>Show All Except</option>
                         </select>
                       </div>
+                      <br />
                   <button type="submit" class="btn btn-medium">Apply Filter</button>
                   </form>
               </div>
@@ -758,6 +758,7 @@ require_once('../models/headerLoggedIn.php');
                           <option>Show All Except</option>
                         </select>
                       </div>
+                      <br />
                   <button type="submit" class="btn btn-medium">Apply Filter</button>
                   </form>
               </div>
@@ -780,6 +781,7 @@ require_once('../models/headerLoggedIn.php');
                           <option>Show All Except</option>
                         </select>
                       </div>
+                      <br />
                   <button type="submit" class="btn btn-medium">Apply Filter</button>
                   </form>
               </div>
