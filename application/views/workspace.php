@@ -99,7 +99,7 @@ require_once('../models/headerLoggedIn.php');
 
              <ul class="nav logo-header">
                 <li><a href="#"><span>Spectra</span>View</a></li>
-              
+
               </ul>
             <p class="dashboard-title">Dashboard</p>
 
@@ -107,8 +107,12 @@ require_once('../models/headerLoggedIn.php');
             <ul class="nav nav-list left-navigation">   
               <!-- Button to trigger upload modal -->
               <li><a href="#myModalupload" role="button" class="my-upload-btn" data-toggle="modal" data-dynamic="true"><i class="icon-upload"> </i>Upload</a></li>
+              <li><a href="#myModalnotebook" role="button" class="my-notebook-btn" data-toggle="modal" data-dynamic="true"><i class="icon-pencil"> </i>Notebook</a></li>
 
             </ul>
+
+            <p class="dashboard-divider">Saved Content</p>
+
             <div class="accordion" id="accordion2">
 
               <div class="accordion-group">
@@ -188,44 +192,6 @@ require_once('../models/headerLoggedIn.php');
                 </div>
               </div><!--end accordion group2 -->
 
-              
-
-              <div class="accordion-group sortable">
-                <div class="accordion-heading">
-                  <a rel="tooltip" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseZero">
-                    <i class="icon-list-alt"> </i>Notebook
-                  </a>
-                </div>
-                <div id="collapseZero" class="accordion-body collapse">
-                  <div class="accordion-inner">
-                    <ul class="nav nav-list left-navigation">           
-                      <li><a href="#myModalnotebook" role="button" class="notebook-btn" data-toggle="modal" data-dynamic="true">Date </a></li>
-                      <li><a href="#myModalnotebook" role="button" class="notebook-btn" data-toggle="modal" data-dynamic="true">Date </a></li>
-                      <li><a href="#myModalnotebook" role="button" class="notebook-btn" data-toggle="modal" data-dynamic="true">Date </a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div><!--end accordion group0 -->
-              
-              <div class="accordion-group">
-                <div class="accordion-heading">
-                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
-                    <i class="icon-calendar"> </i>History
-                  </a>
-                </div>
-                <div id="collapseFour" class="accordion-body collapse">
-                  <div class="accordion-inner">
-                    <ul class="nav nav-list left-navigation">           
-                      <li><a href="#">Link</a></li>
-                      <li><a href="#">Link</a></li>
-                      <li><a href="#">Link</a></li>
-
-
-                    </ul>
-                  </div>
-                </div>
-              </div><!--end accordion group4 -->
-
             </div><!--end left bar accordion -->
           </div><!--/.well -->
         </div><!--/span 2-->
@@ -235,6 +201,9 @@ require_once('../models/headerLoggedIn.php');
           <div id="viewport" class="viewport-display">
            
           <div id="set_load_window" class="set-view span12">
+            
+            <div id="file-title" class=""><h3>Data Set 100</h3></div>
+           
             <div id="graph-window" class="graph span6">
 
               <!--   load graph here -->
@@ -257,10 +226,11 @@ require_once('../models/headerLoggedIn.php');
                     <ul class="set-info span6">
                       <li id="show-description"><a href=""><i class="icon-plus"></i>Show Description</a></li>
                       <li id="show-notes"><a href=""><i class="icon-plus"></i>Show Notes</a></li>
+                                 <!--  change to icon-minus and 'hide notes, etc' -->
                       
                     </ul>
                     
-                     <!--  <div class="span11 offset1 description">
+                      <div class="span11 offset1 description">
                         <p>Set Description</p>
                         <p>username - date</p>
 
@@ -276,7 +246,7 @@ require_once('../models/headerLoggedIn.php');
                           These are the notes uploaded by the user. We should have a button to show and hide these notes.
                           These are the notes uploaded by the user. We should have a button to show and hide these notes.</p>
 
-                      </div> -->
+                      </div>
                     
                 </section>
               </div>
