@@ -98,17 +98,16 @@ require_once('../models/headerLoggedIn.php');
           <div class="well sidebar-nav sidebar-left">
 
              <ul class="nav logo-header">
-                <li><a href="#">SpectraView</a></li>
+                <li><a href="#"><span>Spectra</span>View</a></li>
+              
               </ul>
             <p class="dashboard-title">Dashboard</p>
 
             
             <ul class="nav nav-list left-navigation">   
               <!-- Button to trigger upload modal -->
-              <li><a href="#myModalupload" role="button" class="hidden-phone my-upload-btn" data-toggle="modal" data-dynamic="true"><i class="icon-upload"> </i>Upload</a></li>
+              <li><a href="#myModalupload" role="button" class="my-upload-btn" data-toggle="modal" data-dynamic="true"><i class="icon-upload"> </i>Upload</a></li>
 
-              <!-- Button to trigger notepad modal -->
-              <!-- <li><a href="#myModalnotepad" role="button" class="my-notepad-btn" data-toggle="modal" data-dynamic="true"><i class="icon-pencil"></i>Notepad</a></li> -->
             </ul>
             <div class="accordion" id="accordion2">
 
