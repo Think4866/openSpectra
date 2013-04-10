@@ -24,7 +24,7 @@ $USER_INSTITUTION = $row_GetName['INSTITUTION'];
 $queryGetData = "SELECT * FROM DATASETS";
 $getData = mysqli_query($conn, $queryGetData) or die(mysqli_error($conn));
 $row_GetData = mysqli_fetch_assoc($getData);
-$ORIGFILE_URL = $row_GetData['ORIGFILE_URL'];
+$MUGL_URL = $row_GetData['MUGL_URL'];
 
 
 if ($userloginid === -1) {
