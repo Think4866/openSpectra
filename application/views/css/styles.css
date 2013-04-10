@@ -737,6 +737,26 @@ input.searchMain{
 .modal-wrapper{
 	top:15px;
 }
+.modal-body .well{
+	background-color:transparent;
+	box-shadow: none;
+}
+.modal-body a{
+	color:#45BAB4;
+}
+.modal-body a:hover{
+	color:#333;
+}
+.modal-body .nav-pills>.active>a, .nav-pills>.active{
+	background-color: #ccc;
+	color:#333;
+	border-radius: 5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+.modal-footer{
+	background-color: transparent;
+}
 button.my-close-btn{
 	padding:0 10px;
 	float:right;
