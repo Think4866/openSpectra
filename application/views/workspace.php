@@ -264,6 +264,7 @@ require_once('../models/headerLoggedIn.php');
               </div>  <!-- end tools -->
 
             </div>  <!--  end info -->
+          -->
 
           </div>  <!-- end set view -->
 
@@ -774,7 +775,7 @@ require_once('../models/headerLoggedIn.php');
     <script src="js/bootstrap-scroll-modal.js"></script>  <!-- added for scrolling modals -->
     <script src="js/jRespond.min.js"></script>
 	  <script type="text/javascript" src="http://multigraph.github.com/download/multigraph-min.js"></script>
-    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/load-all-datasets.js"></script>
     <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
     <script type="text/javascript" src="js/jquery.form.js"></script>
     <script type="text/javascript" src="js/form-submits.js"></script>
@@ -783,11 +784,13 @@ require_once('../models/headerLoggedIn.php');
 	<script type="text/javascript">
 
 
-  var muglFileURL = <?php echo "'" . $ORIGFILE_URL . "'"; ?>;
+  var muglFileURL = <?php echo "'" . $MUGL_URL . "'"; ?>;
 
   $ = window.multigraph.jQuery;
   $('#graph-window').multigraph({ 'mugl' : muglFileURL, 'width' : '100%', 'height' : '100%' });
   console.log('This copy of Multigraph uses JQuery version ' + $().jquery);
+
+
 // call jRespond and add breakpoints
     var jRes = jRespond([
         {
