@@ -72,9 +72,7 @@ body.home ul.home-nav li a:hover{
 	padding:15px;
 	font-family: 'OxygenBold';
 }
-body.home .intro .btn:hover{
-	color:#45BAB4 !important;
-}
+
 /*===================================================workspace*/
 body.workspace-body{
 	background: url('../img/bkgd-2.png') repeat top left transparent;
@@ -212,7 +210,8 @@ i.icon-star-empty{
 .navbar .nav>li>a{
 	text-shadow:none;
 	letter-spacing: 1px;
-	color:#45BAB4;
+	/*color:#45BAB4;*/
+	color:#ccc;
 	font-size: .9em;
 	transition: all .2s ease-in;
 	-webkit-transition: all .2s ease-in;
@@ -354,7 +353,7 @@ ul.set-list a.saved i{
 	filter: progid:dximagetransform.microsoft.gradient(startColorStr='#e6e6e6', EndColorStr='#ffffff');
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#404040',EndColorStr='#333333')";*/
 	font-weight: normal;
-	font-size: 1em;
+	font-size: 1.1em;
 	line-height: 2.5em;
 	margin-bottom: 0px;
 	text-shadow: none;
@@ -479,6 +478,18 @@ ul.set-list a.saved i{
 	border-radius: 0 5px 0 0;
 	-webkit-border-radius: 0 5px 0 0;
 	-moz-border-radius: 0 5px 0 0;
+
+}
+.sidebar-left p.dashboard-divider{
+	text-shadow:none;
+	text-align: left;
+	letter-spacing: 1px;
+	background-color: #2A2A2A;
+	color:#F2B017;
+	font-size: 10px;
+	padding:5px 0 5px 5px;
+	margin-bottom: 0;
+	
 
 }
 .sidebar-left .nav-list{
@@ -633,12 +644,25 @@ ul.set-list li.btn-group i{
     -webkit-border-radius: 6px 6px 0px 0px;
     -moz-border-radius: 6px 6px 0px 0px;
     border-radius: 6px 6px 0px 0px;
+
 }
 .viewport-display .graph{
 	min-height: 240px;
 	/*height:340px;*/
 	padding:20px 10px;
-	
+	display: none;
+}
+#file-title{
+	position: absolute;
+	display: none;
+
+
+}
+#file-title h3{
+	font-size: 0.9em;
+text-align: center;
+line-height: 10px;
+
 }
 .viewport-display .info{
 	background-color: rgba(255, 255, 255, 0.2);
@@ -649,6 +673,7 @@ ul.set-list li.btn-group i{
 	min-height: 240px;
 	/*border-left:1px solid #ccc;*/
 	margin-left: 0px;
+	display: none;
 	
 }
 .info-content ul.set-info li{
@@ -668,6 +693,7 @@ ul.set-list li.btn-group i{
     -moz-border-radius: 0px 0px 6px 6px;
     border-radius: 0px 0px 6px 6px;
 }
+
 .viewport-display .load-another {
 	padding-top: 3em;
 	/*background-color: #ccc;*/
@@ -741,6 +767,9 @@ ul.tool-bar{
 	font-size: 12px;
 	margin-left: 0;
 	border-bottom: 1px solid #000;
+}
+.span11 .description, .span11 .notes{
+	display:none;
 }
 .set-info li#show-description a, .set-info li#show-notes a{
 	color:#2b8685;
