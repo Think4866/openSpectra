@@ -138,7 +138,7 @@ i.icon-star-empty{
 /*=============================================================TOP NAVIGATION*/
 .navbar{
 	/*background-color: #000;*/
-	background-color: #2A2A2A;
+/*	background-color: #2A2A2A;*/
 }
 .my-navbar-inner{
 	border-radius: 0;
@@ -406,8 +406,6 @@ ul.set-list a.saved i{
 	/*color: #fff;*/
 	letter-spacing: 1.5px;
 	font-family: '';
-	position: relative;
-	z-index: 1000;
 	font-family: 'OxygenBold';
 
 }
