@@ -75,7 +75,7 @@ p{
 	font-family: 'Open Sans';
 }
 a{
-	color:#ccc;
+	color:#aaa;
 	transition: all .2s ease-in;
 	-webkit-transition: all .2s ease-in;
 	-moz-transition: all .2s ease-in;
@@ -268,10 +268,10 @@ ul.set-list a.saved i{
 	color:#45BAB4;
 }
 
-.sidebar-left ul.left-navigation li a:hover, .sidebar-left .accordion-group a:hover, .sidebar-right ul.nav-stacked li a:hover{
+/*.sidebar-left ul.left-navigation li a:hover, .sidebar-left .accordion-group a:hover, .sidebar-right ul.nav-stacked li a:hover{
 	background: #333333;
 	
-}
+}*/
 
 
 .sidebar-left i, .sidebar-right i{
@@ -282,7 +282,7 @@ ul.set-list a.saved i{
 	border-top: 1px solid #4d4d4d;
 	border-bottom: 1px solid #0d0d0d;
 	border-left: none;
-	color: #ddd;
+	color: #aaa;
 	display: block;
 	background: #333333;
 	font-weight: normal;
@@ -298,7 +298,7 @@ ul.set-list a.saved i{
 	border-top: 1px solid #4d4d4d;
 	border-bottom: 1px solid #0d0d0d;
 	border-left: none;
-	color: #ddd;
+	color: #aaa;
 	display: block;
 	background: #333333;
 	font-weight: normal;
@@ -473,10 +473,10 @@ ul.set-list a.saved i{
 	margin-right: 2px;
 
 }
-#myTabContent{
+.sidebar-right #myTabContent{
 	height: 310px;
 }
-#myTabContent .active{
+.sidebar-right #myTabContent .active{
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -582,6 +582,7 @@ ul.set-list li.btn-group i{
     -webkit-border-radius: 6px 6px 0px 0px;
     -moz-border-radius: 6px 6px 0px 0px;
     border-radius: 6px 6px 0px 0px;
+    margin-left:0;
 
 }
 .viewport-display > .set-view-2{
@@ -594,11 +595,15 @@ ul.set-list li.btn-group i{
     border-radius: 0px 0px 6px 6px;
 
 }
+.viewport-display .comparison-view{
+	margin-left: 0;
+	padding:25px 10px;
+}
 .viewport-display .graph{
 	min-height: 240px;
 	margin-left: 10px;
 	/*height:340px;*/
-	padding:20px 10px;
+	padding:25px 10px;
 	/*display: none;*/
 }
 
@@ -643,14 +648,13 @@ ul.set-list li.btn-group i{
 }
 #file-title{
 	position: absolute;
-	/*display: none;*/
-
 
 }
 #file-title h3{
-	font-size: 0.9em;
+	font-size: 0.6em;
 	text-align: center;
 	line-height: 10px;
+	margin-left: 2em;
 
 }
 .viewport-display .set_tools ul li{
@@ -665,10 +669,16 @@ ul.set-list li.btn-group i{
 	border-radius: 5px;
 	padding:3px 2px;
 	font-size: .8em;
-	/*color:#303030;*/
-	/*color:#2b8685;*/
-}
 
+}
+.viewport-display .comparison .set_tools{
+	margin-left: 0;
+	
+}
+.viewport-display .comparison .set_tools ul li{
+	padding-top: 1.5em;
+	
+}
 .viewport-display .set_tools ul{
 	padding-right: 2em;
 }
