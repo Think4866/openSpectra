@@ -486,6 +486,7 @@ ul.set-list a.saved i{
 	letter-spacing: 1px;
 	background-color: #2A2A2A;
 	color:#F2B017;
+	border-left:3px solid #494949;
 	font-size: 10px;
 	padding:5px 0 5px 5px;
 	margin-bottom: 0;
@@ -578,8 +579,15 @@ ul.set-list a.saved i{
 	margin-right: 2px;
 
 }
-.my-browse-tabs{
-	/*font-size: 70%;*/
+#myTabContent{
+	height: 310px;
+}
+#myTabContent .active{
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	padding:10px;
+	background-color: #494949;
 
 }
 
@@ -625,8 +633,6 @@ ul.set-list li.btn-group i{
 }
 /*=============================================================VIEWPORT*/
 .viewport-display {
-/*	min-height: 480px;
-    padding: 20px;*/
     margin: 0px 0 10px 0;
     font-size: 18px;
     font-weight: 200;
@@ -636,8 +642,14 @@ ul.set-list li.btn-group i{
     -moz-border-radius: 6px;
     border-radius: 6px;
 }
-
-.viewport-display > .set-view{
+.viewport-display .start-screen, .viewport-display .comparison{
+	min-height: 500px;
+	background:url(../img/bkgd-inner.jpg) repeat left top transparent;
+	-webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+.viewport-display > .set-view-1{
 	border-bottom:1px solid #333;
 	min-height: 240px;
 	background:url(../img/bkgd-inner.jpg) repeat left top transparent;
@@ -646,24 +658,24 @@ ul.set-list li.btn-group i{
     border-radius: 6px 6px 0px 0px;
 
 }
+.viewport-display > .set-view-2{
+	margin-left: 0;
+	border-bottom:1px solid #333;
+	min-height: 240px;
+	background:url(../img/bkgd-inner.jpg) repeat left top transparent;
+    -webkit-border-radius: 0px 0px 6px 6px;
+    -moz-border-radius: 0px 0px 6px 6px;
+    border-radius: 0px 0px 6px 6px;
+
+}
 .viewport-display .graph{
 	min-height: 240px;
+	margin-left: 10px;
 	/*height:340px;*/
 	padding:20px 10px;
-	display: none;
+	/*display: none;*/
 }
-#file-title{
-	position: absolute;
-	display: none;
 
-
-}
-#file-title h3{
-	font-size: 0.9em;
-text-align: center;
-line-height: 10px;
-
-}
 .viewport-display .info{
 	background-color: rgba(255, 255, 255, 0.2);
 	border-top:5px solid #eee;
@@ -671,23 +683,14 @@ line-height: 10px;
     -moz-border-radius: 0px 0px 0px 0px ;
     border-radius: 0px 0px 0px 0px ;
 	min-height: 240px;
-	/*border-left:1px solid #ccc;*/
 	margin-left: 0px;
-	display: none;
+	/*display: none;*/
 	
 }
-.info-content ul.set-info li{
-	font-size: 12px;
-}
-.info-content ul.set-info li span{
-	font-size: 14px;
-	font-family: 'OxygenBold';
-}
+
 .viewport-display .set-2-empty{
 	min-height: 240px;
-/*	border:1px solid black;*/
 	margin-left: 0;
-	/*background-color: #ccc;*/
 	background:url(../img/bkgd-inner.jpg) repeat left top transparent;
     -webkit-border-radius: 0px 0px 6px 6px;
     -moz-border-radius: 0px 0px 6px 6px;
@@ -696,7 +699,6 @@ line-height: 10px;
 
 .viewport-display .load-another {
 	padding-top: 3em;
-	/*background-color: #ccc;*/
 	background:url(../img/bkgd-inner.jpg) repeat left top transparent;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
@@ -704,9 +706,26 @@ line-height: 10px;
 }
 .viewport-display .info-display{
 	height:auto;
-/*	border:1px solid black;*/
-	/*padding-left: 20px;
-	background-color: #fff;*/
+
+}
+.info-content ul.set-info li{
+	font-size: 12px;
+}
+.info-content ul.set-info li span{
+	font-size: 14px;
+	font-family: 'OxygenBold';
+}
+#file-title{
+	position: absolute;
+	/*display: none;*/
+
+
+}
+#file-title h3{
+	font-size: 0.9em;
+	text-align: center;
+	line-height: 10px;
+
 }
 .viewport-display .set_tools ul li{
 	display: inline-block;
