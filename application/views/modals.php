@@ -330,7 +330,7 @@
         <div class="modal-body">
           <div class="row-fluid">
             <ul class="nav nav-pills">
-              <li><a href="#material" data-toggle="pill">Material</a></li>
+              <!-- <li><a href="#material" data-toggle="pill">Material</a></li> -->
                 <li>
                   <a href="#name" data-toggle="pill">Name</a>
                 </li>
@@ -363,10 +363,10 @@
                   </form>
               </div>
 
-              <div class="tab-pane" id="isotope">
+              <div class="tab-pane" id="material">
                   <form>
                     <div class="control-group">
-                        <label class="control-label">Isotope</label>
+                        <label class="control-label">Material</label>
                     <div class="controls">
                         <div class="input-prepend">
                       <span class="add-on"><i class="icon-pencil"></i></span>
@@ -386,10 +386,10 @@
                   </form>
               </div>
 
-               <div class="tab-pane" id="material">
+               <div class="tab-pane" id="isotope">
                   <form>
                     <div class="control-group">
-                        <label class="control-label">Material</label>
+                        <label class="control-label">Isotope</label>
                     <div class="controls">
                         <div class="input-prepend">
                       <span class="add-on"><i class="icon-pencil"></i></span>
