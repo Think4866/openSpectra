@@ -1,49 +1,55 @@
 
 
 // Datepicker
-  //$(function() {
-  	jQuery(function($) {
-      $('#date_collected').datepicker()
+  	$(function() {
+      jQuery('#date_collected').datepicker()
         .on('changeDate', function(ev) {
-          $('#date_collected').datepicker('hide');
+          jQuery('#date_collected').datepicker('hide');
         })
-  });
+ 	 });
+
 
 //$(function() {
-	jQuery(function($) {
-	$('#uploadDataset').ajaxForm({
-		beforeSubmit: function() {
-			$('.fileuploaderrors').empty();
-			$('#control-group-material').empty();
-			var datasetFilename = $('#datasetfilename').text();
-			var calibFilename = $('#calibfilename').text();
-			var submitMaterial = $("#material").val();
-			var submitFormula = $("#formula").val();
-			var submitIsotope = $("input[name='isotope']:checked").val();
-			var submitPublic = $("#public").val();
-			var submitDate = $("#date_collected").val();
-			var submitDescription = $("#description").val();
-			if (datasetFilename == '') {
-				$('.fileuploaderrors').append('<span class="errorCheck">You must choose a dataset to upload.</span><br />');
-			} 
-			if (calibFilename == '') {
-				$('.fileuploaderrors').append('<span class="errorCheck">You did not select a calibration file!  If you do not upload a calibration set, your dataset will be flagged as "Not Calibrated".</span>');
+	$(function() {
+		jQuery('#uploadDataset').ajaxForm({
+			beforeSubmit: function() {
+				jQuery('.fileuploaderrors').empty();
+				jQuery('#control-group-material').empty();
+				var datasetFilename = jQuery('#datasetfilename').text();
+				var calibFilename = jQuery('#calibfilename').text();
+				var submitMaterial = jQuery("#material").val();
+				var submitFormula = jQuery("#formula").val();
+				var submitIsotope = jQuery("input[name='isotope']:checked").val();
+				var submitPublic = jQuery("#public").val();
+				var submitDate = jQuery("#date_collected").val();
+				var submitDescription = jQuery("#description").val();
+				if (datasetFilename == '') {
+					jQuery('.fileuploaderrors').append('<span class="errorCheck">You must choose a dataset to upload.</span><br />');
+				} 
+				if (calibFilename == '') {
+					jQuery('.fileuploaderrors').append('<span class="errorCheck">You did not select a calibration file!  If you do not upload a calibration set, your dataset will be flagged as "Not Calibrated".</span>');
+				}
+				if (submitMaterial == '') {
+					jQuery('#control-group-material').prepend('<span class="errorCheck">You must list a compound or material.</span>');
+				}
+				if ((datasetFilename == '' ) || (submitMaterial == '')) {
+					return false;
+				}
+			},
+			success: function() {
+				jQuery('#uploadDataset').clearForm();
+				$("#myModalupload").modal('hide'); 
+				$("#myModaluploadConfirm").modal('show'); 
 			}
-			if (submitMaterial == '') {
-				$('#control-group-material').prepend('<span class="errorCheck">You must list a compound or material.</span>');
-			}
-			if ((datasetFilename == '' ) || (submitMaterial == '')) {
-				return false;
-			}
-		},
-		success: function(data) {
-			jQuery.noConflict();
-			$('#myModaluploadConfirm').modal('show');
-			$('#myModalupload').modal('hide');
-		}
-		//var fname = $("#fname").val();
-
+		});
 	});
-});
 
+/*
+ $(document).on("click", ".closeCustomizedModal", function() {
+ 		jQuery('.customizedModal').removeClass('in');
+		jQuery('.customizedModal').attr('aria-hidden', true);
+		jQuery('.customizedModal').css('display', 'none');
+		jQuery('.modal-backdrop').remove();
+ });
+*/
 
