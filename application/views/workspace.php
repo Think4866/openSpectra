@@ -77,10 +77,17 @@ require_once('../models/headerLoggedIn.php');
                 <ul id="favorites-list" class="nav nav-list set-list">
 
                   <div class="btn-group">
-                    <a class="" href="#" title="favorite"><i class="icon-star"></i></a>
-                    <a class="" href="#" title="view"><i class="icon-eye-open"></i></a>                                   
-                    <a class="" href="#" title="download"><i class="icon-download-alt"></i></a>
-                    <a class="" href="#" title="download"><i class="icon-trash"></i></a>
+                    <a class="" href="#" title="favorite">
+                      <i class="tools icon-star" title="un-favorite" data-toggle="tooltip"></i>
+                    </a>
+                    <a class="" href="#" title="view">
+                      <i class="tools icon-eye-open" title="view" data-toggle="tooltip"></i>
+                    </a>                                   
+                    <a class="" href="#" title="download">
+                      <i class="tools icon-download-alt" title="download" data-toggle="tooltip"></i>
+                    </a>
+                    <a class="" href="#" title="trash">
+                      <i class="tools icon-trash" title="favorite" data-toggle="tooltip"></i></a>
                   </div>
 
                 </ul> 
@@ -90,11 +97,21 @@ require_once('../models/headerLoggedIn.php');
                 <ul id="saved-sets-list" class="nav nav-list set-list">
 
                   <div class="btn-group">
-                    <a class="" href="#" title="favorite"><i class="icon-star-empty"></i></a>
-                    <a class="" href="#" title="view"><i class="icon-eye-open"></i></a>                                   
-                    <a class="" href="#" title="download"><i class="icon-download-alt"></i></a>
-                    <a class="" href="#" title="trash"><i class="icon-trash"></i></a>
-                    <a class="saved" href="#" title="favorite"><i class="icon-save"></i></a>
+                    <a class="" href="#" title="favorite">
+                      <i class="tools icon-star-empty" title="favorite" data-toggle="tooltip"></i>
+                    </a>
+                    <a class="" href="#" title="view">
+                      <i class="tools icon-eye-open" title="view" data-toggle="tooltip"></i>
+                    </a>                                   
+                    <a class="" href="#" title="download">
+                      <i class="tools icon-download-alt" title="download" data-toggle="tooltip"></i>
+                    </a>
+                    <a class="" href="#" title="trash">
+                      <i class="tools icon-trash" title="trash" data-toggle="tooltip"></i>
+                    </a>
+                    <a class="saved" href="#" title="favorite">
+                      <i class="tools icon-save" title="save" data-toggle="tooltip"></i>
+                    </a>
                   </div>
 
                 </ul>
@@ -104,12 +121,21 @@ require_once('../models/headerLoggedIn.php');
                 <ul id="saved-comps-list" class="nav nav-list set-list">
 
                   <div class="btn-group">
-
-                    <a class="" href="#" title="favorite"><i class="icon-star-empty"></i></a>
-                    <a class="" href="#" title="view"><i class="icon-eye-open"></i></a>                                   
-                    <a class="" href="#" title="download"><i class="icon-download-alt"></i></a>
-                    <a class="" href="#" title="download"><i class="icon-trash"></i></a>
-                    <a class="saved" href="#" title="favorite"><i class="icon-save"></i></a>
+                    <a class="" href="#" title="favorite">
+                      <i class="tools icon-star-empty" title="favorite" data-toggle="tooltip"></i>
+                    </a>
+                    <a class="" href="#" title="view">
+                      <i class="tools icon-eye-open" title="view" data-toggle="tooltip"></i>
+                    </a>                                   
+                    <a class="" href="#" title="download">
+                      <i class="tools icon-download-alt" title="download" data-toggle="tooltip"></i>
+                    </a>
+                    <a class="" href="#" title="trash">
+                      <i class="tools icon-trash" title="trash" data-toggle="tooltip"></i>
+                    </a>
+                    <a class="saved" href="#" title="favorite">
+                      <i class="tools icon-save" title="save" data-toggle="tooltip"></i>
+                    </a>
                   </div>
 
                 </ul>
