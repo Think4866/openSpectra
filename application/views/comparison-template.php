@@ -1,4 +1,8 @@
+
           <div id="file-title" class=""><h3>Comparison 100</h3></div>
+            <div class="set-comparison span12">
+              <section class="span12">
+                <div class="comparison-inner">
 
             <div class="span12 comparison-view">
 
