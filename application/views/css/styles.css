@@ -792,10 +792,10 @@ input.searchMain{
 	background-color:transparent;
 	box-shadow: none;
 }
-.modal-body a{
+.modal-body a, .modal-footer a{
 	color:#45BAB4;
 }
-.modal-body a:hover{
+.modal-body a:hover, .modal-footer a:hover{
 	color:#333;
 }
 .modal-body .nav-pills>.active>a, .nav-pills>.active{
