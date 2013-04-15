@@ -650,13 +650,10 @@ ul.set-list li.btn-group i{
 	position: absolute;
 
 }
-<<<<<<< HEAD
-#file-title h3{
-	font-size: 0.6em;
-=======
+
 .file-title h3{
 	font-size: 0.9em;
->>>>>>> lots of work in load-into-viewport, when you click an eye icon from the right menu it loads the corresponding dataset into the viewport... in window-1 if it's empty, otherwise in window-2... still need to create popup or something if both are full asking user to select one to remove... also you can now click the x button on a loaded set and it closes the set... graphs will also load with their set info once we get the scripts working
+	font-size: 0.9em;
 	text-align: center;
 	line-height: 10px;
 	margin-left: 2em;
@@ -676,11 +673,11 @@ ul.set-list li.btn-group i{
 	font-size: .8em;
 
 }
-.viewport-display .comparison .set_tools{
+.viewport-display #comparison_window .set_tools{
 	margin-left: 0;
 	
 }
-.viewport-display .comparison .set_tools ul li{
+.viewport-display #comparison_window .set_tools ul li{
 	padding-top: 1.5em;
 	
 }
