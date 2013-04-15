@@ -1,14 +1,16 @@
 
 
 // Datepicker
-  $(function() {
+  //$(function() {
+  	jQuery(function($) {
       $('#date_collected').datepicker()
         .on('changeDate', function(ev) {
           $('#date_collected').datepicker('hide');
         })
   });
 
-$(function() {
+//$(function() {
+	jQuery(function($) {
 	$('#uploadDataset').ajaxForm({
 		beforeSubmit: function() {
 			$('.fileuploaderrors').empty();

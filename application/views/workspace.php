@@ -126,7 +126,11 @@ require_once('../models/headerLoggedIn.php');
           <div id="viewport" class="viewport-display">
 
             <!-- start screen -->
+<<<<<<< HEAD
             <div class="start-screen">
+=======
+            <div id="start_screen_window">
+>>>>>>> lots of work in load-into-viewport, when you click an eye icon from the right menu it loads the corresponding dataset into the viewport... in window-1 if it's empty, otherwise in window-2... still need to create popup or something if both are full asking user to select one to remove... also you can now click the x button on a loaded set and it closes the set... graphs will also load with their set info once we get the scripts working
 
               <?php include 'start-screen.php' ?>
 
@@ -137,7 +141,7 @@ require_once('../models/headerLoggedIn.php');
 
 
             <!-- comparison template -->
-            <div class="comparison" style="display:none;">
+            <div id="comparison_window" style="display:none;">
 
               <?php include 'comparison-template.php' ?>
 
@@ -149,13 +153,16 @@ require_once('../models/headerLoggedIn.php');
             <!-- set load windows 1 and 2 -->
            
           <div id="set_load_window-1" class="set-view-1 span12" style="display:none;">
-            
+
+            <?php include 'load-window-1.php' ?>
             <!-- include load-window-1.php or set-1-empty.php here -->
 
           </div>
 
           <div id="set_load_window-2" class="set-view-2 span12" style="display:none;">
-            
+
+            <?php include 'load-window-2.php' ?>
+
             <!-- include load-window-2.php or set-2-empty.php here -->
 
 
@@ -248,85 +255,9 @@ require_once('../models/headerLoggedIn.php');
     <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
     <script type="text/javascript" src="js/jquery.form.js"></script>
     <script type="text/javascript" src="js/form-submits.js"></script>
+    <script type="text/javascript" src="js/load-into-viewport.js"></script>
+    <script type="text/javascript" src="js/loaded-set-options.js"></script>
 
-
-	<script type="text/javascript">
-
-
-  var muglFileURL = <?php echo "'" . $MUGL_URL . "'"; ?>;
-
-  $ = window.multigraph.jQuery;
-  $('#graph-window').multigraph({ 'mugl' : muglFileURL, 'width' : '100%', 'height' : '100%' });
-  console.log('This copy of Multigraph uses JQuery version ' + $().jquery);
-
-
-// call jRespond and add breakpoints
-    var jRes = jRespond([
-        {
-            label: 'handheld',
-            enter: 0,
-            exit: 767
-        },{
-            label: 'tablet',
-            enter: 768,
-            exit: 979
-        },{
-            label: 'laptop',
-            enter: 980,
-            exit: 1199
-        },{
-            label: 'desktop',
-            enter: 1200,
-            exit: 10000
-        }
-    ]);
-
-    // register enter and exit functions for multiple breakpoints
-    jRes.addFunc({
-        breakpoint: 'handheld',
-        enter: function() {
-          console.log('entered handheld');
-          $('canvas').width('100%').height('100%');
-        },
-        exit: function() {
-        }
-    });
-
-    jRes.addFunc({
-        breakpoint: 'tablet',
-        enter: function() {
-          console.log('entered tablet');
-          $('canvas').width('100%').height('100%');
-        },
-        exit: function() {
-        }
-    });
-
-    jRes.addFunc({
-        breakpoint: 'laptop',
-        enter: function() {
-          console.log('entered laptop');
-          //$('canvas').remove();
-          $('canvas').width('100%').height('100%');
-        },
-        exit: function() {
-        }
-    });
-
-    jRes.addFunc({
-        breakpoint: 'desktop',
-        enter: function() {
-          console.log('entered desktop');
-          $('canvas').width('100%').height('100%');
-        },
-        exit: function() {
-        }
-    });
-
-
-		console.log('This copy of Multigraph uses JQuery version ' + $().jquery);
-		
-	</script>
 
 
 

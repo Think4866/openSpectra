@@ -568,14 +568,14 @@ ul.set-list li.btn-group i{
 .welcome-screen ul.welcome-options li{
 	padding:15px 5px;
 }
-.viewport-display .start-screen, .viewport-display .comparison{
+.viewport-display #start_screen_window, .viewport-display #comparison_window{
 	min-height: 540px;
 	background:url(../img/bkgd-inner.jpg) repeat left top transparent;
 	-webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px;
 }
-.viewport-display > .set-view-1{
+.viewport-display > .set-view-1 {
 	border-bottom:1px solid #333;
 	min-height: 240px;
 	background:url(../img/bkgd-inner.jpg) repeat left top transparent;
@@ -585,7 +585,7 @@ ul.set-list li.btn-group i{
     margin-left:0;
 
 }
-.viewport-display > .set-view-2{
+.viewport-display > .set-view-2 {
 	margin-left: 0;
 	border-bottom:1px solid #333;
 	min-height: 240px;
@@ -646,12 +646,17 @@ ul.set-list li.btn-group i{
 	font-size: 14px;
 	font-family: 'OxygenBold';
 }
-#file-title{
+.file-title{
 	position: absolute;
 
 }
+<<<<<<< HEAD
 #file-title h3{
 	font-size: 0.6em;
+=======
+.file-title h3{
+	font-size: 0.9em;
+>>>>>>> lots of work in load-into-viewport, when you click an eye icon from the right menu it loads the corresponding dataset into the viewport... in window-1 if it's empty, otherwise in window-2... still need to create popup or something if both are full asking user to select one to remove... also you can now click the x button on a loaded set and it closes the set... graphs will also load with their set info once we get the scripts working
 	text-align: center;
 	line-height: 10px;
 	margin-left: 2em;
@@ -719,17 +724,17 @@ ul.tool-bar{
 	line-height: 1.2;
 	font-size: 12px;
 	margin-left: 0;
-	border-bottom: 1px solid #000;
+	/*border-bottom: 1px solid #000;*/
 }
 .span11 .description, .span11 .notes{
-	display:none;
+	/*display:none; */
 }
-.set-info li#show-description a, .set-info li#show-notes a{
+.set-info li.show-description a, .set-info li.show-notes a{
 	color:#2b8685;
 	font-weight: bold;
 	padding-left: 0;
 }
-.set-info li#show-description a:hover{
+.set-info li.show-description a:hover{
 	color:#000;
 }
 /*=============================================================SEARCH*/
