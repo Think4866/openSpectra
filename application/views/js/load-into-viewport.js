@@ -64,7 +64,7 @@
               $('.load-window-1').show();
 
               //append the set ID onto the file-title h3 heading
-              $('h3#file-title-1').append(thisSetID);
+              $('#file-title-1').append(thisSetID);
 
               //print the user's name including prefix and suffix if applicable
               $('.filldata1.info-data-name').empty().append(userPrefix+" "+thisSetDetails['FIRSTNAME']+" "+thisSetDetails['LASTNAME']+" "+userSuffix);
@@ -109,7 +109,7 @@
               $('.load-window-2').show();
 
               //append the set ID onto the file-title h3 heading
-              $('h3#file-title-2').append(thisSetID);
+              $('#file-title-2').append(thisSetID);
 
               //print the user's name including prefix and suffix if applicable
               $('.filldata2.info-data-name').empty().append(userPrefix+" "+thisSetDetails['FIRSTNAME']+" "+thisSetDetails['LASTNAME']+" "+userSuffix);

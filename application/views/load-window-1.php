@@ -1,7 +1,7 @@
 
       <div class="load-window-1" style="display:none;">
 
-        <div class="file-title"><h3 id="file-title-1">Data Set </h3>
+        <div class="file-title"><h3>Data Set <span class="filldata1" id="file-title-1"></span></h3>
         </div>
            
         <div id="graph-window-1" class="filldata1 graph span6">
