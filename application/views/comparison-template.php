@@ -16,10 +16,10 @@
 
           <div id="set-tools" class="set_tools span12">
               <ul class="row-one-tools pull-right">
-                  <li><a href="#"><i class="icon-star-empty"></i></a></li>
-                  <li><a href="#"><i class="icon-save"></i></a></li>                    
-                  <li><a href="#"><i class="icon-download-alt"></i></a></li>
-                  <li><a href="#"><i class="icon-remove"></i></a></li>
+                  <li><a href="#"><i class="tools icon-star-empty" title="favorite" data-toggle="tooltip"></i></a></li>
+                  <li><a href="#"><i class="tools icon-save" title="save" data-toggle="tooltip"></i></a></li>                    
+                  <li><a href="#"><i class="tools icon-download-alt" title="download" data-toggle="tooltip"></i></a></li>
+                  <li><a href="#"><i class="tools icon-remove" title="remove" data-toggle="tooltip"></i></a></li>
               </ul>
 
         </div>  <!-- end tools -->

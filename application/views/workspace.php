@@ -251,6 +251,15 @@ require_once('../models/headerLoggedIn.php');
     <script type="text/javascript" src="js/load-into-viewport.js"></script>
     <script type="text/javascript" src="js/loaded-set-options.js"></script>
 
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('.tools').tooltip();
+      });
+
+
+
+    </script>
+
 
 
 

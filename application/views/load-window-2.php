@@ -44,11 +44,16 @@
 
               <div id="set-tools-2" class="set_tools span12">
                   <ul class="row-one-tools pull-right">
-                    <li><a href="#myModalnotepad" role="button" class="" data-toggle="modal" data-dynamic="true"><i class="icon-pencil"></i></a></li>
-                    <li><a href="#"><i class="icon-star-empty"></i></a></li>
-                    <li><a href="#"><i class="icon-save"></i></a></li>                    
-                    <li><a href="#"><i class="icon-download-alt"></i></a></li>
-                    <li><a class="remove-loaded-set" id="remove-loaded-set-2" href="#"><i class="icon-remove"></i></a></li>
+
+                    <li><a href="#myModalnotepad" role="button" class="" data-toggle="modal" data-dynamic="true"><i class="tools icon-pencil" title="write a note" data-toggle="tooltip"></i></a></li>
+
+                    <li><a href="#"><i class="tools icon-star-empty" title="favorite" data-toggle="tooltip"></i></a></li>
+
+                    <li><a href="#"><i class="tools icon-save" title="save" data-toggle="tooltip"></i></a></li>    
+
+                    <li><a href="#"><i class="tools icon-download-alt" title="download" data-toggle="tooltip"></i></a></li>
+
+                    <li><a class="remove-loaded-set" id="remove-loaded-set-2" href="#"><i class="tools icon-remove" title="remove" data-toggle="tooltip"></i></a></li>
                    
                   </ul>
 
