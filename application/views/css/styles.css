@@ -473,10 +473,10 @@ ul.set-list a.saved i{
 	margin-right: 2px;
 
 }
-.sidebar-right #myTabContent{
+.sidebar-right #myTabContent, .sidebar-left #myTabContent{
 	height: 310px;
 }
-.sidebar-right #myTabContent .active{
+.sidebar-right #myTabContent .active, .sidebar-left #myTabContent .active{
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -615,8 +615,16 @@ ul.set-list li.btn-group i{
     border-radius: 0px 0px 0px 0px ;
 	min-height: 240px;
 	margin-left: 0px;
-	/*display: none;*/
 	
+	
+}
+.viewport-display .set-1-empty{
+	min-height: 240px;
+	margin-left: 0;
+	background:url(../img/bkgd-inner.jpg) repeat left top transparent;
+    -webkit-border-radius: 6px 6px 0px 0px;
+    -moz-border-radius: 6px 6px 0px 0px;
+    border-radius: 6px 6px 0px 0px;
 }
 
 .viewport-display .set-2-empty{
@@ -634,6 +642,7 @@ ul.set-list li.btn-group i{
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px;
+    margin-left: 0;
 }
 .viewport-display .info-display{
 	height:auto;
@@ -661,8 +670,8 @@ ul.set-list li.btn-group i{
 }
 .viewport-display .set_tools ul li{
 	display: inline-block;
-	padding-top: 4em;
-/*	border:1px solid black;*/
+	padding-top: 2em;
+
 
 }
 .viewport-display .set_tools ul li a{
