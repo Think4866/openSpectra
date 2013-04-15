@@ -114,16 +114,16 @@
       </div>
 
       <!-- Modal Upload Confirm -->
-      <div id="myModaluploadConfirm" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div id="myModaluploadConfirm" class="customizedModal modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-header">
-          <button class="btn my-close-btn" data-dismiss="modal" aria-hidden="true">×</button>
+          <button class="btn my-close-btn closeCustomizedModal" data-dismiss="modal" aria-hidden="true">×</button>
           <h3 id="myModalLabel">Upload successful!</h3>
         </div>
         <div class="modal-body">
           <span class="smalltext">Your new dataset will be displayed under "Your Uploads".</span>
         </div>
         <div class="modal-footer">
-          <button class="btn" data-dismiss="modal" aria-hidden="true">OK</button>
+          <button class="btn closeCustomizedModal" data-dismiss="modal" aria-hidden="true">OK</button>
         </div>
       </div>
 
