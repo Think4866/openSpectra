@@ -123,7 +123,7 @@
           <span class="smalltext">Your new dataset will be displayed under "Your Uploads".</span>
         </div>
         <div class="modal-footer">
-          <button class="btn closeCustomizedModal" data-dismiss="modal" aria-hidden="true">OK</button>
+         <a href="#myModalupload" role="button" class="closeCustomizedModal buttoninline my-upload-btn" data-toggle="modal" data-dynamic="true" data-dismiss="modal" aria-hidden="true">Upload another set</a>&nbsp;&nbsp;<button class="btn closeCustomizedModal buttoninline" data-dismiss="modal" aria-hidden="true">OK</button>
         </div>
       </div>
 
