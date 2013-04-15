@@ -126,11 +126,8 @@ require_once('../models/headerLoggedIn.php');
           <div id="viewport" class="viewport-display">
 
             <!-- start screen -->
-<<<<<<< HEAD
-            <div class="start-screen">
-=======
+
             <div id="start_screen_window">
->>>>>>> lots of work in load-into-viewport, when you click an eye icon from the right menu it loads the corresponding dataset into the viewport... in window-1 if it's empty, otherwise in window-2... still need to create popup or something if both are full asking user to select one to remove... also you can now click the x button on a loaded set and it closes the set... graphs will also load with their set info once we get the scripts working
 
               <?php include 'start-screen.php' ?>
 
@@ -152,25 +149,21 @@ require_once('../models/headerLoggedIn.php');
 
             <!-- set load windows 1 and 2 -->
            
-          <div id="set_load_window-1" class="set-view-1 span12" style="display:none;">
+            <div id="set_load_window-1" class="set-view-1 span12" style="display:none;">
 
-            <?php include 'load-window-1.php' ?>
-            <!-- include load-window-1.php or set-1-empty.php here -->
+              <?php include 'load-window-1.php' ?>
 
-          </div>
+            </div>
 
-          <div id="set_load_window-2" class="set-view-2 span12" style="display:none;">
+            <div id="set_load_window-2" class="set-view-2 span12" style="display:none;">
 
-            <?php include 'load-window-2.php' ?>
+              <?php include 'load-window-2.php' ?>
 
-            <!-- include load-window-2.php or set-2-empty.php here -->
+            </div>
 
+             <!-- end set load windows 1 and 2 -->
 
-          </div>
-
-           <!-- end set load windows 1 and 2 -->
-
-           <!--  end set view content -->
+             <!--  end set view content -->
 
           </div>   <!-- end viewport display -->
 

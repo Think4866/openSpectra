@@ -46,31 +46,5 @@ if (isset($_GET['whoseSets'])) {
 }
 
 
-/*else {	//on first page load
-
-	$queryYourUploads = "SELECT * FROM DATASETS WHERE USER_ID='" . $userloginid . "' ";
-	$yourUploads = mysql_query($queryYourUploads, $openSpectra) or die(mysql_error());
-	$row_yourUploads = mysql_fetch_assoc($yourUploads);
-	$return = array();
-	while($row_yourUploads) {
-		$return[] = $row_yourUploads;
-		$row_yourUploads = mysql_fetch_row($queryYourUploads);
-	}
-	echo json_encode($returnYourUploads);
-
-	$queryAllPublicSets = "SELECT * FROM DATASETS WHERE USER_ID <>'" . $userloginid . "' ";
-	$allPublicSets = mysql_query($queryAllPublicSets, $openSpectra) or die(mysql_error());
-	$row_allPublicSets = mysql_fetch_assoc($allPublicSets);
-	$return = array();
-	while($row_allPublicSets) {
-		$return[] = $row_allPublicSets;
-		$row_allPublicSets = mysql_fetch_row($queryAllPublicSets);
-	}
-	echo json_encode($returnAllPublicSets);
-} */
-
-
-            /*<?php $this->security->get_csrf_token_name() ?> : '<?php $this->security->get_csrf_hash() ?>' */
-
 
 ?>
