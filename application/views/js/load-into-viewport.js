@@ -85,16 +85,15 @@
               $('.filldata1.description-content').empty();
               $('.filldata1.description-content').append(descriptionContent);
 
-              //append class, id and href-specific info to set options icon buttons
-              //$('a#remove-loaded-set-1').attr('href').replace(/#/, '');
+              //generate a new Multigraph from this dataset (graph-window-1)
 
               if (muglFileURL !== null && muglFileURL !== '' && muglFileURL !== undefined) {
                 $ = window.multigraph.jQuery;
-                $('#graph-window-1').multigraph({ 'mugl' : muglFileURL, 'width' : '100%', 'height' : '100%' });
+                $('.graph-window-1').multigraph({ 'mugl' : muglFileURL, 'width' : '100%', 'height' : '100%' });
                 console.log("muglFileURL = "+muglFileURL);
                 //console.log('This copy of Multigraph uses JQuery version ' + $().jquery);
               } else {
-                $('#graph-window-1').append('<p> [ no graph available ]</p>');
+                $('.graph-window-1').append('<p> [ no graph available ]</p>');
               }
               
 
@@ -130,12 +129,14 @@
               $('.filldata2.description-content').empty();
               $('.filldata2.description-content').append(descriptionContent);
 
+              //generate a new Multigraph from this dataset (graph-window-1)
+
               if (muglFileURL !== null && muglFileURL !== '' && muglFileURL !== undefined) {
                 $ = window.multigraph.jQuery;
-                $('#graph-window-2').multigraph({ 'mugl' : muglFileURL, 'width' : '100%', 'height' : '100%' });
+                $('.graph-window-2').multigraph({ 'mugl' : muglFileURL, 'width' : '100%', 'height' : '100%' });
                 console.log("muglFileURL = "+muglFileURL);
               } else {
-                $('#graph-window-2').append('<p> [ no graph available ]</p>');
+                $('.graph-window-2').append('<p> [ no graph available ]</p>');
               }
 
              console.log('#set_load_window-1 had a dataset already, and #set_load_window-2 was empty, so we loaded the new set '+thisSetID+' in #set_load_window-2!');
@@ -150,7 +151,7 @@
 
   
 
-
+// This script makes the graphs resize as you resize the browser window
 // call jRespond and add breakpoints
     var jRes = jRespond([
         {

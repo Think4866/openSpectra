@@ -11,12 +11,12 @@
      if (which_set_load_window == 1) {
      	$('.filldata1').empty();
      	$('.load-window-1').css('display', 'none');
-     	 $('.set-1-empty').show();
+     	$('.set-1-empty').show();
 
      } else if (which_set_load_window == 2) {
      	$('.filldata2').empty();
      	$('.load-window-2').css('display', 'none');
-     	 $('.set-2-empty').show();
+     	$('.set-2-empty').show();
      }
 
   });

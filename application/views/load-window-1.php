@@ -4,7 +4,7 @@
         <div class="file-title"><h3>Data Set <span class="filldata1" id="file-title-1"></span></h3>
         </div>
            
-        <div id="graph-window-1" class="filldata1 graph span6">
+        <div class="graph-window-1" class="filldata1 graph span6">
 
           <!--   load graph here -->
 
