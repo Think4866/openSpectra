@@ -15,7 +15,7 @@ if ($_FILES["origfile_url"]["error"] > 0) {
 } else {
   	//check the database for the next origfile and origcalib autoinc values
 	$query = mysqli_query($conn, "SHOW TABLE STATUS LIKE 'DATASETS'"); 
-	$row = mysqli_fetch_assoc($query); 
+	$row = mysqli_fetch_assoc($query);
 	$next_inc_value = $row['Auto_increment'];
 	 
 	//this is the new name of the raw data file -- keep consistent across the raw and xml buckets
@@ -94,6 +94,8 @@ $ORIGCALIB_URL = GetSQLValueString($ORIGCALIB_URL, "text");
 //echo "fname = " . $FNAME . " and material = " . $MATERIAL;
 
 //add the new dataset to database
+
+
 
 $qstr = "INSERT INTO DATASETS (USER_ID, MATERIAL, MOLECULARFORMULA, ISOTOPE, PUBLIC, DATE_COLLECTED, DESCRIPTION, ORIGFILE_URL, ORIGCALIB_URL) VALUES ('" . $FNAME . "', '" . $MATERIAL . "', '" . $MOLECULARFORMULA . "', '" . $ISOTOPE . "', '" . $PUBLIC . "', '" . $DATE_COLLECTED . "', '" . $DESCRIPTION . "', '" . $ORIGFILE_URL . "', '" . $ORIGCALIB_URL . "')";
 
