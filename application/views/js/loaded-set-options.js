@@ -10,11 +10,13 @@
 
      if (which_set_load_window == 1) {
      	$('.filldata1').empty();
+      $('.graph-window-1').removeAttr('style');
      	$('.load-window-1').css('display', 'none');
      	$('.set-1-empty').show();
 
      } else if (which_set_load_window == 2) {
      	$('.filldata2').empty();
+      $('.graph-window-2').removeAttr('style');
      	$('.load-window-2').css('display', 'none');
      	$('.set-2-empty').show();
      }

@@ -25,7 +25,7 @@ if ($_FILES["origfile_url"]["error"] > 0) {
   	//create a new bucket  
 	$s3->putBucket("spectraview-rawfiles-data", S3::ACL_PUBLIC_READ);
 	  
-	//move the file  
+	//move the file
 	if ($s3->putObjectFile($origfile_url_destination_file, "spectraview-rawfiles-data", $origfile_url_destination, S3::ACL_PUBLIC_READ)) {  
 	    echo "We successfully uploaded your file.";  
 	} else{  
