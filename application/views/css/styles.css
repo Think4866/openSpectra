@@ -18,7 +18,7 @@ body.home .home-nav li a{
 }
 
 .background-header{
-	width:106%;
+	width:100%;
 	height:615px;
 	background:url(../img/spectroscopy.jpg) no-repeat left top transparent;
 }
@@ -69,6 +69,7 @@ body.home ul.home-nav li a:hover{
 /*===================================================workspace*/
 body.workspace-body{
 	background: url('../img/bkgd-2.png') repeat top left transparent;
+	overflow-x:hidden; 
 
 }
 p{
@@ -845,6 +846,18 @@ h5.form-signin-heading{
 }
 .errorCheck {
 	color: #ff3333;
+}
+
+#myModalnotebook .note-container{
+	margin-bottom:15px;
+	padding:10px;
+	background-color: #eee;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+.note-container a.show-note{
+	float: right;
 }
 #myModalnotebook .btn-group a{
 	margin-bottom: 5px;

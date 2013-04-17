@@ -280,6 +280,7 @@ require_once('../models/headerLoggedIn.php');
     <script type="text/javascript">
       $(document).ready(function() {
         $('.tools').tooltip();
+
       });
 
 

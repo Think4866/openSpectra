@@ -157,7 +157,7 @@
         </div>
         <div class="modal-footer">
           <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-          <button class="btn btn-primary">Save Notes</button>
+          <button class="btn btn-medium">Save Notes</button>
         </div>
       </div>
 
@@ -165,16 +165,44 @@
       <div id="myModalnotebook" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-header notebook-header">
           <button class="btn my-close-btn" data-dismiss="modal" aria-hidden="true">×</button>
-          <span><?php echo $USER_USERNAME; ?></span>&nbsp;|&nbsp;<span>Date of Note</span>&nbsp;|&nbsp;<span>Data Set ID?</span>
+          <h3>Your Notes</h3>
+
         </div>
         <div class="modal-body">
-          <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor.
-          Sed posuere consectetur est at lobortis. Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-          <div class="btn-group">         
-            <a class="" href="#" title="view"><i class="icon-eye-open"></i>View Data Set</a>
-            <a class="" href="#" title="trash"><i class="icon-trash"></i>Delete Note</a>
+
+          <div class="note-container">
+            <span><?php echo $USER_USERNAME; ?></span>&nbsp;|&nbsp;<span>Date of Note</span>&nbsp;|&nbsp;<span>Data Set ID?</span>
+            
+
+            <p class="note-intro">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.<a class="show-note" href="#" data-toggle="collapse" data-target="#note-1">show more</a></p>
+
+            <div id="note-1" class="toggle-note collapse">
+            <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+            </div>
+            
+            <div class="btn-group">         
+              <a class="" href="#" title="view"><i class="icon-eye-open"></i>View Data Set</a>
+              <a class="" href="#" title="trash"><i class="icon-trash"></i>Delete Note</a>
+            </div>
           </div>
-        </div>
+
+          <div class="note-container">
+            <span><?php echo $USER_USERNAME; ?></span>&nbsp;|&nbsp;<span>Date of Note</span>&nbsp;|&nbsp;<span>Data Set ID?</span>
+          
+
+            <p class="note-intro">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.<a class="show-note" href="#" data-toggle="collapse" data-target="#note-2">show more</a></p>
+            
+            <div id="note-2" class="toggle-note collapse">
+            <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+            </div>
+            
+            <div class="btn-group">         
+              <a class="" href="#" title="view"><i class="icon-eye-open"></i>View Data Set</a>
+              <a class="" href="#" title="trash"><i class="icon-trash"></i>Delete Note</a>
+            </div>
+          </div>
+
+        </div> <!-- end modal body -->
         <div class="modal-footer">
           
 
