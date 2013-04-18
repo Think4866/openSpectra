@@ -72,6 +72,8 @@ $python_exec_script = exec("python ../../scripts/processData.py .$origfile_url_d
 
 //add variable that you want to use for the amazon s3 processed url and set it equal to $argv[1]
 
+$MUGL_URL = $argv[1];
+
 $queryGetID = "SELECT * FROM USER WHERE USERNAME='" . $FNAME . "' LIMIT 0, 1";
 $selectUserID = mysqli_query($conn, $queryGetID) or die(mysqli_error($conn));
 $row_GetID = mysqli_fetch_assoc($selectUserID);
@@ -80,24 +82,11 @@ $FNAME = $USER_ID;
 
 
 
-//reformat the text items for insertion into db
-/*
-$MATERIAL = GetSQLValueString($MATERIAL, "text");
-$MOLECULARFORMULA = GetSQLValueString($MOLECULARFORMULA, "text");
-$ISOTOPE = GetSQLValueString($ISOTOPE, "text");
-$DATE_COLLECTED = GetSQLValueString($DATE_COLLECTED, "text");
-$DESCRIPTION = GetSQLValueString($DESCRIPTION, "text");
-$ORIGFILE_URL = GetSQLValueString($ORIGFILE_URL, "text");
-$ORIGCALIB_URL = GetSQLValueString($ORIGCALIB_URL, "text");
-*/
-
-//echo "fname = " . $FNAME . " and material = " . $MATERIAL;
-
 //add the new dataset to database
 
 
 
-$qstr = "INSERT INTO DATASETS (USER_ID, MATERIAL, MOLECULARFORMULA, ISOTOPE, PUBLIC, DATE_COLLECTED, DESCRIPTION, ORIGFILE_URL, ORIGCALIB_URL) VALUES ('" . $FNAME . "', '" . $MATERIAL . "', '" . $MOLECULARFORMULA . "', '" . $ISOTOPE . "', '" . $PUBLIC . "', '" . $DATE_COLLECTED . "', '" . $DESCRIPTION . "', '" . $ORIGFILE_URL . "', '" . $ORIGCALIB_URL . "')";
+$qstr = "INSERT INTO DATASETS (USER_ID, MATERIAL, MOLECULARFORMULA, ISOTOPE, PUBLIC, DATE_COLLECTED, DESCRIPTION, ORIGFILE_URL, ORIGCALIB_URL, MUGL_URL) VALUES ('" . $FNAME . "', '" . $MATERIAL . "', '" . $MOLECULARFORMULA . "', '" . $ISOTOPE . "', '" . $PUBLIC . "', '" . $DATE_COLLECTED . "', '" . $DESCRIPTION . "', '" . $ORIGFILE_URL . "', '" . $ORIGCALIB_URL . "', '" . $MUGL_URL . "')";
 
 $addNewDataset = mysqli_query($conn, $qstr) or die(mysqli_error($conn));
 //echo "new row should be added!";
