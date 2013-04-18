@@ -9,6 +9,10 @@ from time import gmtime, strftime
 
 isConnected = boto.connect_s3()
 
+#load args from upload_datasets.php, argv[0] is the name of the script and args passed here increment in the passed order
+#inputFile = argv[1]
+#incValue = argv[2]
+
 inputFile = "../application/models/data/a11001.ws5" #for testing
 
 #reads the WS5 file and takes out the important stuff
@@ -17,6 +21,7 @@ def processWS5Data(inputFile):
         bucket = "spectraview-xml-data"
         s3Connection = Key(bucket)
         s3Connection.key = inputFile
+        finalS3URL = ""
         print "I've connected to Amazon S3 at %s" % strftime("%a, %d %b %Y %H:%M:%S +0000", gmtime())
         with open(inputFile, 'rt') as ourFile:
             tree = ElementTree.parse(ourFile)
