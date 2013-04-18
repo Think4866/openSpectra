@@ -68,10 +68,25 @@ $DESCRIPTION = isset($_POST['description']) ? $_POST['description'] : '';			//re
 $ORIGFILE_URL = isset($origfile_url_destination) ? $origfile_url_destination : '';  	//change to URL for item photo
 $ORIGCALIB_URL = isset($origcalib_url_destination) ? $origcalib_url_destination : '';  	//change to URL for item photo
 
+//add variable that you want to use for the inc value and set it equal to $argv[2]
+
+$queryGetID = "SELECT * FROM USER WHERE USERNAME='" . $FNAME . "' LIMIT 0, 1";
+$selectUserID = mysqli_query($conn, $queryGetID) or die(mysqli_error($conn));
+$row_GetID = mysqli_fetch_assoc($selectUserID);
+$USER_ID = $row_GetID['USER_ID'];
+$FNAME = $USER_ID;
+
+
+
+//add the new dataset to database
+
+$qstr = "INSERT INTO DATASETS (USER_ID, MATERIAL, MOLECULARFORMULA, ISOTOPE, PUBLIC, DATE_COLLECTED, DESCRIPTION, ORIGFILE_URL, ORIGCALIB_URL, MUGL_URL) VALUES ('" . $FNAME . "', '" . $MATERIAL . "', '" . $MOLECULARFORMULA . "', '" . $ISOTOPE . "', '" . $PUBLIC . "', '" . $DATE_COLLECTED . "', '" . $DESCRIPTION . "', '" . $ORIGFILE_URL . "', '" . $ORIGCALIB_URL . "')";
+
+$addNewDataset = mysqli_query($conn, $qstr) or die(mysqli_error($conn));
+//echo "new row should be added!";
+
+
 $python_exec_script = exec("python ../../scripts/processData.py .$origfile_url_destination .$next_inc_value");
-
-
-
 
 
 
