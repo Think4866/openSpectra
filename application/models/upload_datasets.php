@@ -68,7 +68,7 @@ $DESCRIPTION = isset($_POST['description']) ? $_POST['description'] : '';			//re
 $ORIGFILE_URL = isset($origfile_url_destination) ? $origfile_url_destination : '';  	//change to URL for item photo
 $ORIGCALIB_URL = isset($origcalib_url_destination) ? $origcalib_url_destination : '';  	//change to URL for item photo
 
-$python_exec_script = exec("python ../../scripts/processData.py .$origfile_url_destination");
+$python_exec_script = exec("python ../../scripts/processData.py .$origfile_url_destination .$next_inc_value");
 
 
 

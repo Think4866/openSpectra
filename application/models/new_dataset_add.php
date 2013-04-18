@@ -6,6 +6,8 @@ require_once('upload_datasets.php');
 
 $MUGL_URL = $argv[1];
 
+//add variable that you want to use for the inc value and set it equal to $argv[2]
+
 $queryGetID = "SELECT * FROM USER WHERE USERNAME='" . $FNAME . "' LIMIT 0, 1";
 $selectUserID = mysqli_query($conn, $queryGetID) or die(mysqli_error($conn));
 $row_GetID = mysqli_fetch_assoc($selectUserID);
