@@ -80,7 +80,7 @@ $FNAME = $USER_ID;
 
 //add the new dataset to database
 
-$qstr = "INSERT INTO DATASETS (USER_ID, MATERIAL, MOLECULARFORMULA, ISOTOPE, PUBLIC, DATE_COLLECTED, DESCRIPTION, ORIGFILE_URL, ORIGCALIB_URL, MUGL_URL) VALUES ('" . $FNAME . "', '" . $MATERIAL . "', '" . $MOLECULARFORMULA . "', '" . $ISOTOPE . "', '" . $PUBLIC . "', '" . $DATE_COLLECTED . "', '" . $DESCRIPTION . "', '" . $ORIGFILE_URL . "', '" . $ORIGCALIB_URL . "')";
+$qstr = "INSERT INTO DATASETS (USER_ID, MATERIAL, MOLECULARFORMULA, ISOTOPE, PUBLIC, DATE_COLLECTED, DESCRIPTION, ORIGFILE_URL, ORIGCALIB_URL) VALUES ('" . $FNAME . "', '" . $MATERIAL . "', '" . $MOLECULARFORMULA . "', '" . $ISOTOPE . "', '" . $PUBLIC . "', '" . $DATE_COLLECTED . "', '" . $DESCRIPTION . "', '" . $ORIGFILE_URL . "', '" . $ORIGCALIB_URL . "')";
 
 $addNewDataset = mysqli_query($conn, $qstr) or die(mysqli_error($conn));
 //echo "new row should be added!";
