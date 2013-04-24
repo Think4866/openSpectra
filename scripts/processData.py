@@ -11,10 +11,10 @@ from time import gmtime, strftime
 isConnected = boto.connect_s3()
 
 #load args from upload_datasets.php, argv[0] is the name of the script and args passed here increment in the passed order
-#inputFile = sys.argv[1]
-#incValue = sys.argv[2]
+inputFile = sys.argv[1]
+incValue = sys.argv[2]
 
-inputFile = "../application/models/data/a11001.ws5" #for testing
+#inputFile = "../application/models/data/a11001.ws5" #for testing
 
 fileName = "../application/models/data/output.xml" #for testing
 
