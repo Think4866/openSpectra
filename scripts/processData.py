@@ -23,7 +23,7 @@ outputFile = open(fileName, "w") #for testing
 #reads the WS5 file and takes out the important stuff
 def processWS5Data(inputFile):
     if isConnected:
-        bucket = bucket = isConnected.get_bucket('spectraview-xml-data')
+        bucket = isConnected.get_bucket('spectraview-xml-data')
         dataHeader = "<mugl><plot><renderer type=\"pointline\"><option name=\"linecolor\" value=\"black\"/><option name=\"pointcolor\" value=\"blue\"/><option name=\"pointsize\" value=\"1.5\"/></renderer></plot><data><values>"
         outputFile.write("%s"% dataHeader)
         dataFooter = "</values></data></mugl>"
