@@ -11,10 +11,10 @@ from time import gmtime, strftime
 isConnected = boto.connect_s3()
 
 #load args from upload_datasets.php, argv[0] is the name of the script and args passed here increment in the passed order
-inputFile = sys.argv[1]
-incValue = sys.argv[2]
+#inputFile = sys.argv[1]
+#incValue = sys.argv[2]
 
-#inputFile = "../application/models/data/a11001.ws5" #for testing
+inputFile = "../application/models/data/a11001.ws5" #for testing
 
 fileName = "../application/models/data/output.xml" #for testing
 
@@ -39,15 +39,16 @@ def processWS5Data(inputFile):
                 channelFinal = str(index)
                 channelFinal = channelFinal + (",")
                 dataFinal = str(element)
-                finalFormatedData = channelFinal+(" ")+dataFinal+("\n")
+                finalFormatedData = channelFinal + (" ") + dataFinal + ("\n")
                 #s3Connection.set_contents_from_string('%s') % finalFormatedData
                 outputFile.write("%s"% finalFormatedData)
         outputFile.write("%s"% dataFooter)
         outputFile.close()
         k = Key(bucket)
-        k.key = "%s" % fileName
+        k.key = sys.argv[1]
         k.set_contents_from_filename(fileName)
-        finalS3URL = sys.argv[1]
+        finalS3URL =  "http://http://spectraview-xml-data.s3.amazonaws.com/" + (k.key)
+        sys.argv[1] = finalS3URL
         os.system("/usr/bin/php /../models/new_dataset_add.php %s %d") % finalS3URL, incValue
 
 #Checks the file name and runs the appropriate function
